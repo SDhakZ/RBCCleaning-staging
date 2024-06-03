@@ -1,0 +1,342 @@
+.nav-header {
+  /* Positioning */
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+  /* Display & Box Model */
+  display: flex;
+  /* Other */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.nav-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-container {
+  /* Display & Box Model */
+  width: 100%;
+  height: var(--nav-container-h);
+  padding: var(--nav-container-pd);
+  /* Other */
+  background-color: var(--nav-color);
+}
+
+.nav-logo {
+  /* Other */
+  width: 200px;
+  image-rendering: optimizeQuality;
+}
+
+.logoName {
+  /* Other */
+  font-size: var(--nav-logoName-fs);
+
+  font-weight: 600;
+  color: #313131;
+  /* Display & Box Model */
+  margin: 0;
+}
+
+ul.main-menu {
+  /* Display & Box Model */
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 50px;
+  align-items: center;
+}
+
+.menu-item a {
+  /* Positioning */
+  position: relative;
+  /* Other */
+  font-size: var(--nav-menuItems-fs);
+  font-weight: 600;
+  line-height: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  letter-spacing: 0.5px;
+  color: #313131;
+  /* Display & Box Model */
+  display: block;
+}
+
+.menu-item a:hover {
+  /* Display & Box Model */
+  transform: scale(1.05);
+  /* border-bottom: 3px solid white; */
+}
+
+.nav-menus a[class="active"] {
+  /* Display & Box Model */
+  transform: var(--nav-menuItems-scale);
+  color: #1a5cb3;
+  /* Other */
+}
+
+/*---------------Sub menu items---------------*/
+
+.sub-menu-arrow {
+  /* Positioning */
+  position: relative;
+}
+
+.sub-menu-arrow svg {
+  /* Positioning */
+  position: absolute;
+  top: 9px;
+  /* Other */
+  font-size: 1rem;
+  /* Display & Box Model */
+  padding-top: 0px;
+  margin-left: 5px;
+}
+
+.logo-noU {
+  border-bottom: none;
+}
+
+.sub-menus-container {
+  /* Positioning */
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+  /* Display & Box Model */
+  display: none;
+  width: var(--nav-subMenuContainer-w);
+  padding: 2px 0 0 0;
+  /* Other */
+  background: #fbfbfb;
+  border: 1px solid lavender;
+  box-shadow: 0 10px 12px rgb(22 33 39 / 25%);
+}
+
+.menu-item .sub-menus-container a {
+  /* Other */
+  font-size: var(--nav-subMenuContainerItems-fs);
+  color: #313131;
+  /* Display & Box Model */
+  margin: var(--nav-subMenuContainer-m);
+}
+
+.sub-menus-container a:hover {
+  /* Display & Box Model */
+  transform: scale(1.05) translateY(-2px);
+  /* border-bottom: 0px solid #394bec; */
+}
+
+.sub-menus-container a[class="active"] {
+  /* Display & Box Model */
+  transform: var(--nav-menuItems-scale);
+  /* Other */
+  color: var(--nav-color) !important;
+  border-bottom: 3px solid #394bec !important;
+}
+
+.contact-btn {
+  padding: 8px 15px;
+  background-color: #113768;
+  border-radius: 5px;
+  color: #fbfbfb !important;
+}
+
+.search-icon {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 15px;
+  background-color: #0598ce;
+  border-radius: 5px;
+  color: #fbfbfb;
+  transition: all 0.3s;
+  margin-right: -20px;
+}
+
+.search-bar {
+  transition: all 0.5s;
+}
+
+.search-bar-mobile {
+  margin-right: -10px;
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  .nav-logo {
+    /* Other */
+    width: 180px;
+  }
+
+  .menu-item a:hover {
+    /* Display & Box Model */
+    transform: scale(1.08);
+  }
+
+  .nav-menus a[class="active"] {
+    /* Other */
+    border-bottom: 3px solid white !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .search-icon {
+    padding: 8px 10px;
+  }
+
+  .menu-item a {
+    /* Other */
+    letter-spacing: 0.1px;
+  }
+
+  /* .menu-item a:hover {
+      border-bottom: 3px solid white;
+    } */
+}
+
+@media (max-width: 1024px) {
+  .search-icon {
+    margin-right: -12px;
+  }
+
+  .menu-item a {
+    /* Other */
+    letter-spacing: 0.1px;
+  }
+
+  /* .menu-item a:hover {
+      border-bottom: 2px solid white;
+    } */
+
+  .nav-menus a[class="active"] {
+    border-bottom: 2px solid white !important;
+  }
+
+  ul.main-menu {
+    /* Display & Box Model */
+    gap: 25px;
+  }
+
+  .nav-logo {
+    /* Other */
+    width: 110px;
+  }
+}
+
+@media (max-width: 769px) {
+  .search-bar,
+  .search-icon {
+    display: none;
+  }
+
+  .search-bar-mobile {
+    display: block;
+    padding: var(--nav-container-pd);
+    margin-bottom: 30px;
+  }
+
+  .contact-btn {
+    padding: none;
+    /* background-color: transparent;
+      border-radius: none;
+      color: var(--primary-black) !important; */
+    text-align: center;
+    transition: all 0.3s;
+  }
+
+  /*------------Nav icons------------*/
+  .main-nav .nav-icon {
+    /* Display & Box Model */
+    display: flex !important;
+    /* Other */
+    color: #111161;
+    cursor: pointer;
+    /* Positioning */
+    position: relative;
+  }
+
+  /*------------Nav icons------------*/
+
+  .main-nav ul.menu-container {
+    /* Display & Box Model */
+    display: block !important;
+    /* Positioning */
+    position: absolute;
+    top: 4.2rem;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    /* Other */
+    background-color: #ffffff;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+      rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  }
+
+  .main-nav .menu-item a {
+    /* Display & Box Model */
+    padding: 15px 0;
+    /* Other */
+    color: #313131;
+    /* text-align: center; */
+    margin: var(--nav-menuItems-m);
+  }
+
+  .main-nav .menu-item:hover > a {
+    /* Other */
+    color: #394bec;
+    /* Display & Box Model */
+    transform: scale(1);
+  }
+
+  .nav-menus a[class="active"] {
+    /* Other */
+    border-bottom: 2px solid #394bec !important;
+    color: #394bec !important;
+    font-size: 1.25rem;
+  }
+
+  .main-nav ul.main-menu {
+    /* Display & Box Model */
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-menus a[class="active"] {
+    font-size: 1.2rem;
+  }
+
+  .nav-logo {
+    width: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  /*------------Nav icons------------*/
+  .nav-icon .bars svg {
+    /* Other */
+    font-size: 1.8rem;
+  }
+
+  .nav-icon .cross svg {
+    /* Other */
+    font-size: 1.4rem;
+  }
+
+  /*------------Nav icons------------*/
+  .main-nav .menu-item a {
+    /* Display & Box Model */
+    padding: 10px 0;
+    /* text-align: center; */
+  }
+
+  .nav-menus a[class="active"] {
+    /* Other */
+    font-size: 1.2rem;
+  }
+}
