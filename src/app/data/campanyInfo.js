@@ -21,18 +21,20 @@ export const menuData = [
       { title: "Contact", link: "/contact" },
     ],
   },
-  /*  {
-    title: "Services",
-    items: serviceData.map((service) => ({
-      title: service.title,
-      link: `/services/${service.slug}`,
-    })),
-  }, */
   {
-    title: "Others",
+    title: "Services",
     items: [
-      { title: "Sitemap", link: "/sitemap.xml" },
-      { title: "Terms & Conditions", link: "/terms-and-conditions" },
+      { title: "Lawn Mowing", link: `/services/lawn-mowing` },
+      { title: "Power Hose", link: `/services/lawn-mowing` },
+      { title: "Window Cleaning", link: `/services/lawn-mowing` },
+      { title: "Carpet Cleaning", link: `/services/lawn-mowing` },
+      { title: "Building Cleaning", link: `/services/lawn-mowing` },
+      { title: "Buffering", link: `/services/lawn-mowing` },
+      { title: "Air BNB Cleaning", link: `/services/lawn-mowing` },
+      { title: "Domestic Cleaning", link: `/services/lawn-mowing` },
+      { title: "End of the lease cleaning", link: `/services/lawn-mowing` },
+      { title: "Polishing Floors", link: `/services/lawn-mowing` },
+      { title: "Office Cleaning", link: `/services/lawn-mowing` },
     ],
   },
   {

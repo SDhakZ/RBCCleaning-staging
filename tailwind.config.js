@@ -32,6 +32,12 @@ module.exports = {
           200: "#EEEEEE",
           300: "#C0C5C9",
         },
+        "primary-shade": {
+          100: "#C1F2B0",
+          200: "#51BD2A",
+          300: "#429B22",
+        },
+        "secondary-shade": "#FFB534",
       },
     },
   },

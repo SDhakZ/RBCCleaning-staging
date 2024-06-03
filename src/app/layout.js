@@ -5,6 +5,7 @@ import { Topbar } from "./layouts/topbar/topbar";
 import Navbar from "./layouts/navbar/navbar";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import Footer from "./layouts/footer/footer";
 
 config.autoAddCss = false;
 
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         <SmoothScrolling>
           <div>{children}</div>
         </SmoothScrolling>
+        <Footer />
       </body>
     </html>
   );
