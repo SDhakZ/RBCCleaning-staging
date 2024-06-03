@@ -64,24 +64,24 @@ export const socialInfo = [
     icon: faYoutube,
     title: "Youtube",
     link: "https://www.instagram.com",
-    color: "#E1306C",
+    color: "#FF0000",
   },
   {
     icon: faTwitter,
     title: "Tiktok",
     link: "https://www.twitter.com/",
-    color: "#000",
+    color: "#1DA1F2",
   },
   {
     icon: faLinkedinIn,
     title: "Linkedin",
     link: "https://www.linkedin.com/",
-    color: "#0a66c2",
+    color: "#0077B5",
   },
   {
     icon: faFacebookF,
     title: "Facebook",
     link: "https://www.facebook.com/",
-    color: "#316FF6",
+    color: "#1877F2",
   },
 ];

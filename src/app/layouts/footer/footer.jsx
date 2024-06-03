@@ -19,6 +19,25 @@ export default function Footer() {
               </p>
             </div>
             <div className="flex flex-wrap items-center justify-between w-full gap-10">
+              <div className="flex flex-col items-start self-start col-span-1">
+                <p className="text-xl font-semibold tracking-wider text-black-shade-300">
+                  Company
+                </p>
+                <ul className="mt-5 space-y-2 font-semibold ">
+                  {menuData[0].items.map((item, itemIndex) => (
+                    <li className="text-left" key={itemIndex}>
+                      <Link
+                        title={item.title}
+                        href={item.link}
+                        className="text-base text-center transition-all duration-200 whitespace-nowrap hover:text-primary-shade-200 text-black-shade-100 w-fit hover:text-primary-accent "
+                      >
+                        - {item.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
               <div className="flex flex-col col-span-1 sm:items-start">
                 <p className="text-2xl font-semibold tracking-wider text-black-shade-300">
                   Services
@@ -51,26 +70,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="flex flex-col items-start col-span-1">
-                <p className="text-xl font-semibold tracking-wider text-black-shade-300">
-                  Company
-                </p>
-                <ul className="mt-5 space-y-2 font-semibold ">
-                  {menuData[0].items.map((item, itemIndex) => (
-                    <li className="text-left" key={itemIndex}>
-                      <Link
-                        title={item.title}
-                        href={item.link}
-                        className="text-base text-center transition-all duration-200 whitespace-nowrap hover:text-primary-shade-200 text-black-shade-100 w-fit hover:text-primary-accent "
-                      >
-                        - {item.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="flex flex-col justify-center gap-8 w-fit">
+              <div className="flex flex-col self-start justify-center gap-8 w-fit">
                 <div className="flex flex-col gap-6">
                   <h3 className="text-xl font-semibold text-center sm:text-left">
                     Have Any Queries?
@@ -90,7 +90,7 @@ export default function Footer() {
                           href={social.link}
                           target="_blank"
                           rel="noreferrer"
-                          className="text-2xl text-black-shade-100 hover:text-black-shade-200"
+                          className="text-2xl text-black-shade-100 hover:text-primary-shade-200"
                         >
                           <FontAwesomeIcon icon={social.icon} />
                         </a>
@@ -124,7 +124,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex justify-center w-full py-4 font-semibold text-white-shade-100 bg-primary-shade-200">
-        © 2024 RBC Cleaning Services | Privacy Policy
+        © 2024 RBC Cleaning Services |&nbsp;{" "}
+        <a href="/terms-and-conditions">Terms & conditions</a>
       </div>
     </footer>
   );
