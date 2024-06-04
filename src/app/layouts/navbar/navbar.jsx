@@ -44,11 +44,11 @@ const Navbarmenu = () => {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 flex ${
+        className={`sticky top-0 z-50 flex bg-white-shade-100 ${
           isVisible ? "" : NavbarCSS["nav-hidden"]
         }`}
       >
-        <div className="w-full bg-white-shade-100 relative h-20 px-[1.4rem] sm:px-[1.9rem] lg:px-[3.15rem] 2xl:px-[9.05rem] sm:h-20">
+        <div className="relative w-full h-20 container-margin sm:h-20">
           <div className="flex items-center justify-between h-full">
             {/* Add Logo */}
             <Link href="/">
