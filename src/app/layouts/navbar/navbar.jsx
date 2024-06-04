@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { menuData } from "@/app/data/campanyInfo";
+import { menuData } from "@/app/data/companyInfo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose, faBars } from "@fortawesome/free-solid-svg-icons";
 import NavbarCSS from "./navbar.module.css";

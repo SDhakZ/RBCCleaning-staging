@@ -51,7 +51,7 @@ export const menuData = [
         icon: faPhone,
       },
       {
-        title: "Kupondole, Lalitpur, Nepal",
+        title: "31 Loftus street Glenorchy, TAS 7010",
         link: "https://maps.app.goo.gl/sj9EsoNrJkjWph3x9",
         icon: faLocationDot,
       },

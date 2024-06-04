@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-import { menuData, socialInfo } from "../../data/campanyInfo";
+import { menuData, socialInfo } from "../../data/companyInfo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Topbar = () => {

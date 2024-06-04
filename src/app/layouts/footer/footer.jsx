@@ -1,7 +1,7 @@
 import React from "react";
-import { menuData } from "@/app/data/campanyInfo";
+import { menuData } from "@/app/data/companyInfo";
 import Link from "next/link";
-import { socialInfo } from "@/app/data/campanyInfo";
+import { socialInfo } from "@/app/data/companyInfo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Footer() {

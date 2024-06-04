@@ -1,5 +1,10 @@
 import React from "react";
+import ContactModule from "@/app/components/contactModule/contactModule";
 
 export default function page() {
-  return <div className="min-h-screen container-margin">Service page</div>;
+  return (
+    <div>
+      <ContactModule />
+    </div>
+  );
 }
