@@ -53,7 +53,7 @@
   }
 
   .padding-y-lg {
-    @apply pt-14 pb-14 sm:pt-12 sm:pb-8 md:pt-16 md:pb-10 lg:pt-[5.3rem] lg:pb-[5.3rem];
+    @apply pt-12 pb-14 sm:pt-12 sm:pb-8 md:pt-16 md:pb-10 lg:pt-[5.3rem] lg:pb-[5.3rem];
   }
 }
 

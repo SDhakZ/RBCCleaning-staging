@@ -28,7 +28,7 @@ export const serviceData = [
         title: "Builder Cleaning",
         slug: "builder-cleaning",
         brief:
-          "Specialized cleaning tailored for office spaces, including deep cleaning, organizing, and maintenance.",
+          "Post-construction cleaning to remove debris, dust, and other materials, ensuring new buildings are clean and ready for use.",
         icon: "/services/icons/builder-cleaning.png",
         detail: {
           title: "Heres what we offer you with spotless office cleaning",
