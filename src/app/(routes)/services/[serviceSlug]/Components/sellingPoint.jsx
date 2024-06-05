@@ -8,17 +8,17 @@ export default function sellingPoint(props) {
   return (
     <div className="padding-y section container-margin-compact">
       <div className="flex flex-col-reverse items-center justify-between gap-2 sm:items-start md:gap-10 md:flex-row">
-        <div className="flex flex-col gap-6 max-w-[550px]">
-          <h2 className="text-xl font-semibold font-lato lg:leading-tight text-black-shade-300 lg:text-4xl md:text-2xl">
+        <div className="flex flex-col md:gap-5 gap-4 lg:gap-6 max-w-[550px]">
+          <h2 className="text-2xl font-semibold font-lato lg:leading-tight text-black-shade-300 lg:text-4xl md:text-3xl">
             {serviceItem.detail.title}
           </h2>
-          <p className="text-base font-medium font-inter text-black-shade-100">
+          <p className="text-base font-medium md:text-lg font-inter text-black-shade-100">
             {serviceItem.detail.description}
           </p>
-          <ul className="space-y-3 font-medium text-black-shade-100">
+          <ul className="space-y-2 font-medium md:space-y-3 text-black-shade-100">
             {serviceItem.detail.sellingPoints.map((point, index) => (
               <li
-                className="flex items-center gap-2 text-base lg:text-lg"
+                className="flex items-center gap-2 text-base md:text-lg"
                 key={index}
               >
                 <FontAwesomeIcon
