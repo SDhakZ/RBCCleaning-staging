@@ -1,0 +1,46 @@
+:root {
+  --swiper-theme-color: #ffffff;
+  --swiper-navigation-size: 28px;
+}
+
+.swiper-button-prev {
+  /* positioning */
+  left: 5;
+}
+
+.swiper-button-next {
+  /* positioning */
+  right: 5;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  border-radius: 0px;
+  transition: all 0.2s;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  background-color: rgba(27, 27, 27, 0.247);
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.swiper-slide {
+  /* display and box model */
+  margin: none;
+  display: flex;
+  /* positioning */
+  justify-content: center;
+  align-items: center;
+  height: 330px;
+}
+
+@media all and (max-width: 790px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+/* responsive settings */
