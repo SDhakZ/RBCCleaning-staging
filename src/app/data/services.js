@@ -13,14 +13,15 @@ export const serviceData = [
         detail: {
           title: "Heres what we offer you with spotless office cleaning",
           description:
-            "Our comprehensive office cleaning services ensure a clean, organized, and productive workspace. We handle all aspects of office maintenance, including dusting, vacuuming, trash removal, and sanitizing workstations, restrooms, and common areas. Our team uses eco-friendly products and advanced cleaning techniques to create a healthy environment for your employees. We offer flexible scheduling to minimize disruption and tailor our services to meet your office’s specific needs. Trust us to keep your office sparkling and efficient, so you can focus on your business.",
-          benefitPoints: [
+            "Our comprehensive office cleaning services ensure a clean, organized, and productive workspace. We handle all aspects of office maintenance, including dusting, vacuuming, trash removal, and sanitizing workstations, restrooms, and common areas.",
+          sellingPoints: [
             "Experienced professional for the service",
             "Utilization of 100% environmental friendly products",
             "Reliable and flexible scheduling",
             "Free consultation before the cleaning starts",
           ],
-          image: "/services/service-banner.png",
+          bannerImage: "/services/OfficeCleaning/banner",
+          sellingPointImage: "/services/selling-point.png",
         },
       },
       {
@@ -34,13 +35,14 @@ export const serviceData = [
           title: "Heres what we offer you with spotless office cleaning",
           description:
             "Our comprehensive office cleaning services ensure a clean, organized, and productive workspace. We handle all aspects of office maintenance, including dusting, vacuuming, trash removal, and sanitizing workstations, restrooms, and common areas. Our team uses eco-friendly products and advanced cleaning techniques to create a healthy environment for your employees. We offer flexible scheduling to minimize disruption and tailor our services to meet your office’s specific needs. Trust us to keep your office sparkling and efficient, so you can focus on your business.",
-          benefitPoints: [
+          sellingPoints: [
             "Experienced professional for the service",
             "Utilization of 100% environmental friendly products",
             "Reliable and flexible scheduling",
             "Free consultation before the cleaning starts",
           ],
-          image: "/services/service-banner.png",
+          bannerImage: "/services/service-banner.png",
+          sellingPointImage: "/services/selling-point.png",
         },
       },
     ],
@@ -61,13 +63,14 @@ export const serviceData = [
           title: "Heres what we offer you with spotless office cleaning",
           description:
             "Our comprehensive office cleaning services ensure a clean, organized, and productive workspace. We handle all aspects of office maintenance, including dusting, vacuuming, trash removal, and sanitizing workstations, restrooms, and common areas. Our team uses eco-friendly products and advanced cleaning techniques to create a healthy environment for your employees. We offer flexible scheduling to minimize disruption and tailor our services to meet your office’s specific needs. Trust us to keep your office sparkling and efficient, so you can focus on your business.",
-          benefitPoints: [
+          sellingPoints: [
             "Experienced professional for the service",
             "Utilization of 100% environmental friendly products",
             "Reliable and flexible scheduling",
             "Free consultation before the cleaning starts",
           ],
-          image: "/services/service-banner.png",
+          bannerImage: "/services/service-banner.png",
+          sellingPointImage: "/services/selling-point.png",
         },
       },
       {
@@ -81,13 +84,14 @@ export const serviceData = [
           title: "Heres what we offer you with spotless office cleaning",
           description:
             "Our comprehensive office cleaning services ensure a clean, organized, and productive workspace. We handle all aspects of office maintenance, including dusting, vacuuming, trash removal, and sanitizing workstations, restrooms, and common areas. Our team uses eco-friendly products and advanced cleaning techniques to create a healthy environment for your employees. We offer flexible scheduling to minimize disruption and tailor our services to meet your office’s specific needs. Trust us to keep your office sparkling and efficient, so you can focus on your business.",
-          benefitPoints: [
+          sellingPoints: [
             "Experienced professional for the service",
             "Utilization of 100% environmental friendly products",
             "Reliable and flexible scheduling",
             "Free consultation before the cleaning starts",
           ],
-          image: "/services/service-banner.png",
+          bannerImage: "/services/service-banner.png",
+          sellingPointImage: "/services/selling-point.png",
         },
       },
       {
@@ -101,13 +105,14 @@ export const serviceData = [
           title: "Heres what we offer you with spotless office cleaning",
           description:
             "Our comprehensive office cleaning services ensure a clean, organized, and productive workspace. We handle all aspects of office maintenance, including dusting, vacuuming, trash removal, and sanitizing workstations, restrooms, and common areas. Our team uses eco-friendly products and advanced cleaning techniques to create a healthy environment for your employees. We offer flexible scheduling to minimize disruption and tailor our services to meet your office’s specific needs. Trust us to keep your office sparkling and efficient, so you can focus on your business.",
-          benefitPoints: [
+          sellingPoints: [
             "Experienced professional for the service",
             "Utilization of 100% environmental friendly products",
             "Reliable and flexible scheduling",
             "Free consultation before the cleaning starts",
           ],
-          image: "/services/service-banner.png",
+          bannerImage: "/services/service-banner.png",
+          sellingPointImage: "/services/selling-point.png",
         },
       },
       {
@@ -121,13 +126,14 @@ export const serviceData = [
           title: "Heres what we offer you with spotless office cleaning",
           description:
             "Our comprehensive office cleaning services ensure a clean, organized, and productive workspace. We handle all aspects of office maintenance, including dusting, vacuuming, trash removal, and sanitizing workstations, restrooms, and common areas. Our team uses eco-friendly products and advanced cleaning techniques to create a healthy environment for your employees. We offer flexible scheduling to minimize disruption and tailor our services to meet your office’s specific needs. Trust us to keep your office sparkling and efficient, so you can focus on your business.",
-          benefitPoints: [
+          sellingPoints: [
             "Experienced professional for the service",
             "Utilization of 100% environmental friendly products",
             "Reliable and flexible scheduling",
             "Free consultation before the cleaning starts",
           ],
-          image: "/services/service-banner.png",
+          bannerImage: "/services/service-banner.png",
+          sellingPointImage: "/services/selling-point.png",
         },
       },
     ],
@@ -147,13 +153,14 @@ export const serviceData = [
           title: "Heres what we offer you with spotless office cleaning",
           description:
             "Our comprehensive office cleaning services ensure a clean, organized, and productive workspace. We handle all aspects of office maintenance, including dusting, vacuuming, trash removal, and sanitizing workstations, restrooms, and common areas. Our team uses eco-friendly products and advanced cleaning techniques to create a healthy environment for your employees. We offer flexible scheduling to minimize disruption and tailor our services to meet your office’s specific needs. Trust us to keep your office sparkling and efficient, so you can focus on your business.",
-          benefitPoints: [
+          sellingPoints: [
             "Experienced professional for the service",
             "Utilization of 100% environmental friendly products",
             "Reliable and flexible scheduling",
             "Free consultation before the cleaning starts",
           ],
-          image: "/services/service-banner.png",
+          bannerImage: "/services/service-banner.png",
+          sellingPointImage: "/services/selling-point.png",
         },
       },
       {
@@ -167,13 +174,14 @@ export const serviceData = [
           title: "Heres what we offer you with spotless office cleaning",
           description:
             "Our comprehensive office cleaning services ensure a clean, organized, and productive workspace. We handle all aspects of office maintenance, including dusting, vacuuming, trash removal, and sanitizing workstations, restrooms, and common areas. Our team uses eco-friendly products and advanced cleaning techniques to create a healthy environment for your employees. We offer flexible scheduling to minimize disruption and tailor our services to meet your office’s specific needs. Trust us to keep your office sparkling and efficient, so you can focus on your business.",
-          benefitPoints: [
+          sellingPoints: [
             "Experienced professional for the service",
             "Utilization of 100% environmental friendly products",
             "Reliable and flexible scheduling",
             "Free consultation before the cleaning starts",
           ],
-          image: "/services/service-banner.png",
+          bannerImage: "/services/service-banner.png",
+          sellingPointImage: "/services/selling-point.png",
         },
       },
     ],

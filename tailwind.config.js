@@ -16,6 +16,7 @@ module.exports = {
       },
       fontFamily: {
         lato: ["var(--font-lato)", "sans-serif"],
+        inter: ["var(--font-inter)", "sans-serif"],
       },
       backgroundImage: {},
       colors: {

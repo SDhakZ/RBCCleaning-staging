@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Lato } from "next/font/google";
+import { Lato, Inter } from "next/font/google";
 import SmoothScrolling from "./SmoothScrolling";
 import { Topbar } from "./layouts/topbar/topbar";
 import Navbar from "./layouts/navbar/navbar";
@@ -20,10 +20,15 @@ const lato = Lato({
   weight: ["300", "400", "700", "900"],
 });
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${lato.className}`}>
+      <body className={`${lato.variable} ${inter.variable}`}>
         <Topbar />
         <Navbar />
         <SmoothScrolling>
