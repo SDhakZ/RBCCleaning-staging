@@ -24,7 +24,7 @@ export default function Process() {
   ];
 
   return (
-    <div className="py-20 relative section bg-gradient-to-b from-[#65B741] to-[#1B5800]">
+    <div className="pt-12 pb-36 sm:py-20 relative section bg-gradient-to-b from-[#65B741] to-[#1B5800]">
       <img
         className="absolute bottom-0 w-[100px] md:w-[250px]"
         src="/process/spray.png"

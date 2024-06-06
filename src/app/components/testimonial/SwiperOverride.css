@@ -33,7 +33,7 @@
   /* positioning */
   justify-content: center;
   align-items: center;
-  height: 330px;
+  height: 350px;
 }
 
 @media all and (max-width: 790px) {

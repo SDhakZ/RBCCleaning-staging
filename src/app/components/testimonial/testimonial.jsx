@@ -15,11 +15,11 @@ export default function Testimonial() {
   return (
     <div className="overflow-x-hidden padding-y section container-margin-compact">
       <div className="bg-gradient-to-r rounded-2xl md:rounded-[31px] py-8 px-4  from-[#65B741] to-[#7FCE62]">
-        <div className="flex flex-col items-center w-full gap-4">
-          <h3 className="text-base  text-[#045202] font-semibold font-lato">
+        <div className="flex flex-col items-center w-full gap-2">
+          <h3 className="text-base text-[#035202c5] font-semibold font-lato">
             TESTIMONIALS
           </h3>
-          <h2 className="text-3xl text-center md:text-4xl text-white-shade-100">
+          <h2 className="text-3xl text-center text-white md:text-4xl">
             What our clients are saying
           </h2>
         </div>

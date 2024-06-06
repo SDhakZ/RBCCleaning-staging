@@ -4,6 +4,7 @@ import Banner from "./Components/banner";
 import SellingPoint from "./Components/sellingPoint";
 import Testimonial from "@/app/components/testimonial/testimonial";
 import Process from "@/app/components/process/process";
+import ContactModule from "@/app/components/contactModule/contactModule";
 
 export default function page({ params }) {
   const serviceSlug = params.serviceSlug;
@@ -29,6 +30,7 @@ export default function page({ params }) {
       <SellingPoint serviceItem={serviceItem} />
       <Testimonial />
       <Process />
+      <ContactModule />
     </>
   );
 }

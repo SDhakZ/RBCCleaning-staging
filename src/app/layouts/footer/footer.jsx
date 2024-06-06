@@ -70,8 +70,8 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="flex flex-col self-start justify-center gap-8 w-fit">
-                <div className="flex flex-col gap-6">
+              <div className="flex flex-col items-center justify-center w-full gap-6 sm:self-start sm:w-fit">
+                <div className="flex flex-col gap-4">
                   <h3 className="text-xl font-semibold text-center sm:text-left">
                     Have Any Queries?
                   </h3>
