@@ -5,12 +5,12 @@
 
 .swiper-button-prev {
   /* positioning */
-  left: 5;
+  left: 25px;
 }
 
 .swiper-button-next {
   /* positioning */
-  right: 5;
+  right: 25px;
 }
 
 .swiper-button-prev,
@@ -21,8 +21,8 @@
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  background-color: rgba(27, 27, 27, 0.247);
-  padding: 5px;
+  background-color: rgba(2, 51, 0, 0.411);
+  padding: 8px;
   border-radius: 2px;
 }
 
@@ -40,6 +40,16 @@
   .swiper-button-next,
   .swiper-button-prev {
     display: none;
+  }
+
+  .swiper-button-prev {
+    /* positioning */
+    left: 10px;
+  }
+
+  .swiper-button-next {
+    /* positioning */
+    right: 10px;
   }
 }
 

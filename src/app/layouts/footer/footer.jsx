@@ -102,7 +102,7 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <ul className="flex gap-12">
+            <ul className="flex flex-wrap gap-6 sm:gap-12">
               {menuData[2].items.map((social, index) => (
                 <li
                   key={index}

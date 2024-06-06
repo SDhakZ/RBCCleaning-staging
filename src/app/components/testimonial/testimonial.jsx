@@ -61,7 +61,7 @@ export default function Testimonial() {
             const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
             return (
               <SwiperSlide key={index}>
-                <div className="px-6 flex flex-col gap-2 items-center min-w-[250px] max-w-[360px] py-5 rounded-2xl md:rounded-[24px] bg-white-shade-100">
+                <div className="px-6 select-none flex flex-col gap-2 items-center min-w-[250px] max-w-[360px] py-5 rounded-2xl md:rounded-[24px] bg-white-shade-100">
                   <div className="flex gap-1 mt-2">
                     {[...Array(fullStars)].map((_, idx) => (
                       <FontAwesomeIcon
@@ -84,10 +84,10 @@ export default function Testimonial() {
                       />
                     ))}
                   </div>
-                  <p className="mt-4 text-base font-semibold text-center text-black-shade-100">
+                  <p className="mt-4 text-sm font-medium text-center md:text-base md:font-semibold text-black-shade-100">
                     {testimonial.testimonial}
                   </p>
-                  <p className="mt-2 font-semibold font-lato text-primary-shade-300">
+                  <p className="mt-2 text-sm font-medium text-center md:text-base md:font-semibold font-lato text-primary-shade-300">
                     {testimonial.name}
                   </p>
                 </div>

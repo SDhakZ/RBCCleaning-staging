@@ -3,6 +3,7 @@ import { serviceData } from "@/app/data/services";
 import Banner from "./Components/banner";
 import SellingPoint from "./Components/sellingPoint";
 import Testimonial from "@/app/components/testimonial/testimonial";
+import Process from "@/app/components/process/process";
 
 export default function page({ params }) {
   const serviceSlug = params.serviceSlug;
@@ -27,6 +28,7 @@ export default function page({ params }) {
       <Banner serviceItem={serviceItem} />
       <SellingPoint serviceItem={serviceItem} />
       <Testimonial />
+      <Process />
     </>
   );
 }

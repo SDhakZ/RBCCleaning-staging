@@ -6,7 +6,7 @@ export default function page() {
   return (
     <div>
       <Service />
-      <ContactModule message="" />
+      <ContactModule />
     </div>
   );
 }

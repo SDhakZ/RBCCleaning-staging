@@ -12,7 +12,7 @@ export default function sellingPoint(props) {
           <h2 className="text-2xl font-semibold font-lato lg:leading-tight text-black-shade-300 lg:text-4xl md:text-3xl">
             {serviceItem.detail.title}
           </h2>
-          <p className="text-base font-medium md:text-lg font-inter text-black-shade-100">
+          <p className="text-base font-medium md:leading-relaxed md:text-lg font-inter text-black-shade-100">
             {serviceItem.detail.description}
           </p>
           <ul className="space-y-2 font-medium md:space-y-3 text-black-shade-100">
