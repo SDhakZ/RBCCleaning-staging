@@ -16,6 +16,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@headlessui/react": "^2.0.4",
     "@studio-freight/react-lenis": "^0.0.47",
+    "lightbox.js-react": "^1.0.8",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
