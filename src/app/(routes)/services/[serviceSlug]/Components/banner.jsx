@@ -1,7 +1,6 @@
 import React from "react";
 
-export default function banner(props) {
-  const { serviceItem } = props;
+export default function banner({ serviceItem, openModal }) {
   return (
     <div className="relative flex items-center justify-center">
       <picture className="block w-full h-full ">
@@ -27,7 +26,10 @@ export default function banner(props) {
           <p className="text-lg font-lato text-white-shade-100 mt-4 max-w-[450px] font-medium">
             {serviceItem.brief}
           </p>
-          <button className="px-5 py-2 mt-5 text-lg font-semibold rounded-md bg-primary-shade-200 text-white-shade-100">
+          <button
+            onClick={openModal}
+            className="px-5 py-2 mt-5 text-lg font-semibold rounded-md bg-primary-shade-200 text-white-shade-100"
+          >
             Get a quote
           </button>
         </div>

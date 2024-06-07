@@ -87,7 +87,7 @@ const Navbarmenu = () => {
                       : `hidden md:flex m-0 p-0 gap-9 items-center`
                   }
                 >
-                  {menuData[0].items.map((item, index) => (
+                  {menuData[0].items.slice(0, 4).map((item, index) => (
                     <li
                       key={index}
                       className={`relative block py-3 text-lg font-semibold cursor-pointer sm:text-[1.2rem] md:px-0 md:text-base ${

@@ -7,10 +7,10 @@ export default function ContactModule(props) {
   return (
     <div>
       <section className="relative flex justify-center w-full padding-y-lg lg:pb-24 bg-white-shade-100">
-        <div className="w-full container-margin">
+        <div className="w-full container-margin-compact">
           <div>
-            <div className="mt-2 text-3xl font-semibold leading-12 md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight text-black-shade-200">
-              <span className="mt-2 text-3xl font-semibold gradient font-visby leading-12 md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight text-primary-shade-200">
+            <div className="mt-2 text-3xl font-semibold leading-12 md:text-4xl md:leading-tight lg:text-4xl lg:leading-tight text-black-shade-200">
+              <span className="mt-2 text-3xl font-semibold gradient font-visby leading-12 md:text-4xl md:leading-tight lg:text-4xl lg:leading-tight text-primary-shade-200">
                 Get In Touch:{" "}
               </span>
               {message
