@@ -28,7 +28,7 @@ export default function banner({ serviceItem, openModal }) {
           </p>
           <button
             onClick={openModal}
-            className="px-5 py-2 mt-5 text-lg font-semibold rounded-md bg-primary-shade-200 text-white-shade-100"
+            className="px-6 py-2 mt-5 text-lg hover:bg-[#59CA31] font-semibold rounded-md shiny-global bg-primary-shade-200 text-white-shade-100"
           >
             Get a quote
           </button>

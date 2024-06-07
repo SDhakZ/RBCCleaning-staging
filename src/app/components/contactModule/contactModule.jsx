@@ -1,6 +1,7 @@
 import React from "react";
 import { menuData, socialInfo } from "@/app/data/companyInfo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 export default function ContactModule(props) {
   const { message } = props;
@@ -53,14 +54,13 @@ export default function ContactModule(props) {
                 </a>
               ))}
             </div>
-            <div className="col-span-2 my-4 sm:col-span-1 lg:my-4">
-              <a
-                href="/contact"
-                className="px-8 py-4 text-lg hover:bg-[#59CA31] mt-2 font-semibold transition-all duration-200 rounded-md text-white-shade-100 bg-primary-shade-200 text-primary-orange-100 w-fit "
-              >
-                Send Quick Form
-              </a>
-            </div>
+
+            <Link
+              href="/contact"
+              className="px-6 shiny-global overflow-hidden py-4 text-lg hover:bg-[#59CA31] mt-2 font-semibold transition-all duration-200 rounded-md text-white-shade-100 bg-primary-shade-200 text-primary-orange-100 w-fit "
+            >
+              Send Quick Form
+            </Link>
           </div>
         </div>
       </section>

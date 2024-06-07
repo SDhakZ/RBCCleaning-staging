@@ -64,7 +64,7 @@ export default function Process() {
           ))}
         </div>
         <Link
-          className="px-6 py-3 mt-10 text-base font-semibold rounded-md sm:text-lg font-lato text-white-shade-100 bg-secondary-shade w-fit"
+          className="px-6 py-3 mt-10 text-base font-semibold rounded-md sm:text-lg font-lato text-white-shade-100 shiny-global hover:bg-[#FFB554] bg-secondary-shade w-fit"
           href="/contact"
         >
           Book for office cleaning now!

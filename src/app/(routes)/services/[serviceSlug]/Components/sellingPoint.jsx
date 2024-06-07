@@ -30,7 +30,7 @@ export default function sellingPoint(props) {
             ))}
           </ul>
           <Link
-            className="px-6 py-2 mt-2 text-lg font-semibold rounded-md w-fit bg-primary-shade-200 text-white-shade-100"
+            className="px-6 py-3 hover:bg-[#59CA31] mt-2 text-lg font-semibold rounded-md shiny-global w-fit bg-primary-shade-200 text-white-shade-100"
             href="/contact"
           >
             Get the service

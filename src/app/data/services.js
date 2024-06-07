@@ -184,6 +184,69 @@ export const serviceData = [
           sellingPointImage: "/services/selling-point.png",
         },
       },
+      {
+        id: "scs3",
+        title: "Polishing Floors",
+        slug: "polishing-floors",
+        brief:
+          "Floor polishing services to remove dirt and grease buildup, restoring shine and smoothness to floors.",
+        icon: "/services/icons/polishing-floors.png",
+        detail: {
+          title: "Heres what we offer you with spotless office cleaning",
+          description:
+            "Our comprehensive office cleaning services ensure a clean, organized, and productive workspace. We handle all aspects of office maintenance, including dusting, vacuuming, trash removal, and sanitizing workstations, restrooms, and common areas. Our team uses eco-friendly products and advanced cleaning techniques to create a healthy environment for your employees. We offer flexible scheduling to minimize disruption and tailor our services to meet your office’s specific needs. Trust us to keep your office sparkling and efficient, so you can focus on your business.",
+          sellingPoints: [
+            "Experienced professional for the service",
+            "Utilization of 100% environmental friendly products",
+            "Reliable and flexible scheduling",
+            "Free consultation before the cleaning starts",
+          ],
+          bannerImage: "/services/service-banner.png",
+          sellingPointImage: "/services/selling-point.png",
+        },
+      },
+      {
+        id: "scs4",
+        title: "Air BNB Cleaning",
+        slug: "air-bnb-cleaning",
+        brief:
+          "Cleaning services tailored for AIR BNB properties, ensuring they are guest-ready and meet high cleanliness standards.",
+        icon: "/services/icons/air-bnb-cleaning.png",
+        detail: {
+          title: "Heres what we offer you with spotless office cleaning",
+          description:
+            "Our comprehensive office cleaning services ensure a clean, organized, and productive workspace. We handle all aspects of office maintenance, including dusting, vacuuming, trash removal, and sanitizing workstations, restrooms, and common areas. Our team uses eco-friendly products and advanced cleaning techniques to create a healthy environment for your employees. We offer flexible scheduling to minimize disruption and tailor our services to meet your office’s specific needs. Trust us to keep your office sparkling and efficient, so you can focus on your business.",
+          sellingPoints: [
+            "Experienced professional for the service",
+            "Utilization of 100% environmental friendly products",
+            "Reliable and flexible scheduling",
+            "Free consultation before the cleaning starts",
+          ],
+          bannerImage: "/services/service-banner.png",
+          sellingPointImage: "/services/selling-point.png",
+        },
+      },
+      {
+        id: "scs5",
+        title: "Buffering",
+        slug: "buffering",
+        brief:
+          "Buffing services to restore shine and smoothness to floors, eradicating dirt and grease buildup.",
+        icon: "/services/icons/buffering.png",
+        detail: {
+          title: "Heres what we offer you with spotless office cleaning",
+          description:
+            "Our comprehensive office cleaning services ensure a clean, organized, and productive workspace. We handle all aspects of office maintenance, including dusting, vacuuming, trash removal, and sanitizing workstations, restrooms, and common areas. Our team uses eco-friendly products and advanced cleaning techniques to create a healthy environment for your employees. We offer flexible scheduling to minimize disruption and tailor our services to meet your office’s specific needs. Trust us to keep your office sparkling and efficient, so you can focus on your business.",
+          sellingPoints: [
+            "Experienced professional for the service",
+            "Utilization of 100% environmental friendly products",
+            "Reliable and flexible scheduling",
+            "Free consultation before the cleaning starts",
+          ],
+          bannerImage: "/services/service-banner.png",
+          sellingPointImage: "/services/selling-point.png",
+        },
+      },
     ],
   },
 ];
