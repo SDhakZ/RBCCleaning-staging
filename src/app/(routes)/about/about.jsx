@@ -11,8 +11,8 @@ export default function about() {
 
           <div className="flex flex-col gap-1 w-full md:min-w-[400px] md:max-w-[600px] ">
             <h1 className="mb-3 text-2xl font-bold font-lato sm:text-3xl md:mb-4 lg:text-4xl lg:leading-tight text-black-shade-300">
-              Welcome to <span className="text-green-500">RBC Cleaning</span>{" "}
-              Services
+              Dedicated Hands, Immaculate Spaces Welcome to{" "}
+              <span className="text-green-500">RBC Cleaning</span> Services
             </h1>
             <p className="text-base font-medium lg:text-lg lg:leading-relaxed text-black-shade-200">
               RBC Cleaning Services Pty. Ltd. is a local cleaning service

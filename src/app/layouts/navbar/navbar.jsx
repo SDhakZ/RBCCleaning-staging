@@ -108,7 +108,7 @@ const Navbarmenu = () => {
                   ))}
 
                   <li className="relative block w-full text-base cursor-pointer md:mb-0 md:mt-0 md:text-base">
-                    <Link
+                    <a
                       onClick={() => {
                         if (window.innerWidth < 768) {
                           toggleClass();
@@ -119,7 +119,7 @@ const Navbarmenu = () => {
                       className="bg-[#429b22] px-3 py-2 w-full text-white rounded-md"
                     >
                       Contact Us
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </nav>
