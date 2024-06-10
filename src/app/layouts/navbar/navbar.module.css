@@ -4,7 +4,6 @@
 }
 
 .container-margin-navbar {
-  width: 1400px;
   padding: 0 30px;
   margin-left: auto;
   margin-right: auto;
@@ -12,18 +11,21 @@
 
 @media screen and (min-width: 768px) {
   .container-margin-navbar {
-    max-width: calc(100% - 100px);
+    max-width: calc(100% - 60px);
+    padding: 0 0;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .container-margin-navbar {
     max-width: calc(100% - 100px);
+    padding: 0 0;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .container-margin-navbar {
     max-width: calc(100% - 130px);
+    padding: 0 0;
   }
 }

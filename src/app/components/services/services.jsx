@@ -2,7 +2,7 @@ import React from "react";
 import { serviceData } from "@/app/data/services";
 import Link from "next/link";
 
-export default function services() {
+export default function Services() {
   const allServices = serviceData.flatMap((category) => category.serviceItems);
   return (
     <div className="py-14 lg:py-24 container-margin-compact">
