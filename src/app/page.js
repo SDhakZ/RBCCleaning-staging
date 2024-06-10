@@ -1,3 +1,9 @@
-export default function Home() {
-  return <h1>Home</h1>;
+import Home from "./(routes)/home/home";
+
+export default function page() {
+  return (
+    <h1>
+      <Home />
+    </h1>
+  );
 }
