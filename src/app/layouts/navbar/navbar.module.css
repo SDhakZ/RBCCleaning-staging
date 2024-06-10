@@ -2,3 +2,28 @@
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
 }
+
+.container-margin-navbar {
+  width: 1400px;
+  padding: 0 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container-margin-navbar {
+    max-width: calc(100% - 100px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container-margin-navbar {
+    max-width: calc(100% - 100px);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container-margin-navbar {
+    max-width: calc(100% - 130px);
+  }
+}

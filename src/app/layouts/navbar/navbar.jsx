@@ -48,7 +48,9 @@ const Navbarmenu = () => {
           isVisible ? "" : NavbarCSS["nav-hidden"]
         }`}
       >
-        <div className="relative w-full h-20 container-margin sm:h-20">
+        <div
+          className={`relative w-full h-20 ${NavbarCSS["container-margin-navbar"]}  sm:h-20`}
+        >
           <div className="flex items-center justify-between h-full">
             {/* Add Logo */}
             <Link href="/">
@@ -83,14 +85,14 @@ const Navbarmenu = () => {
                 <ul
                   className={
                     isMenu
-                      ? `block px-[1.4rem] sm:px-[1.9rem] lg:px-[3.15rem] xl:px-[4.05rem] absolute top-20 w-full left-0 right-0 z-10 bg-background-white m-0 p-0 md:gap-6 lg:gap-8 items-center`
+                      ? `block px-[1.9rem] lg:px-[3.15rem] xl:px-[4.05rem] absolute top-20 w-full left-0 right-0 z-10 bg-background-white m-0 p-0 md:gap-6 lg:gap-8 items-center`
                       : `hidden md:flex m-0 p-0 gap-9 items-center`
                   }
                 >
                   {menuData[0].items.slice(0, 4).map((item, index) => (
                     <li
                       key={index}
-                      className={`relative block py-3 text-lg font-semibold cursor-pointer sm:text-[1.2rem] md:px-0 md:text-base ${
+                      className={`relative hover:text-primary-shade-200 block py-4 md:py-2 text-lg font-semibold cursor-pointer sm:text-[1.2rem] md:px-0 md:text-base ${
                         pathname === item.link
                           ? "text-green-500 border-b-2 border-green-500"
                           : "text-black-shade-200"
@@ -105,7 +107,7 @@ const Navbarmenu = () => {
                     </li>
                   ))}
 
-                  <li className="relative block w-full mt-4 text-base cursor-pointer md:mt-0 md:text-base">
+                  <li className="relative block w-full text-base cursor-pointer md:mb-0 md:mt-0 md:text-base">
                     <Link
                       onClick={() => {
                         if (window.innerWidth < 768) {
@@ -113,7 +115,7 @@ const Navbarmenu = () => {
                           window.scrollTo({ top: 0 });
                         }
                       }}
-                      href="/contact-us"
+                      href="/contact"
                       className="bg-[#429b22] px-3 py-2 w-full text-white rounded-md"
                     >
                       Contact Us
