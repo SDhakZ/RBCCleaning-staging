@@ -41,13 +41,13 @@ export default function ContactModule(props) {
                 </a>
               </div>
             ))}
-            <div className="relative z-10 flex items-center col-span-2 gap-8 sm:col-span-1">
+            <div className="relative z-10 flex items-center col-span-2 gap-6 sm:col-span-1">
               {socialInfo.map((socialInfo, index) => (
                 <a
                   target="_blank"
                   key={index}
                   title={socialInfo.title}
-                  className="text-3xl transition-all duration-300 lg:text-[2rem] text-black-shade-200 hover:text-primary-shade-200"
+                  className="text-[1.6rem] transition-all duration-300 lg:text-[2rem] text-black-shade-200 hover:text-primary-shade-200"
                   href={socialInfo.link}
                 >
                   <FontAwesomeIcon icon={socialInfo.icon} />
@@ -57,7 +57,7 @@ export default function ContactModule(props) {
 
             <Link
               href="/contact"
-              className="px-6 shiny-global overflow-hidden py-4 text-lg hover:bg-[#59CA31] mt-2 font-semibold transition-all duration-200 rounded-md text-white-shade-100 bg-primary-shade-200 text-primary-orange-100 w-fit "
+              className="px-6 shiny-global overflow-hidden py-4 text-base hover:bg-[#59CA31] mt-1 font-semibold transition-all duration-200 rounded-md text-white-shade-100 bg-primary-shade-200 text-primary-orange-100 w-fit "
             >
               Send Quick Form
             </Link>

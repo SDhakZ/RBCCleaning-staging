@@ -1,10 +1,14 @@
 import React from "react";
-import Gallery from "./gallery";
+import Banner from "./Components/banner";
+import Showcase from "./Components/showcase";
+import ContactModule from "@/app/components/contactModule/contactModule";
 
 export default function page() {
   return (
-    <div>
-      <Gallery />
-    </div>
+    <>
+      <Banner />
+      <Showcase />
+      <ContactModule />
+    </>
   );
 }
