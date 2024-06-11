@@ -76,7 +76,7 @@ export default function Footer() {
                     Have Any Queries?
                   </h3>
                   <Link
-                    className="flex max-w-[200px] items-center justify-center px-3 py-2 font-semibold rounded-md bg-primary-shade-200 text-white-shade-200 "
+                    className="flex max-w-[200px] shiny-global hover:bg-[#16a9df] items-center justify-center px-3 py-2 font-semibold rounded-md bg-primary-shade-200 text-white-shade-200 "
                     href="/contact"
                   >
                     Contact Us
@@ -106,7 +106,7 @@ export default function Footer() {
               {menuData[2].items.map((social, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-3 font-semibold"
+                  className="flex items-center gap-3 font-semibold break-all"
                 >
                   <a
                     href={social.link}

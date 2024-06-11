@@ -1,15 +1,30 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
+import { serviceData } from "@/app/data/services";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
 
-export default function ContactModal({ isOpen, setIsOpen, title }) {
+export default function ContactModal({
+  isOpen,
+  setIsOpen,
+  title,
+  hcaptcha_site_key,
+}) {
   const [selectedOption, setSelectedOption] = useState("Select a subject");
-
-  const handleChange = (event) => {
+  const captchaRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+  const handleInputChange = (event) => {
     setSelectedOption(event.target.value);
   };
+  const handleVerifyCaptcha = (token) => {
+    setToken(token);
+    setVisible(false);
+  };
+  const allServices = serviceData.flatMap((category) => category.serviceItems);
 
   return (
     <>
@@ -19,7 +34,7 @@ export default function ContactModal({ isOpen, setIsOpen, title }) {
         className="relative z-50"
       >
         <div className="fixed inset-0 flex items-center justify-center w-screen bg-black bg-opacity-50 rounded-lg">
-          <DialogPanel className="max-w-[500px] w-full p-8 space-y-6 bg-white border rounded-lg">
+          <DialogPanel className="max-w-[600px] w-full p-8 space-y-6 bg-white border rounded-lg">
             <div className="flex justify-between gap-2">
               <DialogTitle className="font-bold text-black-shade-300">
                 {title ? title : "Request our service and get a free quote "}
@@ -58,20 +73,15 @@ export default function ContactModal({ isOpen, setIsOpen, title }) {
                   name="cars"
                   id="cars"
                   value={selectedOption}
-                  onChange={handleChange}
-                  className="px-4 py-2 text-sm border rounded-md text-black-shade-100"
+                  onChange={handleInputChange}
+                  className="px-4 py-2 text-[#a3a3a3] text-sm border border-gray-300 rounded-md"
                 >
-                  <option
-                    className="text-black-shade-100"
-                    value="Select a subject"
-                    disabled
-                  >
-                    Select a subject
-                  </option>
-                  <option value="volvo">Volvo</option>
-                  <option value="saab">Saab</option>
-                  <option value="mercedes">Mercedes</option>
-                  <option value="audi">Audi</option>
+                  <option value="ask-question">Ask a question</option>
+                  {allServices.map((service, index) => (
+                    <option key={index} value={service.slug}>
+                      {service.title}
+                    </option>
+                  ))}
                 </select>
                 <textarea
                   placeholder="Additional Message*"
@@ -79,19 +89,35 @@ export default function ContactModal({ isOpen, setIsOpen, title }) {
                 ></textarea>
               </div>
             </form>
-            <div className="flex justify-end gap-4">
-              <button
-                className="px-4 py-2 rounded-md bg-[#8a8a8a] text-[#fff]"
-                onClick={() => setIsOpen(false)}
+            <div className="flex flex-col justify-between gap-4 sm:flex-row">
+              <Tippy
+                trigger="manual"
+                content={<span>Click to complete CAPTCHA</span>}
+                visible={visible}
               >
-                Cancel
-              </button>
-              <button
-                className="px-4 py-2 rounded-md bg-primary-shade-200 text-white-shade-100"
-                onClick={() => setIsOpen(false)}
-              >
-                Send Request
-              </button>
+                <div>
+                  <HCaptcha
+                    sitekey={hcaptcha_site_key}
+                    onVerify={handleVerifyCaptcha}
+                    ref={captchaRef}
+                    size="compact"
+                  />
+                </div>
+              </Tippy>
+              <div className="flex flex-col items-center justify-end w-full gap-4 sm:flex-row">
+                <button
+                  className="px-4 py-2 rounded-md w-full bg-[#8a8a8a] text-[#fff]"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Cancel
+                </button>
+                <button
+                  className="w-full px-4 py-2 rounded-md bg-primary-shade-200 text-white-shade-100"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Send
+                </button>
+              </div>
             </div>
           </DialogPanel>
         </div>

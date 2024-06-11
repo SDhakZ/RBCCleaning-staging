@@ -43,7 +43,7 @@ export default function offerings() {
         <div className="flex max-w-[670px] flex-col gap-5">
           {data.map((item, index) => (
             <div
-              className="flex items-center gap-4 p-4 bg-white rounded-lg lg:gap-6"
+              className="flex flex-col items-center gap-4 px-6 py-4 bg-white rounded-lg sm:flex-row lg:gap-6"
               key={index}
             >
               <figure className="max-w-[60px]">
@@ -59,7 +59,7 @@ export default function offerings() {
               </div>
             </div>
           ))}
-          <p className="mt-4 font-semibold md:text-lg lg:text-xl text-black-shade-200">
+          <p className="mt-4 font-semibold md:text-lg text-black-shade-100">
             Looking for Cleaning Services?{" "}
             <a className="text-primary-shade-200" href="/contact">
               Reach Out to Us!
