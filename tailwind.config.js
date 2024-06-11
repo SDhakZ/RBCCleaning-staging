@@ -18,7 +18,9 @@ module.exports = {
         lato: ["var(--font-lato)", "sans-serif"],
         inter: ["var(--font-inter)", "sans-serif"],
       },
-      backgroundImage: {},
+      backgroundImage: {
+        "green-background": "url('/home/green-section-bg.png')",
+      },
       colors: {
         "background-white": "#F5F5F7",
         "background-black": "#121212",
