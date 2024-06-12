@@ -76,6 +76,13 @@ export default function ContactModal({
                   onChange={handleInputChange}
                   className="px-4 py-2 text-[#a3a3a3] text-sm border border-gray-300 rounded-md"
                 >
+                  <option
+                    disabled
+                    selected={true}
+                    className="text-[#0e0e0e] font-semibold"
+                  >
+                    Select a subject
+                  </option>
                   <option value="ask-question">Ask a question</option>
                   {allServices.map((service, index) => (
                     <option key={index} value={service.slug}>

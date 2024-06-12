@@ -48,6 +48,7 @@ export default function Contact(props) {
     setToken(token);
     setVisible(false);
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!token) {
@@ -202,12 +203,19 @@ export default function Contact(props) {
                   className="px-5 py-3 border-2 rounded-md border-[#B8B8B8] outline-2 outline-primary-orange-300"
                 />
                 <select
-                  name="cars"
-                  id="cars"
+                  name="subject"
+                  id="subject"
                   value={selectedOption}
                   onChange={handleInputChange}
-                  className="px-5 font-medium text-[#a3a3a3] cursor-pointer py-3 border-2 rounded-md border-[#B8B8B8] outline-2 outline-primary-orange-300"
+                  className="px-5 custom-select font-medium text-[#4b4b4b] cursor-pointer py-3 border-2 rounded-md border-[#B8B8B8] outline-2 outline-primary-orange-300"
                 >
+                  <option
+                    disabled
+                    selected={true}
+                    className="text-[#0e0e0e] font-semibold"
+                  >
+                    Select a subject
+                  </option>
                   <option value="ask-question">Ask a question</option>
                   {allServices.map((service, index) => (
                     <option key={index} value={service.slug}>

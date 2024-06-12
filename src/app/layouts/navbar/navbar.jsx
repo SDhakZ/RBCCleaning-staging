@@ -86,7 +86,7 @@ const Navbarmenu = () => {
                   className={
                     isMenu
                       ? `block px-[1.9rem] lg:px-[3.15rem] xl:px-[4.05rem] absolute top-20 w-full left-0 right-0 z-10 bg-background-white m-0 p-0 md:gap-6 lg:gap-8 items-center`
-                      : `hidden md:flex m-0 p-0 gap-9 items-center`
+                      : `hidden md:flex m-0 p-0 gap-10 items-center`
                   }
                 >
                   {menuData[0].items.slice(0, 4).map((item, index) => (
@@ -98,16 +98,18 @@ const Navbarmenu = () => {
                           : "text-black-shade-200"
                       }`}
                     >
-                      <Link
+                      <a
                         onClick={() => window.innerWidth < 768 && toggleClass()}
                         href={item.link}
                       >
                         {item.title}
-                      </Link>
+                      </a>
                     </li>
                   ))}
 
-                  <li className="relative block w-full text-base cursor-pointer md:mb-0 md:mt-0 md:text-base">
+                  <li
+                    className={`relative block w-full text-base cursor-pointer py-2 group ${NavbarCSS["shiny-navbar"]} md:mb-0 md:mt-0 md:text-base`}
+                  >
                     <a
                       onClick={() => {
                         if (window.innerWidth < 768) {
@@ -116,7 +118,7 @@ const Navbarmenu = () => {
                         }
                       }}
                       href="/contact"
-                      className="bg-[#429b22] px-3 py-2 w-full text-white rounded-md"
+                      className="bg-[#429b22] group-hover:bg-[#16a9df] font-semibold px-4 py-3 w-full text-white rounded-lg"
                     >
                       Contact Us
                     </a>

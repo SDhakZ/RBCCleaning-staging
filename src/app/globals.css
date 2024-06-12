@@ -152,29 +152,19 @@ body {
   transform: translateX(100%) rotate(45deg); /* Mod3: Can change the shining effect direction and angle */
 }
 
-.gradient-x {
-  /* Display & Box Model */
-  --bg-size: 300%;
-  /* Other */
-  --color-one: #ff6600;
-  --color-two: #fe9600;
-  --color-three: #ffbb00;
-  background: linear-gradient(
-      90deg,
-      var(--color-one),
-      var(--color-two),
-      var(--color-three),
-      var(--color-one)
-    )
-    0 0 / var(--bg-size) 120%;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: move-bg 15s infinite linear;
+.custom-select {
+  appearance: none; /* Remove default caret */
+  background-image: url("/caret-down.png");
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.5rem;
 }
 
-@keyframes move-bg {
-  to {
-    background-position: var(--bg-size) 0;
-  }
+.custom-select:hover {
+  background-position: right 0.75rem center;
+}
+
+.custom-select:focus {
+  background-position: right 0.75rem center;
 }
