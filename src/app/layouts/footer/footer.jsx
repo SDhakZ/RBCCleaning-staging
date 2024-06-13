@@ -24,8 +24,8 @@ export default function Footer() {
                   Company
                 </p>
                 <ul className="mt-5 space-y-2 font-semibold ">
-                  {menuData[0].items.map((item, itemIndex) => (
-                    <li className="text-left" key={itemIndex}>
+                  {menuData[0].items.map((item, index) => (
+                    <li className="text-left" key={index}>
                       <Link
                         title={item.title}
                         href={item.link}
@@ -76,7 +76,7 @@ export default function Footer() {
                     Have Any Queries?
                   </h3>
                   <Link
-                    className="flex max-w-[200px] items-center justify-center px-3 py-2 font-semibold rounded-md bg-primary-shade-200 text-white-shade-200 "
+                    className="flex max-w-[200px] shiny-global hover:bg-[#16a9df] items-center justify-center px-3 py-2 font-semibold rounded-md bg-primary-shade-200 text-white-shade-200 "
                     href="/contact"
                   >
                     Contact Us
@@ -106,7 +106,7 @@ export default function Footer() {
               {menuData[2].items.map((social, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-3 font-semibold"
+                  className="flex items-center gap-3 font-semibold break-all"
                 >
                   <a
                     href={social.link}
@@ -125,7 +125,12 @@ export default function Footer() {
       </div>
       <div className="flex justify-center w-full py-4 font-semibold text-white-shade-100 bg-primary-shade-200">
         © 2024 RBC Cleaning Services |&nbsp;{" "}
-        <a href="/terms-and-conditions">Terms & conditions</a>
+        <a
+          className="transition-colors duration-200 hover:text-blue-600"
+          href="/terms-and-conditions"
+        >
+          Terms & conditions
+        </a>
       </div>
     </footer>
   );

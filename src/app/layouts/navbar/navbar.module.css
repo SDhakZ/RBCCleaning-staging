@@ -4,7 +4,6 @@
 }
 
 .container-margin-navbar {
-  width: 1400px;
   padding: 0 30px;
   margin-left: auto;
   margin-right: auto;
@@ -12,18 +11,53 @@
 
 @media screen and (min-width: 768px) {
   .container-margin-navbar {
-    max-width: calc(100% - 100px);
+    max-width: calc(100% - 60px);
+    padding: 0 0;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .container-margin-navbar {
     max-width: calc(100% - 100px);
+    padding: 0 0;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .container-margin-navbar {
+    width: var(--width);
     max-width: calc(100% - 130px);
+    padding: 0 0;
   }
+}
+
+.shiny-navbar {
+  /* Positioning */
+  position: relative;
+  /* Display & Box Model */
+
+  overflow: hidden;
+  /* Other */
+  text-decoration: none;
+  transition: all 0.3s; /* Mod1: Can change transition duration */
+}
+
+.shiny-navbar:before {
+  content: "";
+  /* Positioning */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Display & Box Model */
+  width: 100%;
+  height: 50px;
+  transform: translateX(-100%) rotate(45deg); /* Mod3: Can change the shining effect direction and angle */
+  /* Other */
+  background-color: white;
+  transition: all 0.3s;
+}
+
+.shiny-navbar:hover:before {
+  /* Display & Box Model */
+  transform: translateX(100%) rotate(45deg); /* Mod3: Can change the shining effect direction and angle */
 }

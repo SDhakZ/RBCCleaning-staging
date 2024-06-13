@@ -151,3 +151,20 @@ body {
   /* Display & Box Model */
   transform: translateX(100%) rotate(45deg); /* Mod3: Can change the shining effect direction and angle */
 }
+
+.custom-select {
+  appearance: none; /* Remove default caret */
+  background-image: url("/caret-down.png");
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.5rem;
+}
+
+.custom-select:hover {
+  background-position: right 0.75rem center;
+}
+
+.custom-select:focus {
+  background-position: right 0.75rem center;
+}

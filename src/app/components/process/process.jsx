@@ -1,23 +1,23 @@
 import React from "react";
 import Link from "next/link";
 
-export default function Process() {
+export default function Process({ title }) {
   const processData = [
     {
       id: 1,
-      title: "Schedule Your Cleaning",
+      title: "1. Schedule Your Cleaning",
       brief: "Contact us to schedule your timing with us.",
       icon: "/process/schedule.png",
     },
     {
       id: 2,
-      title: "Get a custom quote",
+      title: "2. Get a custom quote",
       brief: "Receive a tailored quote from us.",
       icon: "/process/quote.png",
     },
     {
       id: 3,
-      title: " Meet your cleaning specialist",
+      title: "3. Meet your cleaning specialist",
       brief: " Welcome your dedicated cleaning expert at your doorstep.",
       icon: "/process/specialist.png",
     },
@@ -26,11 +26,11 @@ export default function Process() {
   return (
     <div className="pt-12 pb-36 sm:py-20 relative section bg-gradient-to-b from-[#65B741] to-[#1B5800]">
       <img
-        className="absolute bottom-0 w-[100px] md:w-[250px]"
+        className="absolute bottom-0 lg:-bottom-24 w-[100px] md:w-[250px]"
         src="/process/spray.png"
       />
       <img
-        className="absolute bottom-0 right-0 w-[100px] md:w-[280px]"
+        className="absolute lg:-bottom-10 bottom-0 right-0 w-[120px] md:w-[280px]"
         src="/process/wiper.png"
       />
       <div className="flex flex-col items-center justify-center gap-4 container-margin-compact">
@@ -42,7 +42,7 @@ export default function Process() {
           scheduling to meeting your cleaning specialist, we ensure a seamless
           and satisfying service.
         </p>
-        <div className="flex flex-col sm:flex-wrap xl:justify-between xl:flex-nowrap sm:justify-center sm:flex-row items-center lg:items-start w-full gap-10 sm:gap-14 mt-10 max-w-[1000px] justify-between">
+        <div className="flex flex-col sm:flex-wrap xl:justify-between xl:flex-nowrap sm:justify-center sm:flex-row items-center lg:items-start w-full gap-10 sm:gap-14 mt-10 max-w-[1100px] justify-between">
           {processData.map((process, index) => (
             <div
               key={index}
@@ -64,10 +64,10 @@ export default function Process() {
           ))}
         </div>
         <Link
-          className="px-6 py-3 mt-10 text-base font-semibold rounded-md sm:text-lg font-lato text-white-shade-100 shiny-global hover:bg-[#FFB554] bg-secondary-shade w-fit"
+          className="px-6 text-center py-3 mt-10 text-base font-semibold rounded-md sm:text-lg font-lato text-white-shade-100 shiny-global hover:bg-[#FFB554] bg-secondary-shade w-fit"
           href="/contact"
         >
-          Book for office cleaning now!
+          {title ? `Book for ${title} now!` : "Contact us now!"}
         </Link>
       </div>
     </div>
