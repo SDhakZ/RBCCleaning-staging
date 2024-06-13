@@ -39,7 +39,7 @@ export default function page() {
       />
       <SellingPoint serviceItem={serviceItem} />
       <Testimonial />
-      <Process />
+      <Process title={serviceItem.title} />
       <Services />
       <ContactModule />
       <ContactModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />

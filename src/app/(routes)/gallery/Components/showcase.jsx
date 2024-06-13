@@ -2,6 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import PhotoAlbum from "react-photo-album";
+import NextJsImage from "./nextJSImage";
 
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -29,8 +30,11 @@ export default function showcase() {
         slides={photos}
         open={index >= 0}
         index={index}
+        renderPhoto={NextJsImage}
+        sizes={{ size: "calc(100vw - 240px)" }}
+        thumbnails={{ imageFit: "cover" }}
         close={() => setIndex(-1)}
-        plugins={[Fullscreen, Captions, Slideshow, Thumbnails, Zoom]}
+        plugins={[Fullscreen, Thumbnails, Captions, Slideshow, Zoom]}
       />
     </div>
   );

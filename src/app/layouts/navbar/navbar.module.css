@@ -25,6 +25,7 @@
 
 @media screen and (min-width: 1280px) {
   .container-margin-navbar {
+    width: var(--width);
     max-width: calc(100% - 130px);
     padding: 0 0;
   }

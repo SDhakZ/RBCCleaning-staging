@@ -39,6 +39,7 @@ export const Hero = () => {
       <div className={HeroCSS["HeroT-main-container"]}>
         <Carousel
           infinite={true}
+          ssr={true}
           autoPlay={true}
           autoPlaySpeed={5000}
           keyBoardControl={true}

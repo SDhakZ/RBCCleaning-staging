@@ -16,7 +16,7 @@ export default function Engage() {
             us keep your space spotless!
           </p>
           <a
-            className="px-6 py-2 mt-2 mb-10 text-base font-semibold transition-all duration-200 rounded-md md:text-lg hover:bg-secondary-shade hover:text-white text-black-shade-200 bg-white-shade-100 max-w-fit"
+            className="px-6 py-2 mt-2 mb-10 text-base font-semibold transition-all duration-200 rounded-md shiny-global md:text-lg hover:bg-secondary-shade hover:text-white text-black-shade-200 bg-white-shade-100 max-w-fit"
             href="/contact"
           >
             Contact Us

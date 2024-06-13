@@ -3,14 +3,17 @@ import React from "react";
 export default function extraInfo() {
   const data = [
     {
+      id: 1,
       text: "100% Non Hazardous",
       image: "./Frame1.png",
     },
     {
+      id: 2,
       text: "100% Natural",
       image: "./Frame2.png",
     },
     {
+      id: 3,
       text: "Non-toxic materials",
       image: "./Frame3.png",
     },
@@ -48,7 +51,7 @@ export default function extraInfo() {
 
             <div className="flex flex-col items-center mt-6 justify-evenly sm:flex-row sm:flex-wrap gap-x-12 gap-y-8 ">
               {data.map((items) => (
-                <div className="flex flex-col items-center ">
+                <div key={items.id} className="flex flex-col items-center ">
                   <img src={items.image} className="mb-3 size-12 sm:size-14" />
                   <p className="font-semibold text-center text-md sm:text-lg">
                     {items.text}

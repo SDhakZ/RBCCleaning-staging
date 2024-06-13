@@ -24,8 +24,8 @@ export default function Footer() {
                   Company
                 </p>
                 <ul className="mt-5 space-y-2 font-semibold ">
-                  {menuData[0].items.map((item, itemIndex) => (
-                    <li className="text-left" key={itemIndex}>
+                  {menuData[0].items.map((item, index) => (
+                    <li className="text-left" key={index}>
                       <Link
                         title={item.title}
                         href={item.link}
@@ -125,7 +125,12 @@ export default function Footer() {
       </div>
       <div className="flex justify-center w-full py-4 font-semibold text-white-shade-100 bg-primary-shade-200">
         © 2024 RBC Cleaning Services |&nbsp;{" "}
-        <a href="/terms-and-conditions">Terms & conditions</a>
+        <a
+          className="transition-colors duration-200 hover:text-blue-600"
+          href="/terms-and-conditions"
+        >
+          Terms & conditions
+        </a>
       </div>
     </footer>
   );
