@@ -5,6 +5,7 @@ import ContactModule from "@/app/components/contactModule/contactModule";
 import Faq from "./Components/faq.jsx";
 import Services from "@/app/components/services/services.jsx";
 
+
 export default function page() {
   return (
     <>
