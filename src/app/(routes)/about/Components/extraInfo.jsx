@@ -31,7 +31,7 @@ export default function extraInfo() {
             />
           </figure>
           <div className="relative flex flex-col w-full px-2 sm:gap-0 md:gap-2">
-            <h1 className="mb-4 text-2xl font-bold font-lato text-black-shade-300 sm:text-3xl md:text-4xl md:leading-tight">
+            <h1 className="mb-4 text-2xl font-bold font-lato text-black-shade-300 sm:text-3xl md:text-[2.15rem] md:leading-tight">
               Our Commitment to{" "}
               <span className="text-green-500 ">Eco-Friendly</span> Cleaning
             </h1>
@@ -40,7 +40,7 @@ export default function extraInfo() {
               alt=""
               className="absolute right-0 invisible h-10 sm:visible sm:h-14 md:h-16 lg:-right-6 -top-10 sm:-top-16 lg:-top-10 xl:-top-6 sm:right-0"
             />
-            <p className="text-sm font-medium sm:text-lg sm:leading-relaxed text-black-shade-200">
+            <p className="text-base font-medium sm:leading-relaxed text-black-shade-100">
               <b>Sustainability at 💚.</b> At RBC Cleaning Services Pty. Ltd.,
               we believe in leaving a positive impact on both our clients'
               spaces and the environment. Our eco-friendly approach not only
