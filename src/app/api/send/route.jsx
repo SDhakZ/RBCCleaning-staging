@@ -12,7 +12,9 @@ export async function POST(request) {
     const name = form.get("name");
     const email = form.get("email");
     const message = form.get("message");
-    const organization = form.get("organization");
+    const contact = form.get("contact");
+    const address = form.get("address");
+    const subject = form.get("subject");
     const token = form.get("token");
 
     const response = await axios.post(
@@ -24,9 +26,11 @@ export async function POST(request) {
       await resend.emails.send({
         from: "onboarding@resend.dev",
         to: "sharnam34@gmail.com",
-        subject: `Form submission from ${name} via TwelveLetter website`,
+        subject: `Form submission Subject:${subject} via website`,
         react: (
-          <EmailTemplate formData={{ name, email, message, organization }} />
+          <EmailTemplate
+            formData={{ name, email, message, address, contact, subject }}
+          />
         ),
       });
       return NextResponse.json({ success: true }, { status: 200 });

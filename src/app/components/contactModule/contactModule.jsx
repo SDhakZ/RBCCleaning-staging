@@ -57,7 +57,7 @@ export default function ContactModule(props) {
 
             <Link
               href="/contact"
-              className="px-6 shiny-global overflow-hidden py-4 text-base hover:bg-[#59CA31] mt-1 font-semibold transition-all duration-200 rounded-md text-white-shade-100 bg-primary-shade-200 text-primary-orange-100 w-fit "
+              className="px-6 hover:bg-[#16a9df] shiny-global overflow-hidden py-4 text-base mt-1 font-semibold transition-all duration-200 rounded-md text-white-shade-100 bg-primary-shade-200 text-primary-orange-100 w-fit "
             >
               Send Quick Form
             </Link>

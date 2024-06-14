@@ -5,8 +5,11 @@ import Engage from "./Components/engagingSection/engage";
 import Services from "@/app/components/services/services";
 import Process from "@/app/components/process/process";
 import Testimonial from "@/app/components/testimonial/testimonial";
+import Contact from "../contact/contact";
+import FAQ from "@/app/components/faq/faq";
 
 export default function home() {
+  const hcaptcha_site_key = process.env.HCAPTCHA_SITE_KEY;
   return (
     <>
       <Hero />
@@ -17,6 +20,8 @@ export default function home() {
       </div>
       <Process />
       <Testimonial />
+      <Contact hcaptcha_site_key={hcaptcha_site_key} />
+      <FAQ />
     </>
   );
 }
