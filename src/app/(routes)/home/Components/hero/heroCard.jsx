@@ -33,9 +33,9 @@ export const HeroCard = (props) => {
           </p>
           <a
             href={props.redirect ? props.redirect : "/products"}
-            className={`${HeroCSS["HeroT-btn"]} shiny-global sm:mb-0 mb-10 flex mt-2 items-center justify-center text-white-shade-100 sm:max-w-[150px] lg:px-4 font-semibold md:px-3 px-3 py-2 md:py-2 lg:py-3 bg-secondary-shade md:bg-primary-shade-200 lg:text-base xl:text-lg rounded-lg text-center cursor-pointer transition-colors duration-200`}
+            className={`${HeroCSS["HeroT-btn"]} shiny-global sm:mb-0 mb-10 flex mt-2 items-center justify-center text-white-shade-100 sm:max-w-fit lg:px-4 font-semibold md:px-3 px-3 py-2 md:py-2 lg:py-3 bg-secondary-shade md:bg-primary-shade-200 lg:text-base xl:text-lg rounded-lg text-center cursor-pointer transition-colors duration-200`}
           >
-            Check it out
+            {props.ctaMessage}
           </a>
         </div>
       </div>

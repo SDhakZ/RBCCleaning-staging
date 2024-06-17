@@ -115,7 +115,7 @@ export default function Contact(props) {
             className={`text-3xl lg:leading-tight font-semibold sm:text-3xl md:text-4xl text-black-shade-300 lg:text-5xl`}
           >
             <span className="text-primary-shade-200">Have any questions?</span>{" "}
-            Feel free to drop those in we will happily assist you
+            Feel free to drop those in we will happily assist you.
           </h1>
         </section>
         <section className="pb-20 margin-t lg:pb-36">

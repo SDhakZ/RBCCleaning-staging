@@ -98,12 +98,12 @@ const Navbarmenu = () => {
                           : "text-black-shade-200"
                       }`}
                     >
-                      <a
+                      <Link
                         onClick={() => window.innerWidth < 768 && toggleClass()}
                         href={item.link}
                       >
                         {item.title}
-                      </a>
+                      </Link>
                     </li>
                   ))}
 

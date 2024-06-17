@@ -39,7 +39,7 @@ export default function about() {
               may have and help determine the best cleaning solutions for your
               home or business, ensuring they fit your needs and budget.
             </p>
-            <button className="px-6 py-2 mt-6 text-lg font-semibold text-white bg-green-500 rounded-md shiny-global w-max ">
+            <button className="px-6 py-2 mt-6 text-lg font-semibold hover:bg-[#16a9df] text-white bg-green-500 rounded-md shiny-global w-max ">
               Contact Us
             </button>
           </div>

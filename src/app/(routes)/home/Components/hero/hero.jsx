@@ -56,6 +56,7 @@ export const Hero = () => {
             <HeroCard
               key={index}
               id={item.id}
+              ctaMessage={item.ctaMessage ? item.ctaMessage : "Check it out"}
               imageLarge={item.images.imageLarge}
               imageMedium={item.images.imageMedium}
               imageSmall={item.images.imageSmall}
