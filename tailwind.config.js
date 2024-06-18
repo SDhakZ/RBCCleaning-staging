@@ -19,7 +19,7 @@ module.exports = {
         inter: ["var(--font-inter)", "sans-serif"],
       },
       backgroundImage: {
-        "green-background": "url('/home/green-section-bg.png')",
+        "green-background": "url('/home/green-section-bg.webp')",
       },
       colors: {
         "background-white": "#F5F5F7",

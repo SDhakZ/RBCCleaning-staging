@@ -7,7 +7,7 @@ export default function EmailTemplate({ formData }) {
   return (
     <>
       <Head>
-        <title>TwelveLetter Email Template</title>
+        <title>RBC Cleaning Email Template</title>
       </Head>
       <div style={{ overflowX: "hidden", fontFamily: "Visby", width: "100%" }}>
         {/* Render email content */}

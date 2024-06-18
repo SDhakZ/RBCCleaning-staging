@@ -11,10 +11,10 @@ export async function POST(request) {
     const form = await request.formData();
     const name = form.get("name");
     const email = form.get("email");
-    const message = form.get("message");
     const contact = form.get("contact");
     const address = form.get("address");
     const subject = form.get("subject");
+    const message = form.get("message");
     const token = form.get("token");
 
     const response = await axios.post(

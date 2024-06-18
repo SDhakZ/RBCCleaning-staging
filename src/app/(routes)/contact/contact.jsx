@@ -37,6 +37,7 @@ export default function Contact(props) {
   useEffect(() => {
     if (token) {
       setVisible(false);
+      console.log("token: " + token);
     }
   }, [token]);
 
@@ -46,6 +47,7 @@ export default function Contact(props) {
 
   const handleVerifyCaptcha = (token) => {
     setToken(token);
+
     setVisible(false);
   };
 
