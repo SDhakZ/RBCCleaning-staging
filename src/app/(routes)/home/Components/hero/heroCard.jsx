@@ -18,8 +18,8 @@ export const HeroCard = (props) => {
           <Image
             src={props.imageLarge}
             alt={props.title}
-            width={500}
-            height={500}
+            width={4000}
+            height={688}
             objectFit="cover"
             objectPosition="center"
             draggable="false"

@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import BannerDesktop from "@/app/assets/gallery/gallery-banner-desktop.png";
 
 export default function banner() {
   return (
@@ -13,9 +15,10 @@ export default function banner() {
           srcSet={`gallery/gallery-banner-tablet.png`}
         />
         <source srcSet={`gallery/gallery-banner-desktop.png`} />
-        <img
+        <Image
           className="block w-full"
-          src={`gallery/gallery-banner-desktop.png`}
+          src={BannerDesktop}
+          alt="banner image"
         />
       </picture>
       <div className="absolute -translate-y-1/2 w-full top-[50%]">

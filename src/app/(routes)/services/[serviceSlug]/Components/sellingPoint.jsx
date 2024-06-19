@@ -2,9 +2,12 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareCheck } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function sellingPoint(props) {
   const { serviceItem } = props;
+  const iconPath =
+    require(`@/app/assets/services/${serviceItem.detail.sellingPointImage}`).default;
   return (
     <div className="padding-y section container-margin-compact">
       <div className="flex flex-col-reverse items-center justify-between gap-2 sm:items-start md:gap-10 md:flex-row">
@@ -37,9 +40,9 @@ export default function sellingPoint(props) {
           </Link>
         </div>
         <figure>
-          <img
+          <Image
             className="w-full h-auto max-w-[250px] md:min-w-[300px] lg:min-w-96 md:max-w-[500px]"
-            src={serviceItem.detail.sellingPointImage}
+            src={iconPath}
           />
         </figure>
       </div>

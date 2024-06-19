@@ -4,6 +4,7 @@ import { serviceData } from "@/app/data/services";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuestion } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 
 export default function Service() {
   return (
@@ -36,31 +37,35 @@ export default function Service() {
                 {service.category}
               </h2>
               <div className="grid mb-4 sm:mb-10 gap-x-8 gap-y-20 sm:grid-cols-2 md:grid-cols-3 md:gap-x-8 md:gap-y-20 lg:gap-x-14 lg:gap-y-20">
-                {service.serviceItems.map((serviceItem) => (
-                  <Link
-                    onClick={() => {
-                      window.scrollTo(0, 0);
-                    }}
-                    href={`services/${serviceItem.slug}`}
-                    className="flex relative flex-col max-w-[350px]  items-center justify-center w-full gap-2 px-6 pt-12 pb-6 transition-colors duration-200 border-2 md:pb-8 sm:pb-6 lg:pb-8 hover:bg-primary-shade-200 group rounded-3xl flex- card-shadow border-black-shade-100"
-                    key={serviceItem.id}
-                  >
-                    <figure className="flex absolute -top-8 md:-top-12 bg-white items-center justify-center w-16 h-16 sm:w-20 sm:h-20 border-[2px] rounded-full border-black-shade-100">
-                      <img
-                        className="w-10 sm:w-12"
-                        src={serviceItem.icon}
-                        alt={serviceItem.title}
-                      />
-                    </figure>
+                {service.serviceItems.map((serviceItem) => {
+                  const iconPath =
+                    require(`@/app/assets/services/icons/${serviceItem.icon}`).default;
+                  return (
+                    <Link
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                      }}
+                      href={`services/${serviceItem.slug}`}
+                      className="flex relative flex-col max-w-[350px]  items-center justify-center w-full gap-2 px-6 pt-12 pb-6 transition-colors duration-200 border-2 md:pb-8 sm:pb-6 lg:pb-8 hover:bg-primary-shade-200 group rounded-3xl flex- card-shadow border-black-shade-100"
+                      key={serviceItem.id}
+                    >
+                      <figure className="flex absolute -top-8 md:-top-12 bg-white items-center justify-center w-16 h-16 sm:w-20 sm:h-20 border-[2px] rounded-full border-black-shade-100">
+                        <Image
+                          className="w-10 sm:w-12"
+                          src={iconPath}
+                          alt={serviceItem.title}
+                        />
+                      </figure>
 
-                    <h3 className="text-lg font-semibold text-center lg:text-xl group-hover:text-white-shade-100 text-black-shade-300">
-                      {serviceItem.title}
-                    </h3>
-                    <p className="text-sm text-center lg:text-base group-hover:text-white-shade-200 text-black-shade-200">
-                      {serviceItem.brief}
-                    </p>
-                  </Link>
-                ))}
+                      <h3 className="text-lg font-semibold text-center lg:text-xl group-hover:text-white-shade-100 text-black-shade-300">
+                        {serviceItem.title}
+                      </h3>
+                      <p className="text-sm text-center lg:text-base group-hover:text-white-shade-200 text-black-shade-200">
+                        {serviceItem.brief}
+                      </p>
+                    </Link>
+                  );
+                })}
                 <Link
                   href="/contact"
                   className="flex relative flex-col max-w-[350px]  items-center justify-center w-full gap-2 px-6 pt-12 pb-6 transition-colors duration-200 border-2 border-dashed md:pb-8 sm:pb-4 lg:pb-10 hover:bg-primary-shade-200 group rounded-3xl flex- card-shadow border-black-shade-100"

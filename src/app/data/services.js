@@ -21,7 +21,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/OfficeCleaning/banner",
-          sellingPointImage: "/services/selling-point.png",
+          sellingPointImage: "selling-point.png",
         },
       },
       {
@@ -42,7 +42,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/OfficeCleaning/banner",
-          sellingPointImage: "/services/selling-point.png",
+          sellingPointImage: "selling-point.png",
         },
       },
     ],
@@ -70,7 +70,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/OfficeCleaning/banner",
-          sellingPointImage: "/services/selling-point.png",
+          sellingPointImage: "selling-point.png",
         },
       },
       {
@@ -91,7 +91,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/OfficeCleaning/banner",
-          sellingPointImage: "/services/selling-point.png",
+          sellingPointImage: "selling-point.png",
         },
       },
       {
@@ -112,7 +112,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/OfficeCleaning/banner",
-          sellingPointImage: "/services/selling-point.png",
+          sellingPointImage: "selling-point.png",
         },
       },
       {
@@ -133,7 +133,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/OfficeCleaning/banner",
-          sellingPointImage: "/services/selling-point.png",
+          sellingPointImage: "selling-point.png",
         },
       },
     ],
@@ -160,7 +160,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/OfficeCleaning/banner",
-          sellingPointImage: "/services/selling-point.png",
+          sellingPointImage: "selling-point.png",
         },
       },
       {
@@ -181,7 +181,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/OfficeCleaning/banner",
-          sellingPointImage: "/services/selling-point.png",
+          sellingPointImage: "selling-point.png",
         },
       },
       {
@@ -202,7 +202,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/OfficeCleaning/banner",
-          sellingPointImage: "/services/selling-point.png",
+          sellingPointImage: "selling-point.png",
         },
       },
       {
@@ -223,7 +223,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/OfficeCleaning/banner",
-          sellingPointImage: "/services/selling-point.png",
+          sellingPointImage: "selling-point.png",
         },
       },
       {
@@ -244,7 +244,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/OfficeCleaning/banner",
-          sellingPointImage: "/services/selling-point.png",
+          sellingPointImage: "selling-point.png",
         },
       },
     ],
