@@ -11,7 +11,7 @@ import { useParams } from "next/navigation";
 import ContactModal from "@/app/components/contactModal/contactModal";
 import { useState } from "react";
 
-export default function page() {
+export default function ServiceDetail() {
   const params = useParams();
   const serviceSlug = params.serviceSlug;
   const [isModalOpen, setIsModalOpen] = useState(false);

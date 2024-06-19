@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { serviceData } from "@/app/data/services";
 import Link from "next/link";
@@ -37,6 +38,9 @@ export default function Service() {
               <div className="grid mb-4 sm:mb-10 gap-x-8 gap-y-20 sm:grid-cols-2 md:grid-cols-3 md:gap-x-8 md:gap-y-20 lg:gap-x-14 lg:gap-y-20">
                 {service.serviceItems.map((serviceItem) => (
                   <Link
+                    onClick={() => {
+                      window.scrollTo(0, 0);
+                    }}
                     href={`services/${serviceItem.slug}`}
                     className="flex relative flex-col max-w-[350px]  items-center justify-center w-full gap-2 px-6 pt-12 pb-6 transition-colors duration-200 border-2 md:pb-8 sm:pb-6 lg:pb-8 hover:bg-primary-shade-200 group rounded-3xl flex- card-shadow border-black-shade-100"
                     key={serviceItem.id}

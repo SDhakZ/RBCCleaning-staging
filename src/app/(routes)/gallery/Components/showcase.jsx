@@ -15,7 +15,7 @@ import Captions from "yet-another-react-lightbox/plugins/captions";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import photos from "../../../data/gallery";
 
-export default function showcase() {
+export default function Showcase() {
   const [index, setIndex] = useState(-1);
   return (
     <div className="pb-20 section container-margin">

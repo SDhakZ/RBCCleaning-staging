@@ -42,7 +42,7 @@ export default function extraInfo() {
             />
             <p className="text-base font-medium sm:leading-relaxed text-black-shade-100">
               <b>Sustainability at 💚.</b> At RBC Cleaning Services Pty. Ltd.,
-              we believe in leaving a positive impact on both our clients'
+              we believe in leaving a positive impact on both our clients&apos;
               spaces and the environment. Our eco-friendly approach not only
               protects your health but also promotes a greener future. We take
               pride in using cleaning solutions that are enhanced with essential

@@ -45,8 +45,8 @@ export default function FAQ({ slide }) {
 
         <div className="flex flex-col items-center py-6">
           <p className="py-4 text-sm font-semibold text-black-shade-200  max-w-[500px] text-center md:text-lg">
-            Can't find what you're looking for? Send us your question, and we'll
-            provide the answers you need.
+            Can&apos;t find what you&apos;re looking for? Send us your question,
+            and we&apos;ll provide the answers you need.
           </p>
           <div className="flex justify-center">
             {slide ? (
