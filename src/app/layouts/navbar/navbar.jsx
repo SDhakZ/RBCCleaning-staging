@@ -8,8 +8,8 @@ import { faClose, faBars } from "@fortawesome/free-solid-svg-icons";
 import NavbarCSS from "./navbar.module.css";
 
 const Navbarmenu = () => {
-  const [isMenu, setisMenu] = useState(false);
-  const [isResponsiveclose, setResponsiveclose] = useState(false);
+  const [isMenu, setIsMenu] = useState(false);
+  const [isResponsiveClose, setResponsiveClose] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
@@ -17,8 +17,8 @@ const Navbarmenu = () => {
 
   const toggleClass = () => {
     if (window.innerWidth < 768) {
-      setisMenu(!isMenu);
-      setResponsiveclose(!isResponsiveclose);
+      setIsMenu(!isMenu);
+      setResponsiveClose(!isResponsiveClose);
     }
   };
 
@@ -39,97 +39,90 @@ const Navbarmenu = () => {
     };
   }, [prevScrollPos]);
 
-  console.log(pathname);
-
   return (
-    <>
-      <header
-        className={`sticky top-0 z-50 flex bg-white-shade-100 ${
-          isVisible ? "" : NavbarCSS["nav-hidden"]
-        }`}
+    <header
+      className={`sticky top-0 z-50 flex bg-white-shade-100 ${
+        isVisible ? "" : NavbarCSS["nav-hidden"]
+      }`}
+    >
+      <div
+        className={`relative w-full h-20 ${NavbarCSS["container-margin-navbar"]} sm:h-20`}
       >
-        <div
-          className={`relative w-full h-20 ${NavbarCSS["container-margin-navbar"]}  sm:h-20`}
-        >
-          <div className="flex items-center justify-between h-full">
-            {/* Add Logo */}
-            <Link href="/">
-              <img
-                alt="Company Logo"
-                className="w-28 lg:w-30"
-                src="/mainLogo.png"
-              />
-            </Link>
-            <div>
-              <nav className={NavbarCSS["main-nav"]}>
-                {/* Responsive Menu Button */}
-                {isResponsiveclose === true ? (
-                  <span
-                    className="relative flex cursor-pointer md:hidden text-black-shade-400"
-                    onClick={() => {
-                      toggleClass();
-                      window.scrollTo({ top: 0 });
-                    }}
-                  >
-                    <FontAwesomeIcon className="text-2xl" icon={faClose} />
-                  </span>
-                ) : (
-                  <span
-                    className="relative flex cursor-pointer md:hidden text-black-shade-400"
-                    onClick={toggleClass}
-                  >
-                    <FontAwesomeIcon className="text-2xl" icon={faBars} />
-                  </span>
-                )}
-
-                <ul
-                  className={
-                    isMenu
-                      ? `block px-[1.9rem] lg:px-[3.15rem] xl:px-[4.05rem] absolute top-20 w-full left-0 right-0 z-10 bg-background-white m-0 p-0 md:gap-6 lg:gap-8 items-center`
-                      : `hidden md:flex m-0 p-0 gap-10 items-center`
-                  }
+        <div className="flex items-center justify-between h-full">
+          <Link href="/">
+            <img
+              alt="Company Logo"
+              className="w-28 lg:w-30"
+              src="/mainLogo.png"
+            />
+          </Link>
+          <div>
+            <nav className={NavbarCSS["main-nav"]}>
+              {isResponsiveClose ? (
+                <span
+                  className="relative flex cursor-pointer md:hidden text-black-shade-400"
+                  onClick={() => {
+                    toggleClass();
+                    window.scrollTo({ top: 0 });
+                  }}
                 >
-                  {menuData[0].items.slice(0, 4).map((item, index) => (
-                    <li
-                      key={index}
-                      className={`relative hover:text-primary-shade-200 block py-4 md:py-2 text-lg font-semibold cursor-pointer sm:text-[1.2rem] md:px-0 md:text-base ${
-                        pathname === item.link
-                          ? "text-green-500 border-b-2 border-green-500"
-                          : "text-black-shade-200"
-                      }`}
-                    >
-                      <Link
-                        onClick={() => window.innerWidth < 768 && toggleClass()}
-                        href={item.link}
-                      >
-                        {item.title}
-                      </Link>
-                    </li>
-                  ))}
+                  <FontAwesomeIcon className="text-2xl" icon={faClose} />
+                </span>
+              ) : (
+                <span
+                  className="relative flex cursor-pointer md:hidden text-black-shade-400"
+                  onClick={toggleClass}
+                >
+                  <FontAwesomeIcon className="text-2xl" icon={faBars} />
+                </span>
+              )}
 
+              <ul
+                className={
+                  isMenu
+                    ? `block px-[1.9rem] lg:px-[3.15rem] xl:px-[4.05rem] absolute top-20 w-full left-0 right-0 z-10 bg-background-white m-0 p-0 md:gap-6 lg:gap-8 items-center`
+                    : `hidden md:flex m-0 p-0 gap-10 items-center`
+                }
+              >
+                {menuData[0].items.slice(0, 4).map((item, index) => (
                   <li
-                    className={`relative block w-full text-base cursor-pointer py-2 group ${NavbarCSS["shiny-navbar"]} md:mb-0 md:mt-0 md:text-base`}
+                    key={index}
+                    className={`relative hover:text-primary-shade-200 block py-4 md:py-2 text-lg font-semibold cursor-pointer sm:text-[1.2rem] md:px-0 md:text-base ${
+                      pathname === item.link
+                        ? "text-green-500 border-b-2 border-green-500"
+                        : "text-black-shade-200"
+                    }`}
                   >
-                    <a
-                      onClick={() => {
-                        if (window.innerWidth < 768) {
-                          toggleClass();
-                          window.scrollTo({ top: 0 });
-                        }
-                      }}
-                      href="/contact"
-                      className="bg-[#429b22] group-hover:bg-[#16a9df] font-semibold px-4 py-3 w-full text-white rounded-lg"
+                    <Link
+                      href={item.link}
+                      onClick={() => window.innerWidth < 768 && toggleClass()}
                     >
-                      Contact Us
-                    </a>
+                      {item.title}
+                    </Link>
                   </li>
-                </ul>
-              </nav>
-            </div>
+                ))}
+                <li
+                  className={`relative block w-full text-base cursor-pointer py-2 group ${NavbarCSS["shiny-navbar"]} md:mb-0 md:mt-0 md:text-base`}
+                >
+                  <a
+                    onClick={() => {
+                      if (window.innerWidth < 768) {
+                        toggleClass();
+                        window.scrollTo({ top: 0 });
+                      }
+                    }}
+                    href="/contact"
+                    className="bg-[#429b22] group-hover:bg-[#16a9df] font-semibold px-4 py-3 w-full text-white rounded-lg"
+                  >
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   );
 };
 

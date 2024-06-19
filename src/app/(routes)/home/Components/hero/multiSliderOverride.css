@@ -22,10 +22,6 @@
   cursor: grabbing;
 }
 
-.react-multi-carousel-dot--active {
-  color: brown !important;
-}
-
 @media (max-width: 480px) {
   .react-multiple-carousel__arrow--right,
   .react-multiple-carousel__arrow--left {
@@ -34,6 +30,11 @@
 
   .react-multi-carousel-dot-list {
     display: flex;
-    bottom: 3%;
+    bottom: 0%;
   }
+}
+
+.custom-dot-list-style {
+  color: aliceblue;
+  background-color: rgb(255, 255, 255);
 }

@@ -21,7 +21,7 @@ export const HeroCard = (props) => {
             alt={props.title}
           />
         </picture>
-        <div className="md:bg-[#000000ad] bg-primary-shade-300 px-5 py-6 md:p-6 relative md:absolute md:left-[7%] lg:left-[7%] xl:left-[8%] md:top-[45%] transform translate-x-0 md:-translate-y-1/2 z-10 flex flex-col gap-3 lg:gap-3 md:max-w-[470px] lg:max-w-[430px] xl:max-w-[500px] md:rounded-md ">
+        <div className="md:bg-[#000000ad] min-h-[300px] bg-primary-shade-300 px-5 py-6 md:p-6 relative md:absolute md:left-[7%] lg:left-[7%] xl:left-[8%] md:top-[45%] transform translate-x-0 md:-translate-y-1/2 z-10 flex flex-col gap-3 lg:gap-3 md:max-w-[470px] lg:max-w-[430px] xl:max-w-[500px] md:rounded-md ">
           <p className="text-base font-medium text-white-shade-200">
             RBC Cleaning
           </p>

@@ -1,15 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import HeroCSS from "./hero.module.css";
 import "react-multi-carousel/lib/styles.css";
 import { HeroCard } from "./heroCard";
-import { heroData } from "@/app/data/heroData";
 import Carousel from "react-multi-carousel";
 import "./multiSliderOverride.css";
 
-export const Hero = () => {
-  const [isDragging, setIsDragging] = useState(false);
-
+export const Hero = ({ deviceType, heroData }) => {
+  console.log("deviceType", deviceType);
   // Check for cached data
   const responsive = {
     desktop: {
@@ -27,17 +25,12 @@ export const Hero = () => {
       items: 1,
     },
   };
-  const handleDragStart = () => {
-    setIsDragging(true);
-  };
 
-  const handleDragEnd = () => {
-    setIsDragging(false);
-  };
   return (
     <>
       <div className={HeroCSS["HeroT-main-container"]}>
         <Carousel
+          deviceType={deviceType}
           infinite={true}
           ssr={true}
           autoPlay={true}
@@ -46,11 +39,9 @@ export const Hero = () => {
           transitionDuration={1500}
           responsive={responsive}
           removeArrowOnDeviceType={["mobile"]}
-          onDragStart={handleDragStart}
-          onDragEnd={handleDragEnd}
-          additionalTransfrom={isDragging ? -10 : 0}
           pauseOnHover={false}
           showDots
+          dotListClass="custom-dot-list-style"
         >
           {heroData?.map((item, index) => (
             <HeroCard
