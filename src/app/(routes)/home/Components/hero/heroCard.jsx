@@ -1,5 +1,6 @@
 import React from "react";
 import HeroCSS from "./hero.module.css";
+import Image from "next/image";
 
 export const HeroCard = (props) => {
   return (
@@ -14,14 +15,19 @@ export const HeroCard = (props) => {
           {/* Large Image */}
           <source srcSet={props.imageLarge} />
           {/* Default fallback image (for browsers that don't support <picture>) */}
-          <img
-            draggable="false"
-            className="block h-auto max-w-full select-none"
+          <Image
             src={props.imageLarge}
             alt={props.title}
+            width={500}
+            height={500}
+            objectFit="cover"
+            objectPosition="center"
+            draggable="false"
+            className="block h-auto max-w-full select-none"
+            layout="responsive"
           />
         </picture>
-        <div className="md:bg-[#000000ad] min-h-[300px] bg-primary-shade-300 px-5 py-6 md:p-6 relative md:absolute md:left-[7%] lg:left-[7%] xl:left-[8%] md:top-[45%] transform translate-x-0 md:-translate-y-1/2 z-10 flex flex-col gap-3 lg:gap-3 md:max-w-[470px] lg:max-w-[430px] xl:max-w-[500px] md:rounded-md ">
+        <div className="md:bg-[#000000ad] justify-center h-full min-h-[340px] sm:min-h-[300px] md:min-h-fit md:h-fit  bg-primary-shade-300 px-5 py-6 md:p-6 relative md:absolute md:left-[7%] lg:left-[7%] xl:left-[8%] md:top-[45%] transform translate-x-0 md:-translate-y-1/2 z-10 flex flex-col gap-3 lg:gap-3 md:max-w-[470px] lg:max-w-[430px] xl:max-w-[500px] md:rounded-md ">
           <p className="text-base font-medium text-white-shade-200">
             RBC Cleaning
           </p>

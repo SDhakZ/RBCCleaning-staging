@@ -1,5 +1,5 @@
 import React from "react";
-import ContactModule from "@/app/components/contactModule/ContactModule";
+import ContactModule from "@/app/components/contactModule/contactModule";
 const websiteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
 
 /* export const metadata = {

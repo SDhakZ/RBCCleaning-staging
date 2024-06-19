@@ -1,5 +1,8 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import Spray from "@/app/assets/process/spray.png";
+import Wiper from "@/app/assets/process/wiper.png";
 
 export default function Process({ title }) {
   const processData = [
@@ -7,31 +10,39 @@ export default function Process({ title }) {
       id: 1,
       title: "1. Schedule Your Cleaning",
       brief: "Contact us to schedule your timing with us.",
-      icon: "/process/schedule.png",
+      icon: "schedule.png",
     },
     {
       id: 2,
       title: "2. Get a custom quote",
       brief: "Receive a tailored quote from us.",
-      icon: "/process/quote.png",
+      icon: "quote.png",
     },
     {
       id: 3,
       title: "3. Meet your cleaning specialist",
       brief: " Welcome your dedicated cleaning expert at your doorstep.",
-      icon: "/process/specialist.png",
+      icon: "specialist.png",
     },
   ];
 
+  const imageImports = {
+    "schedule.png": require("@/app/assets/process/schedule.png"),
+    "quote.png": require("@/app/assets/process/quote.png"),
+    "specialist.png": require("@/app/assets/process/specialist.png"),
+  };
+
   return (
     <div className="pt-12 pb-36 sm:py-20 relative section bg-gradient-to-b from-[#65B741] to-[#1B5800]">
-      <img
+      <Image
         className="absolute bottom-0 lg:-bottom-24 w-[100px] md:w-[250px]"
-        src="/process/spray.png"
+        src={Spray}
+        alt="spray bottle illustration"
       />
-      <img
+      <Image
         className="absolute lg:-bottom-10 bottom-0 right-0 w-[120px] md:w-[280px]"
-        src="/process/wiper.png"
+        src={Wiper}
+        alt="wiper illustration"
       />
       <div className="flex flex-col items-center justify-center gap-4 container-margin-compact">
         <h2 className="text-2xl font-semibold text-center sm:text-3xl md:text-4xl text-white-shade-100 font-lato">
@@ -49,10 +60,10 @@ export default function Process({ title }) {
               className="flex flex-col w-full items-center gap-2 max-w-[330px]"
             >
               <figure className="rounded-full shadow-xl flex items-center justify-center bg-[#3D961D] w-[80px] h-[80px]">
-                <img
+                <Image
                   className="w-10 h-10 sm:w-12 sm:h-12"
-                  src={process.icon}
-                ></img>
+                  src={imageImports[process.icon]}
+                ></Image>
               </figure>
               <h3 className="mt-3 text-lg font-semibold text-center sm:text-xl text-white-shade-100">
                 {process.title}

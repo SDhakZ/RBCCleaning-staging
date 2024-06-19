@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import OfferingBucket from "@/app/assets/home/offering-bucket.png";
 
 export default function offerings() {
   const data = [
@@ -6,38 +8,49 @@ export default function offerings() {
       title: "Swift and Efficient Service",
       description:
         "Rapid turnaround times ensure your workspace is spotless and ready quickly.",
-      image: "./home/swift-and-efficeient.png",
+      imagePath: "swift-and-efficeient.png",
     },
     {
       title: "Cost-Effective Quality",
       description:
         "Top-tier cleaning at competitive rates, offering great value without compromising quality.",
-      image: "./home/cost-effective.png",
+      imagePath: "cost-effective.png",
     },
     {
       title: "Trusted and Certified Cleaners",
       description:
         "Authorized professionals, vetted and trained, deliver reliable, high-standard cleaning you can trust.",
-      image: "./home/trusted-and-certified.png",
+      imagePath: "trusted-and-certified.png",
     },
     {
       title: "ECO friendly services",
       description:
         "Authorized professionals, vetted and trained, deliver reliable, high-standard cleaning you can trust.",
-      image: "./home/eco-friendly.png",
+      imagePath: "eco-friendly.png",
     },
   ];
+
+  const imageImports = {
+    "swift-and-efficeient.png": require("@/app/assets/home/swift-and-efficeient.png"),
+    "cost-effective.png": require("@/app/assets/home/cost-effective.png"),
+    "trusted-and-certified.png": require("@/app/assets/home/trusted-and-certified.png"),
+    "eco-friendly.png": require("@/app/assets/home/eco-friendly.png"),
+  };
 
   return (
     <div className="py-12 sm:py-16 md:py-20 lg:py-24 container-margin-compact">
       <div className="flex flex-col items-center justify-between gap-10 sm:flex-row">
         <div className="flex flex-col items-center self-start w-full gap-12 sm:w-fit sm:items-start">
-          <h2 className="text-3xl font-semibold lg:text-4xl font-lato">
+          <h2 className="text-3xl font-semibold lg:text-5xl lg:leading-tight font-lato">
             What sets us apart for{" "}
             <span className="text-primary-shade-200">our clients </span>?
           </h2>
           <figure className="max-w-[300px] sm:max-w-[450px]">
-            <img className="w-full" src="/home/offering-bucket.png"></img>
+            <Image
+              alt="cleaning bucket"
+              className="w-full"
+              src={OfferingBucket}
+            />
           </figure>
         </div>
         <div className="flex max-w-[670px] flex-col gap-5">
@@ -47,7 +60,11 @@ export default function offerings() {
               key={index}
             >
               <figure className="max-w-[60px]">
-                <img className="w-full" src={item.image} />
+                <Image
+                  src={imageImports[item.imagePath]}
+                  alt={item.title}
+                  className="w-full"
+                />
               </figure>
               <div className="flex flex-col gap-1 lg:gap-2">
                 <h3 className="text-lg font-semibold lg:text-xl font-lato text-black-shade-300">

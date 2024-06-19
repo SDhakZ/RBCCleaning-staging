@@ -1,4 +1,7 @@
 import React from "react";
+import Image from "next/image";
+import HelpingHands from "@/app/assets/about/HelpingHands.png";
+import ManThinking from "@/app/assets/about/ManThinking.png";
 
 export default function about() {
   return (
@@ -6,7 +9,11 @@ export default function about() {
       <div className="flex flex-col gap-16 md:gap-36">
         <div className="flex flex-col items-center gap-12 sm:justify-evenly md:flex-row">
           <figure className="max-w-[330px] sm:max-w-[350px] md:max-w-[450px]">
-            <img src="/ABOUT1.png" alt="" className="w-full h-auto " />
+            <Image
+              src={HelpingHands}
+              alt="Helping Hands"
+              className="w-full h-auto "
+            />
           </figure>
 
           <div className="flex flex-col gap-1 w-full md:min-w-[400px] md:max-w-[500px] ">
@@ -44,7 +51,11 @@ export default function about() {
             </button>
           </div>
           <figure className="max-w-[330px] sm:max-w-[350px] md:max-w-[420px]">
-            <img src="/ABOUT2.png" alt="" className="w-full h-auto " />
+            <Image
+              src={ManThinking}
+              alt="Man Thinking"
+              className="w-full h-auto "
+            />
           </figure>
         </div>
       </div>

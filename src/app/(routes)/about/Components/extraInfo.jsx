@@ -1,31 +1,40 @@
 import React from "react";
+import Image from "next/image";
+import EcoJunks from "@/app/assets/about/EcoJunks.png";
+import Leaf from "@/app/assets/about/leaf.png";
 
 export default function extraInfo() {
   const data = [
     {
       id: 1,
       text: "100% Non Hazardous",
-      image: "./Frame1.png",
+      imagePath: "non-hazordous.png",
     },
     {
       id: 2,
       text: "100% Natural",
-      image: "./Frame2.png",
+      imagePath: "natural.png",
     },
     {
       id: 3,
       text: "Non-toxic materials",
-      image: "./Frame3.png",
+      imagePath: "non-toxic.png",
     },
   ];
+
+  const imageImports = {
+    "non-hazordous.png": require("@/app/assets/about/non-hazordous.png"),
+    "natural.png": require("@/app/assets/about/natural.png"),
+    "non-toxic.png": require("@/app/assets/about/non-toxic.png"),
+  };
 
   return (
     <div className="w-full bg-white ">
       <div className="py-20 container-margin-compact mt-14">
         <div className="flex flex-col items-center gap-10 md:gap-16 md:flex-row justify-evenly ">
           <figure className="max-w-[400px] self-start md:min-w-[400px] md:max-w-[600px] sm:min-w-[200px] sm:max-w-[400px] ">
-            <img
-              src="/ABOUT3.png"
+            <Image
+              src={EcoJunks}
               alt="Eco illustration"
               className="w-full h-auto"
             />
@@ -35,10 +44,10 @@ export default function extraInfo() {
               Our Commitment to{" "}
               <span className="text-green-500 ">Eco-Friendly</span> Cleaning
             </h1>
-            <img
-              src="/leaf.png"
-              alt=""
-              className="absolute right-0 invisible h-10 sm:visible sm:h-14 md:h-16 lg:-right-6 -top-10 sm:-top-16 lg:-top-10 xl:-top-6 sm:right-0"
+            <Image
+              src={Leaf}
+              alt="leaf"
+              className="absolute right-0 invisible w-auto h-10 sm:visible sm:h-14 md:h-16 lg:-right-6 -top-10 sm:-top-16 lg:-top-10 xl:-top-6 sm:right-0"
             />
             <p className="text-base font-medium sm:leading-relaxed text-black-shade-100">
               <b>Sustainability at 💚.</b> At RBC Cleaning Services Pty. Ltd.,
@@ -52,7 +61,10 @@ export default function extraInfo() {
             <div className="flex flex-col items-center mt-6 justify-evenly sm:flex-row sm:flex-wrap gap-x-12 gap-y-8 ">
               {data.map((items) => (
                 <div key={items.id} className="flex flex-col items-center ">
-                  <img src={items.image} className="mb-3 size-12 sm:size-14" />
+                  <Image
+                    src={imageImports[items.imagePath]}
+                    className="mb-3 size-12 sm:size-14"
+                  />
                   <p className="font-semibold text-center text-md sm:text-lg">
                     {items.text}
                   </p>

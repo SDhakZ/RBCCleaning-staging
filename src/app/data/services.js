@@ -9,7 +9,7 @@ export const serviceData = [
         slug: "office-cleaning",
         brief:
           "Specialized cleaning tailored for office spaces, including deep cleaning, organizing, and maintenance.",
-        icon: "/services/icons/office-cleaning.png",
+        icon: "office-cleaning.png",
         detail: {
           title: "Heres what we offer you with spotless office cleaning",
           description:
@@ -30,7 +30,7 @@ export const serviceData = [
         slug: "builder-cleaning",
         brief:
           "Post-construction cleaning to remove debris, dust, and other materials, ensuring new buildings are clean and ready for use.",
-        icon: "/services/icons/builder-cleaning.png",
+        icon: "builder-cleaning.png",
         detail: {
           title: "Heres what we offer you with spotless office cleaning",
           description:
@@ -58,7 +58,7 @@ export const serviceData = [
         slug: "domestic-cleaning",
         brief:
           "Specialized cleaning tailored for office spaces, including deep cleaning, organizing, and maintenance.",
-        icon: "/services/icons/domestic-cleaning.png",
+        icon: "domestic-cleaning.png",
         detail: {
           title: "Heres what we offer you with spotless office cleaning",
           description:
@@ -79,7 +79,7 @@ export const serviceData = [
         slug: "carpet-steam-cleaning",
         brief:
           "Specialized cleaning tailored for office spaces, including deep cleaning, organizing, and maintenance.",
-        icon: "/services/icons/carpet-steam-cleaning.png",
+        icon: "carpet-steam-cleaning.png",
         detail: {
           title: "Heres what we offer you with spotless office cleaning",
           description:
@@ -100,7 +100,7 @@ export const serviceData = [
         slug: "window-cleaning",
         brief:
           "Specialized cleaning tailored for office spaces, including deep cleaning, organizing, and maintenance.",
-        icon: "/services/icons/window-cleaning.png",
+        icon: "window-cleaning.png",
         detail: {
           title: "Heres what we offer you with spotless office cleaning",
           description:
@@ -121,7 +121,7 @@ export const serviceData = [
         slug: "end-of-lease-cleaning",
         brief:
           "Specialized cleaning tailored for office spaces, including deep cleaning, organizing, and maintenance.",
-        icon: "/services/icons/window-cleaning.png",
+        icon: "window-cleaning.png",
         detail: {
           title: "Heres what we offer you with spotless office cleaning",
           description:
@@ -148,7 +148,7 @@ export const serviceData = [
         slug: "lawn-mowing",
         brief:
           "Specialized cleaning tailored for office spaces, including deep cleaning, organizing, and maintenance.",
-        icon: "/services/icons/lawn-mowing.png",
+        icon: "lawn-mowing.png",
         detail: {
           title: "Heres what we offer you with spotless office cleaning",
           description:
@@ -169,7 +169,7 @@ export const serviceData = [
         slug: "hose-power-cleaning",
         brief:
           "Specialized cleaning tailored for office spaces, including deep cleaning, organizing, and maintenance.",
-        icon: "/services/icons/hose-power-cleaning.png",
+        icon: "hose-power-cleaning.png",
         detail: {
           title: "Heres what we offer you with spotless office cleaning",
           description:
@@ -190,7 +190,7 @@ export const serviceData = [
         slug: "polishing-floors",
         brief:
           "Floor polishing services to remove dirt and grease buildup, restoring shine and smoothness to floors.",
-        icon: "/services/icons/polishing-floors.png",
+        icon: "polishing-floors.png",
         detail: {
           title: "Heres what we offer you with spotless office cleaning",
           description:
@@ -211,7 +211,7 @@ export const serviceData = [
         slug: "air-bnb-cleaning",
         brief:
           "Cleaning services tailored for AIR BNB properties, ensuring they are guest-ready and meet high cleanliness standards.",
-        icon: "/services/icons/air-bnb-cleaning.png",
+        icon: "air-bnb-cleaning.png",
         detail: {
           title: "Heres what we offer you with spotless office cleaning",
           description:
@@ -232,7 +232,7 @@ export const serviceData = [
         slug: "buffering",
         brief:
           "Buffing services to restore shine and smoothness to floors, eradicating dirt and grease buildup.",
-        icon: "/services/icons/buffering.png",
+        icon: "buffering.png",
         detail: {
           title: "Heres what we offer you with spotless office cleaning",
           description:

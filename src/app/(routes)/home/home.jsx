@@ -11,9 +11,9 @@ import FAQ from "@/app/components/faq/faq";
 import { heroData } from "@/app/data/heroData";
 import { useDeviceType } from "@/app/hooks/useDeviceType";
 
-export default function Home() {
+export default function Home({ hcaptcha_site_key }) {
   const deviceType = useDeviceType();
-  const hcaptcha_site_key = process.env.HCAPTCHA_SITE_KEY;
+
   return (
     <>
       <Hero heroData={heroData} deviceType={deviceType} />

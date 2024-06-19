@@ -8,7 +8,6 @@ import "./multiSliderOverride.css";
 
 export const Hero = ({ deviceType, heroData }) => {
   console.log("deviceType", deviceType);
-  // Check for cached data
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1000 },

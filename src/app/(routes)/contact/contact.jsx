@@ -213,7 +213,7 @@ export default function Contact(props) {
                 >
                   <option
                     disabled
-                    selected={true}
+                    defaultValue
                     className="text-[#0e0e0e] font-semibold"
                   >
                     Select a subject
@@ -237,7 +237,6 @@ export default function Contact(props) {
 
                 <div className="flex flex-col gap-6 mt-2">
                   <Tippy
-                    trigger="manual"
                     content={<span>Click to complete CAPTCHA</span>}
                     visible={visible}
                   >

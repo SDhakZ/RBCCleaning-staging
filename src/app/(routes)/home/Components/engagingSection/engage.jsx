@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import LadyPointing from "@/app/assets/home/lady-pointing.png";
 
 export default function Engage() {
   return (
@@ -23,7 +25,7 @@ export default function Engage() {
           </a>
         </div>
         <figure className="max-w-[450px] invisible hidden md:block md:visible self-end">
-          <img className="w-full h-auto" src="/home/lady-pointing.png" />
+          <Image className="w-full h-auto" src={LadyPointing} />
         </figure>
       </div>
     </div>
