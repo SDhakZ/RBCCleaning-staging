@@ -61,6 +61,7 @@ export default function Process({ title }) {
             >
               <figure className="rounded-full shadow-xl flex items-center justify-center bg-[#3D961D] w-[80px] h-[80px]">
                 <Image
+                  alt={process.title}
                   className="w-10 h-10 sm:w-12 sm:h-12"
                   src={imageImports[process.icon]}
                 ></Image>

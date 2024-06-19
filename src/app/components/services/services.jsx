@@ -22,7 +22,11 @@ export default function Services() {
               className="flex md:max-w-[400px] w-full items-center gap-4 p-3 transition-colors duration-150 bg-white rounded-full md:gap-6 hover:bg-primary-shade-200 group service-card-shadow"
             >
               <figure className="flex items-center justify-center bg-white rounded-full min-w-14 min-h-14 lg:min-w-16 lg:min-h-16 service-pic-shadow">
-                <Image className="w-8 lg:w-10" src={iconPath} />
+                <Image
+                  alt={service.title}
+                  className="w-8 lg:w-10"
+                  src={iconPath}
+                />
               </figure>
               <p className="text-[20px] font-semibold md:text-xl lg:text-2xl xl:text-xl group-hover:text-white-shade-100 text-black-shade-300 font-lato">
                 {service.title}

@@ -25,7 +25,11 @@ export default function Engage() {
           </a>
         </div>
         <figure className="max-w-[450px] invisible hidden md:block md:visible self-end">
-          <Image className="w-full h-auto" src={LadyPointing} />
+          <Image
+            alt="Lady Pointing"
+            className="w-full h-auto"
+            src={LadyPointing}
+          />
         </figure>
       </div>
     </div>

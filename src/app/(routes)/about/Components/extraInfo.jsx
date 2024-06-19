@@ -62,6 +62,7 @@ export default function extraInfo() {
               {data.map((items) => (
                 <div key={items.id} className="flex flex-col items-center ">
                   <Image
+                    alt={items.text}
                     src={imageImports[items.imagePath]}
                     className="mb-3 size-12 sm:size-14"
                   />

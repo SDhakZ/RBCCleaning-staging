@@ -41,6 +41,7 @@ export default function sellingPoint(props) {
         </div>
         <figure>
           <Image
+            alt="Icons"
             className="w-full h-auto max-w-[250px] md:min-w-[300px] lg:min-w-96 md:max-w-[500px]"
             src={iconPath}
           />

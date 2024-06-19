@@ -6,6 +6,8 @@ import { menuData } from "@/app/data/companyInfo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose, faBars } from "@fortawesome/free-solid-svg-icons";
 import NavbarCSS from "./navbar.module.css";
+import Image from "next/image";
+import CompanyLogo from "@/app/assets/mainLogo.png";
 
 const Navbarmenu = () => {
   const [isMenu, setIsMenu] = useState(false);
@@ -50,10 +52,10 @@ const Navbarmenu = () => {
       >
         <div className="flex items-center justify-between h-full">
           <Link href="/">
-            <img
+            <Image
               alt="Company Logo"
               className="w-28 lg:w-30"
-              src="/mainLogo.png"
+              src={CompanyLogo}
             />
           </Link>
           <div>

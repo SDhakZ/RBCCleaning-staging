@@ -3,6 +3,8 @@ import { menuData } from "@/app/data/companyInfo";
 import Link from "next/link";
 import { socialInfo } from "@/app/data/companyInfo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
+import CompanyLogo from "@/app/assets/mainLogo.png";
 
 export default function Footer() {
   return (
@@ -11,7 +13,7 @@ export default function Footer() {
         <div className="flex flex-col gap-12">
           <div className="flex flex-wrap justify-center w-full gap-16 sm:gap-24 sm:flex-nowrap">
             <div className="col-span-1 flex flex-col items-center sm:items-start w-full max-w-[320px] min-w-[250px]">
-              <img src="/mainLogo.png" className="w-36" />
+              <Image alt="Company Logo" src={CompanyLogo} className="w-36" />
               <p className="mt-4 font-semibold leading-relaxed text-center sm:text-left text-black-shade-200">
                 At RBC Cleaning Services, our dedicated team delivers top-notch
                 cleaning with unmatched passion. Experience the highest

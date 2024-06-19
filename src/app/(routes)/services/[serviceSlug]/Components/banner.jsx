@@ -14,6 +14,7 @@ export default function banner({ serviceItem, openModal }) {
         />
         <source srcSet={`${serviceItem.detail.bannerImage}-desktop.png`} />
         <img
+          alt="banner"
           className="block w-full"
           src={`${serviceItem.detail.bannerImage}-desktop.png`}
         />
