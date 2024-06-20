@@ -6,6 +6,7 @@ import Navbar from "./layouts/navbar/navbar";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Footer from "./layouts/footer/footer";
+import Providers from "./components/ProgressBarProvider/ProgressBarProvider";
 
 config.autoAddCss = false;
 
@@ -30,11 +31,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${lato.variable} ${inter.variable}`}>
         <Topbar />
-        <Navbar />
-        <SmoothScrolling>
-          <div>{children}</div>
-        </SmoothScrolling>
-        <Footer />
+        <Providers>
+          <Navbar />
+          <SmoothScrolling>
+            <div>{children}</div>
+          </SmoothScrolling>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
