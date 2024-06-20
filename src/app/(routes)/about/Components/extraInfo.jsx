@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import EcoJunks from "@/app/assets/about/EcoJunks.png";
+import EcoJunks from "@/app/assets/about/ECOJunks.png";
 import Leaf from "@/app/assets/about/leaf.png";
 
 export default function extraInfo() {
