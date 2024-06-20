@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
@@ -13,13 +13,22 @@ export default function ContactModal({
   setIsOpen,
   title,
   hcaptcha_site_key,
+  serviceSlug,
 }) {
   const [selectedOption, setSelectedOption] = useState("Select a subject");
   const captchaRef = useRef(null);
   const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    if (serviceSlug) {
+      setSelectedOption(serviceSlug);
+    }
+  }, [serviceSlug]);
+
   const handleInputChange = (event) => {
     setSelectedOption(event.target.value);
   };
+
   const handleVerifyCaptcha = (token) => {
     setToken(token);
     setVisible(false);
@@ -70,17 +79,12 @@ export default function ContactModal({
                   className="px-4 py-2 text-sm border border-gray-300 rounded-md"
                 />
                 <select
-                  name="cars"
-                  id="cars"
+                  name="service"
                   value={selectedOption}
                   onChange={handleInputChange}
                   className="px-4 py-2 text-[#a3a3a3] text-sm border border-gray-300 rounded-md"
                 >
-                  <option
-                    disabled
-                    selected={true}
-                    className="text-[#0e0e0e] font-semibold"
-                  >
+                  <option disabled className="text-[#0e0e0e] font-semibold">
                     Select a subject
                   </option>
                   <option value="ask-question">Ask a question</option>
@@ -96,7 +100,7 @@ export default function ContactModal({
                 ></textarea>
               </div>
             </form>
-            <div className="flex flex-col justify-between gap-4 sm:flex-row">
+            <div className="flex flex-col justify-between gap-4 ">
               <Tippy
                 trigger="manual"
                 content={<span>Click to complete CAPTCHA</span>}
@@ -107,7 +111,7 @@ export default function ContactModal({
                     sitekey={hcaptcha_site_key}
                     onVerify={handleVerifyCaptcha}
                     ref={captchaRef}
-                    size="compact"
+                    size="normal"
                   />
                 </div>
               </Tippy>

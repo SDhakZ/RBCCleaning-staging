@@ -9,12 +9,17 @@ import ContactModule from "@/app/components/contactModule/contactModule";
 import Services from "@/app/components/services/services";
 import { useParams } from "next/navigation";
 import ContactModal from "@/app/components/contactModal/contactModal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function ServiceDetail() {
+export default function ServiceDetail(props) {
+  const { hcaptcha_site_key } = props;
   const params = useParams();
   const serviceSlug = params.serviceSlug;
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const findServiceBySlug = (slug) => {
     for (const category of serviceData) {
@@ -42,7 +47,12 @@ export default function ServiceDetail() {
       <Process title={serviceItem.title} />
       <Services />
       <ContactModule />
-      <ContactModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
+      <ContactModal
+        hcaptcha_site_key={hcaptcha_site_key}
+        serviceSlug={serviceSlug}
+        isOpen={isModalOpen}
+        setIsOpen={setIsModalOpen}
+      />
     </>
   );
 }
