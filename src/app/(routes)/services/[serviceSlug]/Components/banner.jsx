@@ -6,17 +6,17 @@ export default function banner({ serviceItem, openModal }) {
       <picture className="block w-full h-full ">
         <source
           media="(max-width:540px)"
-          srcSet={`${serviceItem.detail.bannerImage}-mobile.png`}
+          srcSet={`${serviceItem.detail.bannerImage}-mobile.webp`}
         />
         <source
           media="(max-width:1020px)"
-          srcSet={`${serviceItem.detail.bannerImage}-tablet.png`}
+          srcSet={`${serviceItem.detail.bannerImage}-tablet.webp`}
         />
-        <source srcSet={`${serviceItem.detail.bannerImage}-desktop.png`} />
+        <source srcSet={`${serviceItem.detail.bannerImage}-desktop.webp`} />
         <img
           alt="banner"
           className="block w-full"
-          src={`${serviceItem.detail.bannerImage}-desktop.png`}
+          src={`${serviceItem.detail.bannerImage}-desktop.webp`}
         />
       </picture>
       <div className="absolute -translate-y-1/2 w-full top-[50%]">
@@ -29,7 +29,7 @@ export default function banner({ serviceItem, openModal }) {
           </p>
           <button
             onClick={openModal}
-            className="px-6 py-2 mt-5 text-lg hover:bg-[#59CA31] font-semibold rounded-md shiny-global bg-primary-shade-200 text-white-shade-100"
+            className="px-6 py-2 mt-5 text-lg hover:bg-[#16a9df] font-semibold rounded-md shiny-global bg-primary-shade-200 text-white-shade-100"
           >
             Get a quote
           </button>
