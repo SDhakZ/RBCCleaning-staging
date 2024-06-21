@@ -5,6 +5,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuestion } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
+import ServiceBanner from "@/app/assets/services/service-banner.webp";
 
 export default function Service() {
   return (
@@ -17,12 +18,13 @@ export default function Service() {
         <picture>
           <source
             media="(max-width:540px)"
-            srcSet="/services/service-banner-mobile.png"
+            srcSet="/services/service-banner-mobile.webp"
           />
-          <img
+          <Image
             className="mt-6 sm:mt-6 md:mt-12 lg:mt-16"
-            src="/services/service-banner.png"
+            src={ServiceBanner}
             alt="Service Banner"
+            priority={true}
           />
         </picture>
       </div>

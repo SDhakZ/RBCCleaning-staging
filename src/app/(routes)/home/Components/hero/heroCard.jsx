@@ -20,6 +20,7 @@ export const HeroCard = (props) => {
             alt={props.title}
             width={4000}
             height={688}
+            priority={true}
             objectFit="cover"
             objectPosition="center"
             draggable="false"
