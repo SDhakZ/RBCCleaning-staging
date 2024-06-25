@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect } from "react";
 import Image from "next/image";
-import HelpingHands from "@/app/assets/about/HelpingHands.png";
-import ManThinking from "@/app/assets/about/ManThinking.png";
+import HelpingHands from "@/app/assets/about/HelpingHands.webp";
+import ManThinking from "@/app/assets/about/ManThinking.webp";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
