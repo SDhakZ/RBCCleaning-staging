@@ -6,7 +6,7 @@ import ManThinking from "@/app/assets/about/ManThinking.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-export default function about() {
+export default function About() {
   useEffect(() => {
     Aos.init({
       duration: "500",

@@ -6,7 +6,7 @@ import Leaf from "@/app/assets/about/leaf.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-export default function extraInfo() {
+export default function ExtraInfo() {
   useEffect(() => {
     Aos.init({
       duration: "500",

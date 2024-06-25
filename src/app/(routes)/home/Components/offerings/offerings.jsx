@@ -5,7 +5,7 @@ import OfferingBucket from "@/app/assets/home/offering-bucket.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-export default function offerings() {
+export default function Offerings() {
   const data = [
     {
       title: "Swift and Efficient Service",
