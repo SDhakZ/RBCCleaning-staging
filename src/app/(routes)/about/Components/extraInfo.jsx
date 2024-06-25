@@ -1,9 +1,19 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import EcoJunks from "@/app/assets/about/ECOJunks.png";
 import Leaf from "@/app/assets/about/leaf.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function extraInfo() {
+  useEffect(() => {
+    Aos.init({
+      duration: "500",
+      easing: "ease-in-out",
+      once: false,
+    });
+  });
   const data = [
     {
       id: 1,
@@ -34,12 +44,16 @@ export default function extraInfo() {
         <div className="flex flex-col items-center gap-10 md:gap-16 md:flex-row justify-evenly ">
           <figure className="max-w-[400px] self-start md:min-w-[400px] md:max-w-[600px] sm:min-w-[200px] sm:max-w-[400px] ">
             <Image
+              data-aos="fade"
               src={EcoJunks}
               alt="Eco illustration"
               className="w-full h-auto"
             />
           </figure>
-          <div className="relative flex flex-col w-full px-2 sm:gap-0 md:gap-2">
+          <div
+            data-aos="fade"
+            className="relative flex flex-col w-full px-2 sm:gap-0 md:gap-2"
+          >
             <h1 className="mb-4 text-2xl font-bold font-lato text-black-shade-300 sm:text-3xl md:text-[2.15rem] md:leading-tight">
               Our Commitment to{" "}
               <span className="text-green-500 ">Eco-Friendly</span> Cleaning
@@ -59,8 +73,13 @@ export default function extraInfo() {
             </p>
 
             <div className="flex flex-col items-center mt-6 justify-evenly sm:flex-row sm:flex-wrap gap-x-12 gap-y-8 ">
-              {data.map((items) => (
-                <div key={items.id} className="flex flex-col items-center ">
+              {data.map((items, index) => (
+                <div
+                  data-aos="fade"
+                  data-aos-delay={`${50 + index * 300}`}
+                  key={items.id}
+                  className="flex flex-col items-center "
+                >
                   <Image
                     alt={items.text}
                     src={imageImports[items.imagePath]}

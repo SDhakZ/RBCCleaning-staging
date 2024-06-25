@@ -1,12 +1,24 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import LadyPointing from "@/app/assets/home/lady-pointing.png";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 export default function Engage() {
+  useEffect(() => {
+    Aos.init({
+      duration: "500",
+      easing: "ease-in-out",
+      once: false,
+    });
+  });
   return (
     <div className="pt-10 bg-cover bg-green-background">
       <div className="flex flex-col items-center justify-between gap-3 md:flex-row container-margin-compact">
-        <div className="max-w-[600px] flex flex-col gap-4 md:gap-6">
+        <div
+          data-aos="fade"
+          className="max-w-[600px] flex flex-col gap-4 md:gap-6"
+        >
           <h2 className="text-2xl font-semibold text-white md:text-3xl lg:text-4xl font-lato">
             Expert Cleaning Services{" "}
             <span className="text-secondary-shade">Guranteed</span> to Sparkle
@@ -24,7 +36,10 @@ export default function Engage() {
             Contact Us
           </a>
         </div>
-        <figure className="max-w-[450px] invisible hidden md:block md:visible self-end">
+        <figure
+          data-aos="fade-left"
+          className="max-w-[450px] invisible hidden md:block md:visible self-end"
+        >
           <Image
             alt="Lady Pointing"
             className="w-full h-auto"

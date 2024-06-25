@@ -37,7 +37,7 @@ export default function ServiceDetail(props) {
     return <div>Service not found</div>;
   }
   return (
-    <>
+    <div className="overflow-hidden">
       <Banner
         serviceItem={serviceItem}
         openModal={() => setIsModalOpen(true)}
@@ -53,6 +53,6 @@ export default function ServiceDetail(props) {
         isOpen={isModalOpen}
         setIsOpen={setIsModalOpen}
       />
-    </>
+    </div>
   );
 }

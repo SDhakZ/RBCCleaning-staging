@@ -1,10 +1,20 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Spray from "@/app/assets/process/spray.png";
 import Wiper from "@/app/assets/process/wiper.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Process({ title }) {
+  useEffect(() => {
+    Aos.init({
+      duration: "500",
+      easing: "ease-in-out",
+      once: false,
+    });
+  });
   const processData = [
     {
       id: 1,
@@ -33,18 +43,23 @@ export default function Process({ title }) {
   };
 
   return (
-    <div className="pt-12 pb-36 sm:py-20 relative section bg-gradient-to-b from-[#65B741] to-[#1B5800]">
+    <div className="pt-12  pb-36 sm:py-20 relative section bg-gradient-to-b from-[#65B741] to-[#1B5800]">
       <Image
+        data-aos="fade-up-right"
         className="absolute bottom-0 lg:-bottom-24 w-[100px] md:w-[250px]"
         src={Spray}
         alt="spray bottle illustration"
       />
       <Image
+        data-aos="fade-up-left"
         className="absolute lg:-bottom-10 bottom-0 right-0 w-[120px] md:w-[280px]"
         src={Wiper}
         alt="wiper illustration"
       />
-      <div className="flex flex-col items-center justify-center gap-4 container-margin-compact">
+      <div
+        data-aos="fade"
+        className="flex flex-col items-center justify-center gap-4 container-margin-compact"
+      >
         <h2 className="text-2xl font-semibold text-center sm:text-3xl md:text-4xl text-white-shade-100 font-lato">
           Efficient Cleaning Process
         </h2>
@@ -57,6 +72,8 @@ export default function Process({ title }) {
           {processData.map((process, index) => (
             <div
               key={index}
+              data-aos="fade-up"
+              data-aos-delay={`${50 + index * 200}`}
               className="flex flex-col w-full items-center gap-2 max-w-[330px]"
             >
               <figure className="rounded-full shadow-xl flex items-center justify-center bg-[#3D961D] w-[80px] h-[80px]">
@@ -76,6 +93,7 @@ export default function Process({ title }) {
           ))}
         </div>
         <Link
+          data-aos="fade-up"
           className="px-6 text-center py-3 mt-10 text-base font-semibold rounded-md sm:text-lg font-lato text-white-shade-100 shiny-global hover:bg-[#FFB554] bg-secondary-shade w-fit"
           href="/contact"
         >

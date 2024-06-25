@@ -1,14 +1,28 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import HelpingHands from "@/app/assets/about/HelpingHands.png";
 import ManThinking from "@/app/assets/about/ManThinking.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function about() {
+  useEffect(() => {
+    Aos.init({
+      duration: "500",
+      easing: "ease-in-out",
+      once: false,
+    });
+  });
+
   return (
-    <div className="top-section-p container-margin-compact">
+    <div className="top-section-p margin-t container-margin-compact">
       <div className="flex flex-col gap-16 md:gap-36">
         <div className="flex flex-col items-center gap-12 sm:justify-evenly md:flex-row">
-          <figure className="max-w-[330px] sm:max-w-[350px] md:max-w-[450px]">
+          <figure
+            data-aos="fade"
+            className="max-w-[330px] sm:max-w-[350px] md:max-w-[450px]"
+          >
             <Image
               src={HelpingHands}
               alt="Helping Hands"
@@ -16,7 +30,10 @@ export default function about() {
             />
           </figure>
 
-          <div className="flex flex-col gap-1 w-full md:min-w-[400px] md:max-w-[500px] ">
+          <div
+            data-aos="fade"
+            className="flex flex-col gap-1 w-full md:min-w-[400px] md:max-w-[500px] "
+          >
             <h1 className="mb-3 text-2xl font-bold font-lato sm:text-3xl md:mb-4 lg:leading-tight text-black-shade-300">
               Dedicated Hands, Immaculate Spaces Welcome to{" "}
               <span className="text-green-500">RBC Cleaning</span> Services
@@ -32,7 +49,10 @@ export default function about() {
           </div>
         </div>
         <div className="flex flex-col-reverse items-center gap-12 sm:justify-evenly md:flex-row ">
-          <div className="flex flex-col gap-1 w-full md:min-w-[450px] md:max-w-[500px] ">
+          <div
+            data-aos="fade"
+            className="flex flex-col gap-1 w-full md:min-w-[450px] md:max-w-[500px] "
+          >
             <h1 className="mb-3 text-2xl font-bold font-lato sm:text-3xl md:mb-4 lg:leading-tight text-black-shade-300">
               Thinking About what Kind of Service Best Suites{" "}
               <span className="text-primary-shade-200">You?</span>
@@ -50,7 +70,10 @@ export default function about() {
               Contact Us
             </button>
           </div>
-          <figure className="max-w-[330px] sm:max-w-[350px] md:max-w-[420px]">
+          <figure
+            data-aos="fade"
+            className="max-w-[330px] sm:max-w-[350px] md:max-w-[420px]"
+          >
             <Image
               src={ManThinking}
               alt="Man Thinking"

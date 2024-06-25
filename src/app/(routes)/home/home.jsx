@@ -15,7 +15,7 @@ export default function Home({ hcaptcha_site_key }) {
   const deviceType = useDeviceType();
 
   return (
-    <>
+    <div className="overflow-hidden">
       <Hero heroData={heroData} deviceType={deviceType} />
       <Offerings />
       <Engage />
@@ -26,6 +26,6 @@ export default function Home({ hcaptcha_site_key }) {
       <Testimonial />
       <Contact hcaptcha_site_key={hcaptcha_site_key} />
       <FAQ />
-    </>
+    </div>
   );
 }
