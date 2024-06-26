@@ -1,13 +1,26 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import { serviceData } from "@/app/data/services";
 import Link from "next/link";
 import Image from "next/image";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Services() {
+  useEffect(() => {
+    Aos.init({
+      duration: "500",
+      easing: "ease-in-out",
+      once: false,
+    });
+  });
   const allServices = serviceData.flatMap((category) => category.serviceItems);
   return (
     <div className="py-14 lg:py-24 container-margin-compact">
-      <h2 className="text-3xl font-semibold text-center md:text-4xl lg:text-5xl font-lato">
+      <h2
+        data-aos="fade"
+        className="text-3xl font-semibold text-center md:text-4xl lg:text-5xl font-lato"
+      >
         Other <span className="text-primary-shade-200">Services</span> that
         might interest you
       </h2>
@@ -17,6 +30,9 @@ export default function Services() {
             require(`@/app/assets/services/icons/${service.icon}`).default;
           return (
             <Link
+              data-aos="fade-up"
+              data-aos-delay={`${50 + index * 50}`}
+              data-aos-anchor-placement="center-bottom"
               key={index}
               href={`/services/${service.slug}`}
               className="flex md:max-w-[400px] w-full items-center gap-4 p-3 transition-colors duration-150 bg-white rounded-full md:gap-6 hover:bg-primary-shade-200 group service-card-shadow"

@@ -7,6 +7,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Footer from "./layouts/footer/footer";
 import Providers from "./components/ProgressBarProvider/ProgressBarProvider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 config.autoAddCss = false;
 
@@ -67,6 +68,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${lato.variable} ${inter.variable}`}>
+        <SpeedInsights />
         <Topbar />
         <Providers>
           <Navbar />

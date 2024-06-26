@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,10 +10,22 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./SwiperOverride.css";
 import { testimonialData } from "@/app/data/testimonial";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Testimonial() {
+  useEffect(() => {
+    Aos.init({
+      duration: "500",
+      easing: "ease-in-out",
+      once: false,
+    });
+  });
   return (
-    <div className="overflow-x-hidden padding-y section container-margin-compact">
+    <div
+      data-aos="zoom-in"
+      className="overflow-x-hidden padding-y section container-margin-compact"
+    >
       <div className="bg-gradient-to-r rounded-2xl md:rounded-[31px] py-8 px-4  from-[#65B741] to-[#7FCE62]">
         <div className="flex flex-col items-center w-full gap-2">
           <h3 className="text-base text-[#035202c5] font-semibold font-lato">
@@ -61,7 +73,11 @@ export default function Testimonial() {
             const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
             return (
               <SwiperSlide key={index}>
-                <div className="px-6 select-none flex flex-col gap-2 items-center min-w-[250px] max-w-[360px] py-5 rounded-2xl md:rounded-[24px] bg-white-shade-100">
+                <div
+                  data-aos="zoom-in"
+                  data-aos-delay={`${50 + index * 200}`}
+                  className="px-6 select-none flex flex-col gap-2 items-center min-w-[250px] max-w-[360px] py-5 rounded-2xl md:rounded-[24px] bg-white-shade-100"
+                >
                   <div className="flex gap-1 mt-2">
                     {[...Array(fullStars)].map((_, idx) => (
                       <FontAwesomeIcon
