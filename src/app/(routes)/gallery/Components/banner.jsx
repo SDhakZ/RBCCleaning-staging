@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import BannerDesktop from "@/app/assets/gallery/gallery-banner-desktop.png";
+import BannerDesktop from "@/app/assets/gallery/gallery-banner-desktop.webp";
 
 export default function banner() {
   return (
@@ -8,13 +8,13 @@ export default function banner() {
       <picture className="block w-full h-full ">
         <source
           media="(max-width:540px)"
-          srcSet={`gallery/gallery-banner-mobile.png`}
+          srcSet={`gallery/gallery-banner-mobile.webp`}
         />
         <source
           media="(max-width:1020px)"
-          srcSet={`gallery/gallery-banner-tablet.png`}
+          srcSet={`gallery/gallery-banner-tablet.webp`}
         />
-        <source srcSet={`gallery/gallery-banner-desktop.png`} />
+        <source srcSet={`gallery/gallery-banner-desktop.webp`} />
         <Image
           className="block w-full"
           src={BannerDesktop}
