@@ -84,10 +84,10 @@ export default function Offerings() {
                 />
               </figure>
               <div className="flex flex-col gap-1 lg:gap-2">
-                <h3 className="text-lg font-semibold lg:text-xl font-lato text-black-shade-300">
+                <h3 className="text-lg font-semibold text-center sm:text-left lg:text-xl font-lato text-black-shade-300">
                   {item.title}
                 </h3>
-                <p className="text-sm font-semibold lg:text-base text-black-shade-100">
+                <p className="text-sm font-semibold text-center sm:text-left lg:text-base text-black-shade-100">
                   {item.description}
                 </p>
               </div>

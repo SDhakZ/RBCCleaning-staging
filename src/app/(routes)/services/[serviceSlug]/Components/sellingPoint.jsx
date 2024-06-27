@@ -21,7 +21,7 @@ export default function sellingPoint(props) {
           <ul className="space-y-2 font-medium md:space-y-3 text-black-shade-100">
             {serviceItem.detail.sellingPoints.map((point, index) => (
               <li
-                className="flex items-center gap-2 text-base md:text-lg"
+                className="flex items-center gap-3 text-base md:text-lg"
                 key={index}
               >
                 <FontAwesomeIcon
@@ -33,7 +33,7 @@ export default function sellingPoint(props) {
             ))}
           </ul>
           <Link
-            className="px-6 py-3 hover:bg-[#59CA31] mt-2 text-lg font-semibold rounded-md shiny-global w-fit bg-primary-shade-200 text-white-shade-100"
+            className="px-6 py-3 hover:bg-[#16a9df] mt-2 text-lg font-semibold rounded-md shiny-global w-fit bg-primary-shade-200 text-white-shade-100"
             href="/contact"
           >
             Get the service

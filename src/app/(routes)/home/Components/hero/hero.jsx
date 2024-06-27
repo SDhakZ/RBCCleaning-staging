@@ -33,7 +33,7 @@ export const Hero = ({ deviceType, heroData }) => {
           infinite={true}
           ssr={true}
           autoPlay={true}
-          autoPlaySpeed={5000}
+          autoPlaySpeed={7000}
           keyBoardControl={true}
           transitionDuration={1500}
           responsive={responsive}
