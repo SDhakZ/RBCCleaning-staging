@@ -20,7 +20,7 @@ export default function NotFound() {
             className="rounded-lg text-base md:text-lg lg:mb-10 mb-10  shiny-global font-semibold bg-primary-shade-200 text-white-shade-100  hover:bg-[#16a9df]"
             href="/"
           >
-            Return Home
+            Return To Home
           </Link>
         </div>
       </div>
