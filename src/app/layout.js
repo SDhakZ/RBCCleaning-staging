@@ -14,7 +14,6 @@ config.autoAddCss = false;
 const websiteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
 
 export const metadata = {
-  metadataBase: new URL(websiteUrl),
   title: {
     template: "%s | RBC Cleaning Services.",
     default: "For all your cleaning needs | RBC Cleaning Services",

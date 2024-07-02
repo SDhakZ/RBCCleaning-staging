@@ -1,7 +1,6 @@
 import React from "react";
 import ServiceDetail from "@/app/(routes)/services/[serviceSlug]/serviceDetail";
 import { serviceData } from "@/app/data/services";
-import NotFound from "@/app/not-found";
 const websiteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
 
 export function generateStaticParams() {
@@ -11,7 +10,7 @@ export function generateStaticParams() {
   }));
 
   if (!serviceSlugs) {
-    return <NotFound />;
+    return <p>Not found</p>;
   }
 
   return serviceSlugs;
@@ -24,13 +23,13 @@ export async function generateMetadata({ params }) {
   const serviceItem = allServices.find((item) => item.slug === serviceSlug);
 
   if (!serviceItem || !serviceSlug) {
-    return <NotFound />;
+    return <p>Not found</p>;
   }
   const { title, brief } = serviceItem;
 
   const optimizedDescription =
     brief < 230
-      ? brief +                                                                                                                                                                                                                 
+      ? brief +
         "Email: cleaningservices.rbc@gmail.com, Location: 31 Loftus street Glenorchy, TAS 7010"
       : brief;
 
