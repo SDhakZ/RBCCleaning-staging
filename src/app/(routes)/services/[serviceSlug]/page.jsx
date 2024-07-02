@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
 
   const optimizedDescription =
     brief < 230
-      ? brief +
+      ? brief +                                                                                                                                                                                                                 
         "Email: cleaningservices.rbc@gmail.com, Location: 31 Loftus street Glenorchy, TAS 7010"
       : brief;
 

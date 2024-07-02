@@ -16,8 +16,7 @@ export const metadata = {
     "cleaning solutions",
   ],
   alternates: {
-    canonical: "/services",
-  },
+    canonical: "/services",  },
   openGraph: {
     title: "From Clean to Pristine: Comprehensive Cleaning Solutions",
     description:

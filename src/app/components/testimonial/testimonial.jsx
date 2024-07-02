@@ -100,7 +100,7 @@ export default function Testimonial() {
                       />
                     ))}
                   </div>
-                  <p className="mt-4 text-sm font-medium text-center md:text-base md:font-semibold text-black-shade-100">
+                  <p className="mt-4 text-sm font-medium text-center md:text-base text-black-shade-100">
                     {testimonial.testimonial}
                   </p>
                   <p className="mt-2 text-sm font-medium text-center md:text-base md:font-semibold font-lato text-primary-shade-300">

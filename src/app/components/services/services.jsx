@@ -44,7 +44,7 @@ export default function Services() {
                   src={iconPath}
                 />
               </figure>
-              <p className="text-[20px] font-semibold md:text-xl lg:text-2xl xl:text-xl group-hover:text-white-shade-100 text-black-shade-300 font-lato">
+              <p className="text-[20px] font-medium font-m md:text-xl lg:text-2xl xl:text-xl group-hover:text-white-shade-100 text-black-shade-300 font-lato">
                 {service.title}
               </p>
             </Link>

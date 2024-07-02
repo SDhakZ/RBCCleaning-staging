@@ -12,7 +12,9 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 config.autoAddCss = false;
 
 const websiteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
+
 export const metadata = {
+  metadataBase: new URL(websiteUrl),
   title: {
     template: "%s | RBC Cleaning Services.",
     default: "For all your cleaning needs | RBC Cleaning Services",
@@ -52,7 +54,7 @@ export const metadata = {
   },
   manifest: "/site.webmanifest",
 };
-
+1;
 const lato = Lato({
   subsets: ["latin"],
   variable: "--font-lato",

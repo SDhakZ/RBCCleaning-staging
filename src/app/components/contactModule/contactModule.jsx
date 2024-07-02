@@ -16,7 +16,7 @@ export default function ContactModule(props) {
               </span>
               {message
                 ? message
-                : "Reach Out to Us for Inquiries, Assistance, or Collaborations"}
+                : "Reach out to us for Inquiries, Assistance, or Collaborations"}
             </div>
           </div>
 

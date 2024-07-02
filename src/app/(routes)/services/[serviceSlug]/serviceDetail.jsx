@@ -10,6 +10,7 @@ import Services from "@/app/components/services/services";
 import { useParams } from "next/navigation";
 import ContactModal from "@/app/components/contactModal/contactModal";
 import { useState, useEffect } from "react";
+import NotFound from "@/app/not-found";
 
 export default function ServiceDetail(props) {
   const { hcaptcha_site_key } = props;
@@ -34,7 +35,7 @@ export default function ServiceDetail(props) {
   const serviceItem = findServiceBySlug(serviceSlug);
 
   if (!serviceItem) {
-    return <div>Service not found</div>;
+    return <NotFound />;
   }
   return (
     <div className="overflow-hidden">

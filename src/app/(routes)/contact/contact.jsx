@@ -143,7 +143,7 @@ export default function Contact(props) {
                     title={info.title}
                     key={index}
                     href={info.link}
-                    className="flex items-center space-x-4 transition-all duration-200 cursor-pointer group text-black-shade-300 w-fit "
+                    className="flex items-center space-x-3 transition-all duration-200 cursor-pointer text-black-shade-200 group w-fit "
                   >
                     <FontAwesomeIcon
                       className="text-xl transition-all duration-200 group-hover:text-primary-shade-200 lg:text-2xl text-primary-accent"
@@ -151,7 +151,7 @@ export default function Contact(props) {
                       width={20}
                     />
                     <p
-                      className={`text-lg sm:text-lg transition-all duration-200 group-hover:text-primary-shade-200 hover:text-primary-orange-300 text-black-shade-300 tracking-wider font-semibold relative overflow-hidden lg:text-lg`}
+                      className={`text-lg sm:text-lg transition-all duration-200 group-hover:text-primary-shade-200 hover:text-primary-orange-300 text-black-shade-200 tracking-wider font-medium relative overflow-hidden lg:text-lg`}
                     >
                       {info.title}
                     </p>

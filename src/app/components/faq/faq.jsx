@@ -44,7 +44,7 @@ export default function FAQ({ slide }) {
         </div>
 
         <div className="flex flex-col items-center py-6">
-          <p className="py-4 text-sm font-semibold text-black-shade-200  max-w-[500px] text-center md:text-lg">
+          <p className="py-4 text-sm font-medium text-black-shade-200  max-w-[500px] text-center md:text-lg">
             Can&apos;t find what you&apos;re looking for? Send us your question,
             and we&apos;ll provide the answers you need.
           </p>
