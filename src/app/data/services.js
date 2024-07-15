@@ -24,6 +24,32 @@ export const serviceData = [
           bannerImage: "/services/OfficeCleaning/banner",
           sellingPointImage: "selling-point.png",
         },
+        pictures: [
+          {
+            src: "/gallery/Images/gallery-1.webp",
+            title: "test",
+            width: "760",
+            height: "570",
+          },
+          {
+            src: "/gallery/Images/gallery-2.webp",
+            title: "test2",
+            width: "760",
+            height: "570",
+          },
+          {
+            src: "/gallery/Images/gallery-1.webp",
+            title: "test",
+            width: "760",
+            height: "570",
+          },
+          {
+            src: "/gallery/Images/gallery-7.webp",
+            title: "test",
+            width: 576,
+            height: 768,
+          },
+        ],
       },
       {
         id: "ccs2",
