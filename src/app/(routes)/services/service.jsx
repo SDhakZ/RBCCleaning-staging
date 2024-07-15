@@ -6,11 +6,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuestion } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import ServiceBanner from "@/app/assets/services/service-banner.webp";
+import Banner from "./Components/banner";
 
 export default function Service() {
   return (
-    <div className="padding-y-lg">
-      <div className="flex flex-col items-center justify-center container-margin">
+    <div>
+      {/* <div className="flex flex-col items-center justify-center container-margin">
         <h1 className="text-2xl font-semibold text-center max-w-[400px] sm:max-w-none sm:text-3xl md:text-4xl lg:text-[2.85rem]">
           Wide range of <span className="text-primary-shade-200">services</span>{" "}
           we provide
@@ -27,7 +28,8 @@ export default function Service() {
             priority={true}
           />
         </picture>
-      </div>
+      </div> */}
+      <Banner />
       <div className="flex justify-center section">
         <div className="flex flex-col gap-14 sm:gap-14 md:gap-20 lg:gap-22 container-margin max-w-[1200px]">
           {serviceData.map((service, index) => (

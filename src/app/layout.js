@@ -25,6 +25,7 @@ export const metadata = {
     apple: ["/apple-touch-icon.png"],
     shortcut: ["/apple-touch-icon.png"],
   },
+  metadataBase: new URL(websiteUrl),
   openGraph: {
     title: "For all your cleaning needs | RBC Cleaning Services",
     description:

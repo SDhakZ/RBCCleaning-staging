@@ -35,16 +35,17 @@ export default function About() {
             className="flex flex-col gap-1 w-full md:min-w-[400px] md:max-w-[500px] "
           >
             <h1 className="mb-3 text-2xl font-bold font-lato sm:text-3xl md:mb-4 lg:leading-tight text-black-shade-300">
-              Dedicated Hands, Immaculate Spaces Welcome to{" "}
-              <span className="text-green-500">RBC Cleaning</span> Services
+              Immaculate Spaces, Dedicated Hands: Welcome to{" "}
+              <span className="text-green-500">RBC Cleaning Services</span>
             </h1>
             <p className="text-base font-medium lg:leading-relaxed text-black-shade-100">
-              RBC Cleaning Services Pty. Ltd. is a local cleaning service
-              company that has been helping people keep their homes and
-              businesses clean for over four years. Whether it&apos;s
-              residential or commercial locations, we are committed to the
-              satisfaction of our clients. We guarantee to leave your home or
-              office sparkling clean! Customer satisfaction is guaranteed.
+              RBC Cleaning Services Pvt. Ltd. is a locally owned and operated
+              cleaning service company for over four years. From residential to
+              commercial, our main aim is satisfaction of our clients. Feel
+              assured for a sparkling clean finish from our highly professional
+              team, who use top- of- the- line products with efficient
+              techniques. We guarantee to leave your home or office sparkling
+              clean.
             </p>
           </div>
         </div>
@@ -54,17 +55,20 @@ export default function About() {
             className="flex flex-col gap-1 w-full md:min-w-[450px] md:max-w-[500px] "
           >
             <h1 className="mb-3 text-2xl font-bold font-lato sm:text-3xl md:mb-4 lg:leading-tight text-black-shade-300">
-              Thinking About what Kind of Service Best Suites{" "}
-              <span className="text-primary-shade-200">You?</span>
+              Considering which service best suits{" "}
+              <span className="text-primary-shade-200">your needs?</span>
             </h1>
             <p className="text-base font-medium lg:leading-relaxed text-black-shade-100">
-              RBC Cleaning Services Pty. Ltd. is proud to offer free in-home
-              consultations tailored to your unique cleaning needs. We
-              understand that every space is different, and we are happy to
-              adapt our services to meet your specific requirements. During your
-              consultation, our expert technician will address any questions you
-              may have and help determine the best cleaning solutions for your
-              home or business, ensuring they fit your needs and budget.
+              At RBC Cleaning Services Pvt. Ltd., we provide personalized, free
+              in-home consultations which tailors services according to your
+              specific cleaning needs, as we understand that every space is
+              different and requires particularization of services. During
+              consultation, our qualified technicians will evaluate your needs,
+              answer all your queries, and then make professional
+              recommendations to ensure the best cleaning solutions for either
+              your home or business. Our aim is to deliver quality service, not
+              just to meet but to go beyond your expectations, while remaining
+              within your budget.
             </p>
             <button className="px-6 py-2 mt-6 text-lg font-semibold hover:bg-[#16a9df] text-white bg-green-500 rounded-md shiny-global w-max ">
               Contact Us

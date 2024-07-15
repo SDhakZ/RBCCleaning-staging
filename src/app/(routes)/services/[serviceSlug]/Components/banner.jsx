@@ -1,5 +1,5 @@
+"use client";
 import React from "react";
-
 export default function banner({ serviceItem, openModal }) {
   return (
     <div className="relative flex items-center justify-center">

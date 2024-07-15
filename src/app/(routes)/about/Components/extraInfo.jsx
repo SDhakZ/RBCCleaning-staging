@@ -55,8 +55,11 @@ export default function ExtraInfo() {
             className="relative flex flex-col w-full px-2 sm:gap-0 md:gap-2"
           >
             <h1 className="mb-4 text-2xl font-bold font-lato text-black-shade-300 sm:text-3xl md:text-[2.15rem] md:leading-tight">
-              Our Commitment to{" "}
-              <span className="text-green-500 ">Eco-Friendly</span> Cleaning
+              Our Dedication to
+              <span className="text-green-500 ">
+                Environmentally Friendly
+              </span>{" "}
+              Cleaning
             </h1>
             <Image
               src={Leaf}
@@ -64,12 +67,14 @@ export default function ExtraInfo() {
               className="absolute right-0 invisible w-auto h-10 sm:visible sm:h-14 md:h-16 lg:-right-6 -top-10 sm:-top-16 lg:-top-10 xl:-top-6 sm:right-0"
             />
             <p className="text-base font-medium sm:leading-relaxed text-black-shade-100">
-              <b>Sustainability at 💚.</b> At RBC Cleaning Services Pty. Ltd.,
-              we believe in leaving a positive impact on both our clients&apos;
-              spaces and the environment. Our eco-friendly approach not only
-              protects your health but also promotes a greener future. We take
-              pride in using cleaning solutions that are enhanced with essential
-              oils, ensuring your spaces smell as fresh as they look.
+              <b>Sustainability at 💚.</b> Our vision at RBC Cleaning Services
+              Ptv. Ltd. is to leave a positive impact on both our clients&apos;
+              spaces and the environment. We take a green approach to ensure
+              protection for both your health and the green future. Our cleaning
+              solutions, are enhanced with essential oils to ensure your space
+              smells as fresh as it looks. By choosing RBC Cleaning Services,
+              you&apos;re not only getting a sparkling space but you&apos;re
+              also choosing a cleaner, healthier, and more sustainable world.
             </p>
 
             <div className="flex flex-col items-center mt-6 justify-evenly sm:flex-row sm:flex-wrap gap-x-12 gap-y-8 ">
