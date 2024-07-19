@@ -104,7 +104,7 @@ const Navbarmenu = () => {
                   </li>
                 ))}
                 <li
-                  className={`relative block w-full text-base cursor-pointer py-2 group ${NavbarCSS["shiny-navbar"]} md:mb-0 md:mt-0 md:text-base`}
+                  className={`relative flex mb-4 md:mb-0 max-w-[150px] md:block items-center justify-center w-full text-base cursor-pointer py-2 group ${NavbarCSS["shiny-navbar"]} md:mb-0 md:mt-0 md:text-base`}
                 >
                   <a
                     onClick={() => {
@@ -114,7 +114,7 @@ const Navbarmenu = () => {
                       }
                     }}
                     href="/contact"
-                    className="bg-[#429b22] group-hover:bg-[#16a9df] font-semibold px-4 py-3 w-full text-white rounded-lg"
+                    className="bg-[#429b22] text-center group-hover:bg-[#16a9df] font-semibold px-4 py-3 w-full text-white rounded-lg"
                   >
                     Contact Us
                   </a>
