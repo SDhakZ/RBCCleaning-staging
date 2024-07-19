@@ -22,7 +22,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/OfficeCleaning/banner",
-          sellingPointImage: "selling-point.png",
+          sellingPointImage: "selling-point.webp",
         },
         pictures: [
           {
@@ -69,7 +69,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/BuildingCleaning/building-cleaning",
-          sellingPointImage: "selling-point.png",
+          sellingPointImage: "selling-point.webp",
         },
       },
     ],
@@ -98,7 +98,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/DomesticCleaning/domestic-cleaning",
-          sellingPointImage: "selling-point.png",
+          sellingPointImage: "selling-point.webp",
         },
       },
       {
@@ -119,7 +119,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/CarpetSteamCleaning/carpet-steam-cleaning",
-          sellingPointImage: "selling-point.png",
+          sellingPointImage: "selling-point.webp",
         },
       },
       {
@@ -140,7 +140,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/WindowCleaning/window-cleaning",
-          sellingPointImage: "selling-point.png",
+          sellingPointImage: "selling-point.webp",
         },
       },
       {
@@ -161,7 +161,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/EndOfLease/end-of-the-lease",
-          sellingPointImage: "selling-point.png",
+          sellingPointImage: "selling-point.webp",
         },
       },
     ],
@@ -188,7 +188,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/LawnMowing/lawn-mowing",
-          sellingPointImage: "selling-point.png",
+          sellingPointImage: "selling-point.webp",
         },
       },
       {
@@ -208,7 +208,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/PowerHose/power-hose",
-          sellingPointImage: "selling-point.png",
+          sellingPointImage: "selling-point.webp",
         },
       },
       {
@@ -229,7 +229,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/PolishingFloors/polishing-floors",
-          sellingPointImage: "selling-point.png",
+          sellingPointImage: "selling-point.webp",
         },
       },
       {
@@ -250,7 +250,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/AirBnbCleaning/air-bnb-cleaning",
-          sellingPointImage: "selling-point.png",
+          sellingPointImage: "selling-point.webp",
         },
       },
       {
@@ -271,7 +271,7 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/OfficeCleaning/buffering",
-          sellingPointImage: "selling-point.png",
+          sellingPointImage: "selling-point.webp",
         },
       },
     ],

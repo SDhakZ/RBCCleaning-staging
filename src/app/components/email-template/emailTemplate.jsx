@@ -11,35 +11,35 @@ export default function EmailTemplate({ formData }) {
       </Head>
       <div style={{ overflowX: "hidden", fontFamily: "Visby", width: "100%" }}>
         {/* Render email content */}
-        <h1 style={{ color: "#51BD2A" }}>RBC Cleaning Services</h1>
-        <h2>You received a message from your website</h2>
+        <h1>RBC Cleaning Services</h1>
+        <h2>You received a message from {name} through your website</h2>
         <div
           style={{
             width: "100%",
             marginTop: "30px",
             maxWidth: "700px",
-            backgroundColor: "#F5F5F7",
+            backgroundColor: "#F3F3F3",
             padding: "2px 15px",
           }}
         >
           <p style={{ fontSize: "1.1rem" }}>
-            <strong>Subject: </strong>
+            <strong style={{ color: "#25AAC7" }}>Subject: </strong>
             {subject}
           </p>
           <p style={{ fontSize: "1.1rem" }}>
-            <strong>Name: </strong>
+            <strong style={{ color: "#25AAC7" }}>Name: </strong>
             {name}
           </p>
           <p style={{ fontSize: "1.1rem" }}>
-            <strong>Address: </strong>
+            <strong style={{ color: "#25AAC7" }}>Address: </strong>
             {address}
           </p>
           <p style={{ fontSize: "1.1rem" }}>
-            <strong>Contact: </strong>
+            <strong style={{ color: "#25AAC7" }}>Contact: </strong>
             {contact}
           </p>
           <p style={{ fontSize: "1.1rem" }}>
-            <strong>Email: </strong>{" "}
+            <strong style={{ color: "#25AAC7" }}>Email: </strong>{" "}
             <a
               title="Email"
               style={{ color: "#FF867A", textDecoration: "underline" }}
@@ -55,7 +55,11 @@ export default function EmailTemplate({ formData }) {
               maxWidth: "500px",
             }}
           >
-            <strong>Message:</strong> &quot;{message}&quot;
+            <strong style={{ fontSize: "1.1rem", color: "#25AAC7" }}>
+              Message:
+            </strong>{" "}
+            &quot;
+            {message}&quot;
           </p>
         </div>
       </div>

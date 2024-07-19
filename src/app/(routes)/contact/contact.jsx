@@ -220,7 +220,7 @@ export default function Contact(props) {
                   </option>
                   <option value="ask-question">Ask a question</option>
                   {allServices.map((service, index) => (
-                    <option key={index} value={service.slug}>
+                    <option key={index} value={service.title}>
                       {service.title}
                     </option>
                   ))}

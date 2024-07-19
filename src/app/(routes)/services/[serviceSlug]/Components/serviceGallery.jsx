@@ -15,7 +15,7 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 export default function ServiceGallery({ pictures, title }) {
   const [index, setIndex] = useState(-1);
   return (
-    <div className="container-margin-compact margin-t">
+    <div className="container-margin-compact margin-t padding-y">
       <h3 className="mb-6 text-2xl font-semibold md:text-3xl lg:text-4xl lg:mb-10 text-black-shade-300">
         Some of our works for{" "}
         <span className="text-primary-shade-200">{title}</span>
