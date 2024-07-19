@@ -12,7 +12,7 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import Captions from "yet-another-react-lightbox/plugins/captions";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 
-export default function serviceGallery({ pictures, title }) {
+export default function ServiceGallery({ pictures, title }) {
   const [index, setIndex] = useState(-1);
   return (
     <div className="container-margin-compact margin-t">
