@@ -21,11 +21,11 @@ export default function sellingPoint(props) {
           <ul className="space-y-2 font-medium md:space-y-3 text-black-shade-100">
             {serviceItem.detail.sellingPoints.map((point, index) => (
               <li
-                className="flex items-center gap-3 text-base md:text-lg"
+                className="flex items-start gap-3 text-base md:text-lg"
                 key={index}
               >
                 <FontAwesomeIcon
-                  className="text-lg lg:text-xl text-primary-shade-200"
+                  className="mt-1 text-lg lg:text-lg text-primary-shade-200"
                   icon={faSquareCheck}
                 />
                 {point}

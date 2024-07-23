@@ -151,7 +151,8 @@ export const serviceData = [
           "Thorough and Stress-Free Cleaning to Ensure You Get Your Deposit Back",
         icon: "end-of-the-lease-cleaning.png",
         detail: {
-          title: "Here’s we provide for Stress- free End of the Lease Cleaning",
+          title:
+            "Here’s what we provide for Stress- free End of the Lease Cleaning",
           description:
             "We aim to provide quality end-of-lease cleaning to return your rental property to the highest standards of cleanliness. Whether you are a tenant getting ready to move out or a landlord preparing for new residents, our diligent team will see to every little detail in cleaning with precision and care. Our professionals handle everything from deep cleaning in every room to sanitizing every kitchen and bath area. Our comprehensive services ensure all areas of your property are left in an immaculate state, ready for inspection. Moreover, we can arrange the most appropriate floor care, including carpet cleaning if required, and window cleaning inside and out, leaving a spotless finish, With eco-friendly products and advanced techniques.",
           sellingPoints: [
@@ -161,6 +162,27 @@ export const serviceData = [
             "Free consultation before the cleaning starts",
           ],
           bannerImage: "/services/EndOfLease/end-of-the-lease",
+          sellingPointImage: "selling-point.webp",
+        },
+      },
+      {
+        id: "rcs5",
+        title: "Pickup Rubbish",
+        slug: "pickup-rubbish",
+        brief:
+          "Thorough and Stress-Free Cleaning to Ensure You Get Your Deposit Back",
+        icon: "pickup-rubbish.png",
+        detail: {
+          title: "Green and General Waste Pickup Made Easy",
+          description:
+            "We offer reliable rubbish pickup services for a variety of items, including mattresses, tires, general rubbish, and green waste. Our professional team ensures efficient and hassle-free removal, keeping your space clean and clutter-free.",
+          sellingPoints: [
+            "We handle everything from bulky items like mattresses and tires to everyday general rubbish and green waste.",
+            "Flexible pickup times to suit your busy schedule.",
+            "Committed to responsible disposal and recycling practices to protect the environment.",
+            "Experienced and courteous staff dedicated to providing top-notch service.",
+          ],
+          bannerImage: "/services/PickupRubbish/pickup-rubbish",
           sellingPointImage: "selling-point.webp",
         },
       },
