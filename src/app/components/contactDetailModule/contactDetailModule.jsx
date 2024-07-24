@@ -25,16 +25,17 @@ export function ContactDetailModule({
 
       if (field.type === "checkbox") {
         return (
-          <div key={index} className="flex items-center space-x-3">
+          <div key={index} className="flex items-center space-x-2">
+            <label htmlFor={field.key}>{field.label}</label>
             <input
               type="checkbox"
               id={field.key}
               name={field.key}
-              checked={!!formData[field.key]} // Convert to boolean to ensure the correct checked state
+              checked={!!formData[field.key]}
               onChange={handleDynamicChange}
               className="rounded-md"
+              required={field.required}
             />
-            <label htmlFor={field.key}>{field.label}</label>
             {formData[field.key] && field.dependentFields && (
               <div className="ml-6">{renderFields(field.dependentFields)}</div>
             )}
@@ -50,11 +51,13 @@ export function ContactDetailModule({
             </label>
             <input
               type="number"
+              min={1}
               id={field.key}
               name={field.key}
               value={formData[field.key] || ""}
               onChange={handleDynamicChange}
               className="px-2 w-fit text-sm max-w-[60px] py-1 border-2 rounded-md border-[#B8B8B8] outline-2 outline-primary-orange-300"
+              required={field.required}
             />
           </div>
         );
@@ -70,16 +73,57 @@ export function ContactDetailModule({
               value={formData[field.key] || ""}
               onChange={handleDynamicChange}
               className="px-5 py-3 bg-transparent border-2 rounded-md border-[#B8B8B8] outline-2 outline-primary-orange-300"
+              required={field.required}
             >
               <option value="" disabled hidden>
-                Select an option
+                {field.label}
               </option>
-              {field.options.map((option, i) => (
-                <option key={i} value={option}>
-                  {option}
+              {field.option.map((opt, i) => (
+                <option key={i} value={opt}>
+                  {opt}
                 </option>
               ))}
             </select>
+          </div>
+        );
+      }
+      if (field.type === "number-and-dropdown") {
+        return (
+          <div className="flex gap-2 item-center">
+            <div key={index}>
+              <label className="mr-2" htmlFor={field.key}>
+                {field.label}
+              </label>
+              <input
+                type="number"
+                min={1}
+                id={field.key}
+                name={field.key}
+                value={formData[field.key] || ""}
+                onChange={handleDynamicChange}
+                className="px-2 w-fit text-sm max-w-[60px] py-1 border-2 rounded-md border-[#B8B8B8] outline-2 outline-primary-orange-300"
+                required={field.required}
+              />
+            </div>
+            <div key={index}>
+              <select
+                id={field.dropdown.key}
+                name={field.dropdown.key}
+                value={formData[field.dropdown.key] || ""}
+                onChange={handleDynamicChange}
+                className="px-2 py-1 bg-transparent border-2 rounded-md border-[#B8B8B8] outline-2 outline-primary-orange-300"
+                required={field.dropdown.required}
+              >
+                <option value="" disabled hidden>
+                  {field.dropdown.label}
+                </option>
+                {field.dropdown.option.map((opt, i) => (
+                  <option key={i} value={opt}>
+                    {opt}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
         );
       }
@@ -88,18 +132,19 @@ export function ContactDetailModule({
         return (
           <div key={index}>
             <p>{field.label}</p>
-            {field.options.map((option, i) => (
+            {field.option.map((opt, i) => (
               <div key={i} className="flex items-center space-x-3">
                 <input
                   type="radio"
-                  id={`${field.key}-${option}`}
+                  id={`${field.key}-${opt}`}
                   name={field.key}
-                  value={option}
-                  checked={formData[field.key] === option}
+                  value={opt}
+                  checked={formData[field.key] === opt}
                   onChange={handleDynamicChange}
                   className="rounded-md"
+                  required={field.required}
                 />
-                <label htmlFor={`${field.key}-${option}`}>{option}</label>
+                <label htmlFor={`${field.key}-${opt}`}>{opt}</label>
               </div>
             ))}
           </div>

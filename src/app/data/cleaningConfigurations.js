@@ -11,11 +11,13 @@ const cleaningConfigurations = [
         label: "Number of Storeys:",
         type: "number",
         key: "Number of stores",
+        required: true,
       },
       {
         label: "Number of Rooms:",
         type: "number",
         key: "Number of rooms",
+        required: true,
       },
       {
         label: "Include Toilets:",
@@ -26,6 +28,7 @@ const cleaningConfigurations = [
             label: "Number of Toilets",
             type: "number",
             key: "Number of toilets",
+            required: true,
           },
         ],
       },
@@ -55,22 +58,25 @@ const cleaningConfigurations = [
 
   {
     title: "Builder Cleaning Details",
-    key: "builder-cleaning",
+    key: "Builder Cleaning",
     fields: [
       {
         type: "heading",
         label: "Quantity Specifications",
       },
       {
-        label: "Area of Building",
-        type: "number",
+        label: "Area of Building:",
+        type: "number-and-dropdown",
+        required: true,
         key: "area",
+        dropdown: {
+          key: "areaUnit",
+          label: "unit",
+          option: ["sq ft", "sq m", "sq yards", "sq km"],
+          required: true,
+        },
       },
-      {
-        label: "Unit of Measurement",
-        type: "dropdown",
-        option: ["sq ft", "sq m", "sq yards", "sq km"],
-      },
+
       {
         type: "heading",
         label: "Cleaning Type",
@@ -78,7 +84,7 @@ const cleaningConfigurations = [
       {
         label: "Cleaning Type",
         type: "radio",
-        options: ["Normal Cleaning", "Detailed Cleaning"],
+        option: ["Normal Cleaning", "Detailed Cleaning"],
         key: "cleaningType",
       },
     ],

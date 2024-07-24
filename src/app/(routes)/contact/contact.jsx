@@ -9,7 +9,7 @@ import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import { serviceData } from "@/app/data/services";
 import { ContactDetailModule } from "@/app/components/contactDetailModule/contactDetailModule";
-
+import cleaningConfigurations from "../../data/cleaningConfigurations";
 export default function Contact(props) {
   const { hcaptcha_site_key } = props;
   const initialFormData = {
@@ -122,18 +122,43 @@ export default function Contact(props) {
 
   const handleDynamicChange = (event) => {
     const { name, type, value, checked } = event.target;
-    if (type === "checkbox") {
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        [name]: checked, // For checkboxes, set the state to true or false based on the checked status
-      }));
-    } else {
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        [name]: value,
-      }));
-    }
+
+    setFormData((prevFormData) => {
+      const updatedFormData = { ...prevFormData };
+
+      if (type === "checkbox") {
+        updatedFormData[name] = checked;
+
+        if (!checked) {
+          // If the main checkbox is unchecked, reset the dependent fields
+          resetDependentFields(name, updatedFormData);
+        }
+      } else {
+        updatedFormData[name] = value;
+      }
+
+      return updatedFormData;
+    });
+
     console.log(formData);
+  };
+
+  const resetDependentFields = (mainFieldKey, formData) => {
+    const config = cleaningConfigurations.find((config) =>
+      config.fields.some((field) => field.key === mainFieldKey)
+    );
+
+    if (config) {
+      const mainField = config.fields.find(
+        (field) => field.key === mainFieldKey
+      );
+
+      if (mainField && mainField.dependentFields) {
+        mainField.dependentFields.forEach((dependentField) => {
+          formData[dependentField.key] = false;
+        });
+      }
+    }
   };
 
   const allServices = serviceData.flatMap((category) => category.serviceItems);
@@ -200,7 +225,6 @@ export default function Contact(props) {
                   onChange={handleChange}
                   className="px-5 py-3 border-2 rounded-md border-[#B8B8B8] outline-2 outline-primary-orange-300"
                 />
-
                 <input
                   id="sender_email"
                   type="email"
@@ -212,7 +236,6 @@ export default function Contact(props) {
                   onChange={handleChange}
                   className="px-5 py-3 border-2 rounded-md border-[#B8B8B8] outline-2 outline-primary-orange-300"
                 />
-
                 <input
                   id="sender_org"
                   value={formData.address}
@@ -268,7 +291,6 @@ export default function Contact(props) {
                   className="px-5 py-3 transition-all duration-200 border-2 rounded-md border-[#B8B8B8] outline-2 outline-primary-orange-300 min-h-40 "
                   placeholder="Send your message here..."
                 />
-
                 <div className="flex flex-col gap-6 mt-2">
                   <Tippy
                     content={<span>Click to complete CAPTCHA</span>}
