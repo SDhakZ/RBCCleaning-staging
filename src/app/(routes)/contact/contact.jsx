@@ -8,6 +8,7 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import { serviceData } from "@/app/data/services";
+import { ContactDetailModule } from "@/app/components/contactDetailModule/contactDetailModule";
 
 export default function Contact(props) {
   const { hcaptcha_site_key } = props;
@@ -27,6 +28,7 @@ export default function Contact(props) {
   const captchaRef = useRef(null);
   const [skeletons, setSkeletons] = useState(true);
   const [visible, setVisible] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("Select a subject");
 
   useEffect(() => {
     setTimeout(() => {
@@ -47,7 +49,6 @@ export default function Contact(props) {
 
   const handleVerifyCaptcha = (token) => {
     setToken(token);
-
     setVisible(false);
   };
 
@@ -69,6 +70,20 @@ export default function Contact(props) {
     dataToSend.append("message", formData.message);
     dataToSend.append("subject", selectedOption);
     dataToSend.append("token", token);
+
+    Object.keys(formData).forEach((key) => {
+      if (
+        key !== "name" &&
+        key !== "email" &&
+        key !== "address" &&
+        key !== "contact" &&
+        key !== "message" &&
+        key !== "subject" &&
+        key !== "token"
+      ) {
+        dataToSend.append(key, formData[key]);
+      }
+    });
 
     try {
       setLoading(true);
@@ -101,10 +116,24 @@ export default function Contact(props) {
     }
   };
 
-  const [selectedOption, setSelectedOption] = useState("Select a subject");
-
   const handleInputChange = (event) => {
     setSelectedOption(event.target.value);
+  };
+
+  const handleDynamicChange = (event) => {
+    const { name, type, value, checked } = event.target;
+    if (type === "checkbox") {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        [name]: checked, // For checkboxes, set the state to true or false based on the checked status
+      }));
+    } else {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        [name]: value,
+      }));
+    }
+    console.log(formData);
   };
 
   const allServices = serviceData.flatMap((category) => category.serviceItems);
@@ -225,6 +254,11 @@ export default function Contact(props) {
                     </option>
                   ))}
                 </select>
+                <ContactDetailModule
+                  selectedOption={selectedOption}
+                  formData={formData}
+                  handleDynamicChange={handleDynamicChange}
+                />
                 <textarea
                   id="sender_message"
                   value={formData.message}

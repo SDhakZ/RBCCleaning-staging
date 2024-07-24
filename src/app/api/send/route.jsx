@@ -16,6 +16,20 @@ export async function POST(request) {
     const subject = form.get("subject");
     const message = form.get("message");
     const token = form.get("token");
+    const dynamicFields = {};
+    form.forEach((value, key) => {
+      if (
+        key !== "name" &&
+        key !== "email" &&
+        key !== "contact" &&
+        key !== "address" &&
+        key !== "subject" &&
+        key !== "message" &&
+        key !== "token"
+      ) {
+        dynamicFields[key] = value;
+      }
+    });
 
     const response = await axios.post(
       `https://api.hcaptcha.com/siteverify?response=${token}&secret=${SECRET_KEY}`,
@@ -29,7 +43,15 @@ export async function POST(request) {
         subject: `Form submission Subject:${subject} via website`,
         react: (
           <EmailTemplate
-            formData={{ name, email, message, address, contact, subject }}
+            formData={{
+              name,
+              email,
+              message,
+              address,
+              contact,
+              subject,
+              dynamicFields,
+            }}
           />
         ),
       });
