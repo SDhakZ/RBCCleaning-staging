@@ -4,6 +4,40 @@ import Head from "next/head";
 export default function EmailTemplate({ formData }) {
   const { name, email, address, subject, contact, message, dynamicFields } =
     formData;
+  const areaKeys = [
+    "Area of the building",
+    "Area of the lawn",
+    "Area of the car park",
+    "Area of the walk ins",
+    "Area of the concrete pavement",
+  ];
+  // Helper function to render dynamic fields
+  const renderDynamicFields = (fields) => {
+    return Object.keys(fields).map((key) => {
+      if (areaKeys.includes(key) && fields["Area Unit"]) {
+        return (
+          <p key={key} style={{ fontSize: "1.1rem" }}>
+            <strong style={{ color: "#25AAC7" }}>
+              {key.replace(/([A-Z])/g, " $1")}:{" "}
+            </strong>
+            {`${fields[key]} ${fields["Area Unit"]}`}
+          </p>
+        );
+      } else if (key === "Area Unit") {
+        // Skip rendering the Area Unit key as it's already combined with area
+        return null;
+      } else {
+        return (
+          <p key={key} style={{ fontSize: "1.1rem" }}>
+            <strong style={{ color: "#25AAC7" }}>
+              {key.replace(/([A-Z])/g, " $1")}:{" "}
+            </strong>
+            {fields[key]}
+          </p>
+        );
+      }
+    });
+  };
 
   return (
     <>
@@ -12,7 +46,7 @@ export default function EmailTemplate({ formData }) {
       </Head>
       <div style={{ overflowX: "hidden", fontFamily: "Visby", width: "100%" }}>
         {/* Render email content */}
-        <h1>RBC Cleaning Services</h1>s
+        <h1>RBC Cleaning Services</h1>
         <h2>You received a message from {name} through your website</h2>
         <div
           style={{
@@ -52,15 +86,8 @@ export default function EmailTemplate({ formData }) {
 
           {dynamicFields && (
             <div style={{ marginTop: "30px" }}>
-              <h3 style={{ color: "#25AAC7" }}>{subject} Details:</h3>
-              {Object.keys(dynamicFields).map((key) => (
-                <p key={key} style={{ fontSize: "1.1rem" }}>
-                  <strong style={{ color: "#25AAC7" }}>
-                    {key.replace(/([A-Z])/g, " $1")}:{" "}
-                  </strong>
-                  {dynamicFields[key]}
-                </p>
-              ))}
+              <h3 style={{ fontSize: "1.2rem" }}>{subject} Details:</h3>
+              {renderDynamicFields(dynamicFields)}
             </div>
           )}
           <p
@@ -73,8 +100,7 @@ export default function EmailTemplate({ formData }) {
             <strong style={{ fontSize: "1.1rem", color: "#25AAC7" }}>
               Additional Message:
             </strong>{" "}
-            &quot;
-            {message}&quot;
+            &quot;{message}&quot;
           </p>
         </div>
       </div>

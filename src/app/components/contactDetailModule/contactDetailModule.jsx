@@ -26,7 +26,7 @@ export function ContactDetailModule({
       if (field.type === "checkbox") {
         return (
           <div key={index} className="flex items-center space-x-2">
-            <label htmlFor={field.key}>{field.label}</label>
+            <label htmlFor={field.key}>{field.label}:</label>
             <input
               type="checkbox"
               id={field.key}
@@ -47,13 +47,14 @@ export function ContactDetailModule({
         return (
           <div key={index}>
             <label className="mr-2" htmlFor={field.key}>
-              {field.label}
+              {field.label}:
             </label>
             <input
               type="number"
               min={1}
               id={field.key}
               name={field.key}
+              defaultValue={1}
               value={formData[field.key] || ""}
               onChange={handleDynamicChange}
               className="px-2 w-fit text-sm max-w-[60px] py-1 border-2 rounded-md border-[#B8B8B8] outline-2 outline-primary-orange-300"
@@ -66,7 +67,7 @@ export function ContactDetailModule({
       if (field.type === "dropdown") {
         return (
           <div key={index}>
-            <label htmlFor={field.key}>{field.label}</label>
+            <label htmlFor={field.key}>{field.label}:</label>
             <select
               id={field.key}
               name={field.key}
@@ -92,8 +93,9 @@ export function ContactDetailModule({
           <div className="flex gap-2 item-center">
             <div key={index}>
               <label className="mr-2" htmlFor={field.key}>
-                {field.label}
+                {field.label}:
               </label>
+
               <input
                 type="number"
                 min={1}

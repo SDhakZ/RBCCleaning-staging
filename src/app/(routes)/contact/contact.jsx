@@ -101,6 +101,7 @@ export default function Contact(props) {
         setTimeout(() => {
           setSentStatus(null);
           setFormData({ ...initialFormData });
+          setSelectedOption("Select a subject");
           captchaRef.current?.resetCaptcha();
         }, 2000);
       }

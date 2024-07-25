@@ -8,19 +8,19 @@ const cleaningConfigurations = [
         label: "Quantity Specifications",
       },
       {
-        label: "Number of Storeys:",
+        label: "Number of Storeys",
         type: "number",
         key: "Number of stores",
         required: true,
       },
       {
-        label: "Number of Rooms:",
+        label: "Number of Rooms",
         type: "number",
         key: "Number of rooms",
         required: true,
       },
       {
-        label: "Include Toilets:",
+        label: "Include Toilets",
         type: "checkbox",
         key: "Include Toilets",
         dependentFields: [
@@ -65,12 +65,12 @@ const cleaningConfigurations = [
         label: "Quantity Specifications",
       },
       {
-        label: "Area of Building:",
+        label: "Area of Building",
         type: "number-and-dropdown",
         required: true,
-        key: "area",
+        key: "Area of the building",
         dropdown: {
-          key: "areaUnit",
+          key: "Area Unit",
           label: "unit",
           option: ["sq ft", "sq m", "sq yards", "sq km"],
           required: true,
@@ -85,14 +85,15 @@ const cleaningConfigurations = [
         label: "Cleaning Type",
         type: "radio",
         option: ["Normal Cleaning", "Detailed Cleaning"],
-        key: "cleaningType",
+        key: "Cleaning Type",
+        required: true,
       },
     ],
   },
 
   {
     title: "Air BnB Cleaning Details",
-    key: "air-bnb-cleaning",
+    key: "Air BNB Cleaning",
     fields: [
       {
         type: "heading",
