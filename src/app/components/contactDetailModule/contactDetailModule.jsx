@@ -94,11 +94,8 @@ export function ContactDetailModule({
       }
       if (field.type === "number-and-dropdown") {
         return (
-          <div className="flex w-full gap-2 item-center">
-            <div
-              className="flex flex-wrap items-center w-full space-y-2"
-              key={index}
-            >
+          <div key={index} className="flex w-full gap-2 item-center">
+            <div className="flex flex-wrap items-center w-full space-y-2">
               <label className="mr-2 whitespace-nowrap" htmlFor={field.key}>
                 {field.label}:
               </label>
