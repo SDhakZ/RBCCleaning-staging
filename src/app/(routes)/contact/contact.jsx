@@ -154,9 +154,24 @@ export default function Contact(props) {
         if (field.type === "number") {
           initialFormData[field.key] = 1;
         }
+        if (field.type === "checkbox") {
+          initialFormData[field.key] = false;
+        }
         if (field.type === "number-and-dropdown") {
           initialFormData[field.key] = 1;
           initialFormData[field.dropdown.key] = ""; // Initial value for dropdown
+        }
+        if (field.dependentFields) {
+          field.dependentFields.forEach((dependentField) => {
+            if (dependentField.type === "number-and-dropdown") {
+              formData[dependentField.key] = 1;
+              formData[dependentField.dropdown.key] = "";
+            } else if (dependentField.type === "number") {
+              formData[dependentField.key] = dependentField.min || 1;
+            } else if (dependentField.type === "dropdown") {
+              formData[dependentField.key] = "";
+            }
+          });
         }
       });
 

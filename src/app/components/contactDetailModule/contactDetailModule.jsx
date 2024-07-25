@@ -108,7 +108,7 @@ export function ContactDetailModule({
                   min={field.min}
                   id={field.key}
                   name={field.key}
-                  value={formData[field.key] || field.min === 0 ? null : 1}
+                  value={formData[field.key] || field.min}
                   onChange={handleDynamicChange}
                   className="px-2 w-fit text-sm max-w-[60px] py-1 border-2 rounded-md border-[#B8B8B8] outline-2 outline-primary-orange-300"
                   required={field.required}
@@ -167,6 +167,9 @@ export function ContactDetailModule({
 
   return (
     <div className="border-[#B8B8B8] rounded-md flex flex-col gap-4 w-full  border-2 border-solid p-4">
+      <h2 className="text-lg font-semibold underline decoration-2 underline-offset-4">
+        {config.title}
+      </h2>
       {renderFields(config.fields)}
     </div>
   );

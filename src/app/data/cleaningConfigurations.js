@@ -1,5 +1,3 @@
-import { label } from "yet-another-react-lightbox";
-
 const cleaningConfigurations = [
   {
     title: "Air BnB Cleaning Details",
@@ -111,10 +109,6 @@ const cleaningConfigurations = [
         },
       },
 
-      {
-        type: "heading",
-        label: "Cleaning Type",
-      },
       {
         label: "Cleaning Type",
         type: "radio",
