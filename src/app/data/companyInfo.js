@@ -9,7 +9,9 @@ import {
   faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+import { serviceData } from "./services";
 
+const allServices = serviceData.flatMap((category) => category.serviceItems);
 export const menuData = [
   {
     title: "Company",
@@ -23,19 +25,10 @@ export const menuData = [
   },
   {
     title: "Services",
-    items: [
-      { title: "Lawn Mowing", link: `/services/lawn-mowing` },
-      { title: "Power Hose", link: `/services/lawn-mowing` },
-      { title: "Window Cleaning", link: `/services/lawn-mowing` },
-      { title: "Carpet Cleaning", link: `/services/lawn-mowing` },
-      { title: "Building Cleaning", link: `/services/lawn-mowing` },
-      { title: "Buffering", link: `/services/lawn-mowing` },
-      { title: "Air BNB Cleaning", link: `/services/lawn-mowing` },
-      { title: "Domestic Cleaning", link: `/services/lawn-mowing` },
-      { title: "End of the lease cleaning", link: `/services/lawn-mowing` },
-      { title: "Polishing Floors", link: `/services/lawn-mowing` },
-      { title: "Office Cleaning", link: `/services/lawn-mowing` },
-    ],
+    items: allServices.map((service) => ({
+      title: service.title,
+      link: `/services/${service.slug}`,
+    })),
   },
   {
     title: "Contacts",

@@ -140,9 +140,29 @@ export default function Contact(props) {
 
       return updatedFormData;
     });
-
-    console.log(formData);
   };
+
+  useEffect(() => {
+    const config = cleaningConfigurations.find(
+      (config) => config.key === selectedOption
+    );
+
+    if (config) {
+      const initialFormData = {};
+
+      config.fields.forEach((field) => {
+        if (field.type === "number") {
+          initialFormData[field.key] = 1;
+        }
+        if (field.type === "number-and-dropdown") {
+          initialFormData[field.key] = 1;
+          initialFormData[field.dropdown.key] = ""; // Initial value for dropdown
+        }
+      });
+
+      setFormData(initialFormData);
+    }
+  }, [selectedOption]);
 
   const resetDependentFields = (mainFieldKey, formData) => {
     const config = cleaningConfigurations.find((config) =>

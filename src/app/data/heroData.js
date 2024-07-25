@@ -52,7 +52,7 @@ export const heroData = [
   },
   {
     id: 5,
-    title: "Hose Power Cleaning",
+    title: "Pressure Hose Cleaning",
     description:
       "Blast away dirt and grime with our powerful hose cleaning service. Your surfaces, renewed!",
     redirect: "/services/window-cleaning",

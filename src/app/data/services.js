@@ -215,12 +215,12 @@ export const serviceData = [
       },
       {
         id: "scs2",
-        title: "Hose Power Cleaning",
-        slug: "hose-power-cleaning",
+        title: "Pressure Hose Cleaning",
+        slug: "pressure-hose-cleaning",
         brief: "High-Pressure Cleaning to Revitalize Your Outdoor Surfaces",
         icon: "hose-power-cleaning.png",
         detail: {
-          title: "Here’s what we provide for Hose Power Cleaning",
+          title: "Here’s what we provide for Pressure Hose Cleaning",
           description:
             "We provide professional hose power cleaning to help keep your outdoor surfaces clean and well maintained. Our team treats all residential driveways, commercial walkways, or any other exterior surface with precision and care. This work is done using high-pressure water jets that leave absolutely no dirt, grime and mold on many surfaces, including concrete, brick, and stone. We clean driveways and sideway that are stained and worn-out as well as clean fences and other exterior walls to create that bright look and durability. We also do cleaning of gutters and all the debris accumulated, so that the water may pass freely, thereby reducing the chances of damage to your property. Using professional-grade equipment along with eco-friendly techniques is what enables us to achieve the best outcome in maximizing your outdoor area beauty and safety.",
           sellingPoints: [
@@ -235,8 +235,8 @@ export const serviceData = [
       },
       {
         id: "scs3",
-        title: "Polishing Floors",
-        slug: "polishing-floors",
+        title: "Polishing and Washing",
+        slug: "polishing-and-washing",
         brief:
           "Enhancing Your Space with Sparkling and Smooth Surfaces, Free from Dirt and Grime",
         icon: "polishing-floors.png",
