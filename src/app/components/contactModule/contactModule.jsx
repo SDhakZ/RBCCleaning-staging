@@ -11,7 +11,7 @@ export default function ContactModule(props) {
         <div className="w-full container-margin-compact">
           <div>
             <div className="mt-2 text-3xl font-semibold leading-12 md:text-4xl md:leading-tight lg:text-4xl lg:leading-tight text-black-shade-200">
-              <span className="mt-2 text-3xl font-semibold gradient font-visby leading-12 md:text-4xl md:leading-tight lg:text-4xl lg:leading-tight text-primary-shade-200">
+              <span className="mt-2 text-3xl font-semibold leading-tight gradient font-visby md:text-4xl md:leading-tight lg:text-4xl lg:leading-tight text-primary-shade-200">
                 Get In Touch:{" "}
               </span>
               {message
@@ -29,11 +29,11 @@ export default function ContactModule(props) {
                   className="flex items-center space-x-4 cursor-pointer w-fit hover:text-primary-shade-200"
                 >
                   <FontAwesomeIcon
-                    className="text-xl lg:text-2xl text-black-shade-200"
+                    className="text-xl lg:text-lg text-black-shade-200"
                     icon={info.icon}
                   />
                   <p
-                    className={`text-lg sm:text-lg font-semibold text-black-shade-200 hover:text-primary-shade-200 tracking-wider relative overflow-hidden lg:text-xl`}
+                    className={`text-lg sm:text-lg font-semibold text-black-shade-200 hover:text-primary-shade-200 tracking-wider relative overflow-hidden `}
                   >
                     {info.title}
                     <span className="underline"></span>

@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="flex flex-wrap justify-center w-full gap-16 sm:gap-24 sm:flex-nowrap">
             <div className="col-span-1 flex flex-col items-center sm:items-start w-full max-w-[320px] min-w-[250px]">
               <Image alt="Company Logo" src={CompanyLogo} className="w-36" />
-              <p className="mt-4 font-semibold leading-relaxed text-center sm:text-left text-black-shade-200">
+              <p className="mt-4 text-sm font-semibold leading-relaxed text-center sm:text-left text-black-shade-200">
                 At RBC Cleaning Services, our dedicated team delivers top-notch
                 cleaning with unmatched passion. Experience the highest
                 standards of hygiene and perfection.
@@ -22,7 +22,7 @@ export default function Footer() {
             </div>
             <div className="flex flex-wrap items-center justify-between w-full gap-10">
               <div className="flex flex-col items-start self-start col-span-1">
-                <p className="text-xl font-semibold tracking-wider text-black-shade-300">
+                <p className="text-lg font-semibold tracking-wider text-black-shade-300">
                   Company
                 </p>
                 <ul className="mt-5 space-y-2 font-semibold ">
@@ -31,7 +31,7 @@ export default function Footer() {
                       <Link
                         title={item.title}
                         href={item.link}
-                        className="text-base text-center transition-all duration-200 whitespace-nowrap hover:text-primary-shade-200 text-black-shade-100 w-fit hover:text-primary-accent "
+                        className="text-base text-center transition-all duration-200 sm:text-sm whitespace-nowrap hover:text-primary-shade-200 text-black-shade-100 w-fit hover:text-primary-accent "
                       >
                         - {item.title}
                       </Link>
@@ -41,7 +41,7 @@ export default function Footer() {
               </div>
 
               <div className="flex flex-col col-span-1 sm:items-start">
-                <p className="text-2xl font-semibold tracking-wider text-black-shade-300">
+                <p className="text-lg font-semibold tracking-wider text-black-shade-300">
                   Services
                 </p>
                 <div className="flex flex-col flex-wrap gap-2 mt-5 font-semibold sm:gap-12 sm:flex-row">
@@ -51,7 +51,7 @@ export default function Footer() {
                         key={index}
                         title={item.title}
                         href={item.link}
-                        className="text-base text-center transition-all duration-200 whitespace-nowrap hover:text-primary-shade-200 text-black-shade-100 w-fit hover:text-primary-accent"
+                        className="text-base text-center transition-all duration-200 sm:text-sm whitespace-nowrap hover:text-primary-shade-200 text-black-shade-100 w-fit hover:text-primary-accent"
                       >
                         - {item.title}
                       </Link>
@@ -63,7 +63,7 @@ export default function Footer() {
                         key={index}
                         title={item.title}
                         href={item.link}
-                        className="text-base text-center transition-all duration-200 whitespace-nowrap hover:text-primary-shade-200 text-black-shade-100 w-fit hover:text-primary-accent "
+                        className="text-base text-center transition-all duration-200 sm:text-sm whitespace-nowrap hover:text-primary-shade-200 text-black-shade-100 w-fit hover:text-primary-accent "
                       >
                         - {item.title}
                       </Link>
