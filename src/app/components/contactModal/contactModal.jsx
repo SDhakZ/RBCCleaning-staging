@@ -7,6 +7,8 @@ import { serviceData } from "@/app/data/services";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
+import cleaningConfigurations from "@/app/data/cleaningConfigurations";
+import { ContactDetailModule } from "../contactDetailModule/contactDetailModule";
 
 export default function ContactModal({
   isOpen,

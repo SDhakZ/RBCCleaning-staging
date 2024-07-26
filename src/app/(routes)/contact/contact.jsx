@@ -10,6 +10,9 @@ import "tippy.js/dist/tippy.css";
 import { serviceData } from "@/app/data/services";
 import { ContactDetailModule } from "@/app/components/contactDetailModule/contactDetailModule";
 import cleaningConfigurations from "../../data/cleaningConfigurations";
+import { useForm } from "@/app/hooks/useForm";
+import { useDynamicFields } from "@/app/hooks/useDynamicFields";
+
 export default function Contact(props) {
   const { hcaptcha_site_key } = props;
   const initialFormData = {

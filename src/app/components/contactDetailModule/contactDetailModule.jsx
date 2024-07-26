@@ -35,7 +35,7 @@ export function ContactDetailModule({
               name={field.key}
               checked={!!formData[field.key] || false}
               onChange={handleDynamicChange}
-              className="rounded-md"
+              className="rounded-md cursor-pointer"
               required={field.required}
             />
             {formData[field.key] && field.dependentFields && (
