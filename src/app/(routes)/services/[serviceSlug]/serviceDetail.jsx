@@ -23,6 +23,17 @@ export default function ServiceDetail(props) {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isModalOpen]);
+
   const findServiceBySlug = (slug) => {
     for (const category of serviceData) {
       const service = category.serviceItems.find((item) => item.slug === slug);
@@ -59,6 +70,7 @@ export default function ServiceDetail(props) {
       <ContactModal
         hcaptcha_site_key={hcaptcha_site_key}
         serviceSlug={serviceSlug}
+        serviceItem={serviceItem}
         isOpen={isModalOpen}
         setIsOpen={setIsModalOpen}
       />

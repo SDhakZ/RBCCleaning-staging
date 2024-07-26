@@ -1,15 +1,13 @@
 "use client";
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { menuData } from "@/app/data/companyInfo";
-import axios from "axios";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import { serviceData } from "@/app/data/services";
 import { ContactDetailModule } from "@/app/components/contactDetailModule/contactDetailModule";
-import cleaningConfigurations from "../../data/cleaningConfigurations";
 import { useForm } from "@/app/hooks/useForm";
 import { useDynamicFields } from "@/app/hooks/useDynamicFields";
 
@@ -23,15 +21,26 @@ export default function Contact(props) {
     subject: "",
     message: "",
   };
+  const {
+    formData,
+    loading,
+    sentStatus,
+    visible,
+    selectedOption,
+    captchaRef,
+    handleChange,
+    handleVerifyCaptcha,
+    handleSubmit,
+    setFormData,
+    setSelectedOption,
+  } = useForm(initialFormData, hcaptcha_site_key);
 
-  const [formData, setFormData] = useState({ ...initialFormData });
-  const [loading, setLoading] = useState(false);
-  const [sentStatus, setSentStatus] = useState(null);
-  const [token, setToken] = useState(null);
-  const captchaRef = useRef(null);
+  const { handleDynamicChange } = useDynamicFields(
+    selectedOption,
+    setFormData,
+    formData
+  );
   const [skeletons, setSkeletons] = useState(true);
-  const [visible, setVisible] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("Select a subject");
 
   useEffect(() => {
     setTimeout(() => {
@@ -39,165 +48,8 @@ export default function Contact(props) {
     }, 7000);
   }, []);
 
-  useEffect(() => {
-    if (token) {
-      setVisible(false);
-      console.log("token: " + token);
-    }
-  }, [token]);
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleVerifyCaptcha = (token) => {
-    setToken(token);
-    setVisible(false);
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!token) {
-      setVisible(true);
-      return;
-    }
-
-    setVisible(false);
-
-    const dataToSend = new FormData();
-    // Append form data fields
-    dataToSend.append("name", formData.name);
-    dataToSend.append("email", formData.email);
-    dataToSend.append("address", formData.address);
-    dataToSend.append("contact", formData.contact);
-    dataToSend.append("message", formData.message);
-    dataToSend.append("subject", selectedOption);
-    dataToSend.append("token", token);
-
-    Object.keys(formData).forEach((key) => {
-      if (
-        key !== "name" &&
-        key !== "email" &&
-        key !== "address" &&
-        key !== "contact" &&
-        key !== "message" &&
-        key !== "subject" &&
-        key !== "token"
-      ) {
-        dataToSend.append(key, formData[key]);
-      }
-    });
-
-    try {
-      setLoading(true);
-      const res = await axios.post(
-        "http://localhost:3000/api/send",
-        dataToSend,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
-      if (res.status === 200) {
-        setSentStatus("success");
-        setTimeout(() => {
-          setSentStatus(null);
-          setFormData({ ...initialFormData });
-          setSelectedOption("Select a subject");
-          captchaRef.current?.resetCaptcha();
-        }, 2000);
-      }
-      // Handle success
-    } catch (error) {
-      console.log(error);
-      setSentStatus("error");
-      setTimeout(() => {
-        setSentStatus(null);
-      }, 2000);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const handleInputChange = (event) => {
     setSelectedOption(event.target.value);
-  };
-
-  const handleDynamicChange = (event) => {
-    const { name, type, value, checked } = event.target;
-
-    setFormData((prevFormData) => {
-      const updatedFormData = { ...prevFormData };
-
-      if (type === "checkbox") {
-        updatedFormData[name] = checked;
-
-        if (!checked) {
-          // If the main checkbox is unchecked, reset the dependent fields
-          resetDependentFields(name, updatedFormData);
-        }
-      } else {
-        updatedFormData[name] = value;
-      }
-
-      return updatedFormData;
-    });
-  };
-
-  useEffect(() => {
-    const config = cleaningConfigurations.find(
-      (config) => config.key === selectedOption
-    );
-
-    if (config) {
-      const initialFormData = {};
-
-      config.fields.forEach((field) => {
-        if (field.type === "number") {
-          initialFormData[field.key] = 1;
-        }
-        if (field.type === "checkbox") {
-          initialFormData[field.key] = false;
-        }
-        if (field.type === "number-and-dropdown") {
-          initialFormData[field.key] = 1;
-          initialFormData[field.dropdown.key] = ""; // Initial value for dropdown
-        }
-        if (field.dependentFields) {
-          field.dependentFields.forEach((dependentField) => {
-            if (dependentField.type === "number-and-dropdown") {
-              formData[dependentField.key] = 1;
-              formData[dependentField.dropdown.key] = "";
-            } else if (dependentField.type === "number") {
-              formData[dependentField.key] = dependentField.min || 1;
-            } else if (dependentField.type === "dropdown") {
-              formData[dependentField.key] = "";
-            }
-          });
-        }
-      });
-
-      setFormData(initialFormData);
-    }
-  }, [selectedOption]);
-
-  const resetDependentFields = (mainFieldKey, formData) => {
-    const config = cleaningConfigurations.find((config) =>
-      config.fields.some((field) => field.key === mainFieldKey)
-    );
-
-    if (config) {
-      const mainField = config.fields.find(
-        (field) => field.key === mainFieldKey
-      );
-
-      if (mainField && mainField.dependentFields) {
-        mainField.dependentFields.forEach((dependentField) => {
-          formData[dependentField.key] = false;
-        });
-      }
-    }
   };
 
   const allServices = serviceData.flatMap((category) => category.serviceItems);

@@ -69,7 +69,7 @@ const inter = Inter({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${lato.variable} ${inter.variable}`}>
+      <body id="main" className={`${lato.variable} ${inter.variable}`}>
         <SpeedInsights />
         <Topbar />
         <Providers>

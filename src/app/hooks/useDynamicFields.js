@@ -1,8 +1,7 @@
-"use client";
 import { useEffect } from "react";
 import cleaningConfigurations from "@/app/data/cleaningConfigurations";
 
-export function useDynamicFields(selectedOption, setFormData, formData) {
+export function useDynamicFields(selectedOption, setFormData) {
   useEffect(() => {
     const config = cleaningConfigurations.find(
       (config) => config.key === selectedOption
@@ -25,22 +24,25 @@ export function useDynamicFields(selectedOption, setFormData, formData) {
         if (field.dependentFields) {
           field.dependentFields.forEach((dependentField) => {
             if (dependentField.type === "number-and-dropdown") {
-              formData[dependentField.key] = 1;
-              formData[dependentField.dropdown.key] = "";
+              initialFormData[dependentField.key] = 1;
+              initialFormData[dependentField.dropdown.key] = "";
             } else if (dependentField.type === "number") {
-              formData[dependentField.key] = dependentField.min || 1;
+              initialFormData[dependentField.key] = dependentField.min || 1;
             } else if (dependentField.type === "dropdown") {
-              formData[dependentField.key] = "";
+              initialFormData[dependentField.key] = "";
             }
           });
         }
       });
 
-      setFormData(initialFormData);
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        ...initialFormData,
+      }));
     }
-  }, [selectedOption, setFormData, formData]);
+  }, [selectedOption, setFormData]);
 
-  const resetDependentFields = (mainFieldKey, formData) => {
+  const resetDependentFields = (mainFieldKey, updatedFormData) => {
     const config = cleaningConfigurations.find((config) =>
       config.fields.some((field) => field.key === mainFieldKey)
     );
@@ -52,7 +54,13 @@ export function useDynamicFields(selectedOption, setFormData, formData) {
 
       if (mainField && mainField.dependentFields) {
         mainField.dependentFields.forEach((dependentField) => {
-          formData[dependentField.key] = false;
+          if (dependentField.type === "checkbox") {
+            updatedFormData[dependentField.key] = false;
+          } else if (dependentField.type === "number") {
+            updatedFormData[dependentField.key] = 1;
+          } else if (dependentField.type === "dropdown") {
+            updatedFormData[dependentField.key] = "";
+          }
         });
       }
     }
@@ -68,7 +76,6 @@ export function useDynamicFields(selectedOption, setFormData, formData) {
         updatedFormData[name] = checked;
 
         if (!checked) {
-          // If the main checkbox is unchecked, reset the dependent fields
           resetDependentFields(name, updatedFormData);
         }
       } else {
