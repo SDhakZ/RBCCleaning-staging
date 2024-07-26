@@ -55,7 +55,9 @@ export default function Contact(props) {
   const allServices = serviceData.flatMap((category) => category.serviceItems);
 
   return (
-    <div className={`relative transition-colors duration-[1200ms] bg-[#fff]`}>
+    <div
+      className={`relative overflow-hidden transition-colors duration-[1200ms] bg-[#fff]`}
+    >
       <div className="relative container-margin-compact">
         <section className="top-section-p">
           <h1
@@ -96,7 +98,7 @@ export default function Contact(props) {
                       width={20}
                     />
                     <p
-                      className={`text-lg sm:text-lg transition-all duration-200 group-hover:text-primary-shade-200 hover:text-primary-orange-300 text-black-shade-200 tracking-wider font-medium relative overflow-hidden lg:text-lg`}
+                      className={`text-lg sm:text-lg break-all transition-all duration-200 group-hover:text-primary-shade-200 hover:text-primary-orange-300 text-black-shade-200 tracking-wider font-medium relative overflow-hidden lg:text-lg`}
                     >
                       {info.title}
                     </p>

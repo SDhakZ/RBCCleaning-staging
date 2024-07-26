@@ -17,7 +17,7 @@ export function ContactDetailModule({
     fields.map((field, index) => {
       if (field.type === "heading") {
         return (
-          <h4 key={index} className="font-semibold">
+          <h4 className="font-semibold text-black-shade-300" key={index}>
             {field.label}
           </h4>
         );
@@ -25,21 +25,26 @@ export function ContactDetailModule({
 
       if (field.type === "checkbox") {
         return (
-          <div key={index} className="flex items-center w-full space-x-2">
-            <label className="whitespace-nowrap" htmlFor={field.key}>
-              {field.label}:
-            </label>
-            <input
-              type="checkbox"
-              id={field.key}
-              name={field.key}
-              checked={!!formData[field.key] || false}
-              onChange={handleDynamicChange}
-              className="rounded-md cursor-pointer"
-              required={field.required}
-            />
+          <div key={index} className="flex flex-col w-full gap-2 sm:flex-row">
+            <div className="flex items-center gap-2 mr-2">
+              <label
+                className="whitespace-nowrap text-black-shade-300"
+                htmlFor={field.key}
+              >
+                {field.label}:
+              </label>
+              <input
+                type="checkbox"
+                id={field.key}
+                name={field.key}
+                checked={!!formData[field.key] || false}
+                onChange={handleDynamicChange}
+                className="rounded-md cursor-pointer"
+                required={field.required}
+              />
+            </div>
             {formData[field.key] && field.dependentFields && (
-              <div className="w-full pl-2 item-center">
+              <div className="flex flex-col w-full gap-2 item-center">
                 {renderFields(field.dependentFields)}
               </div>
             )}
@@ -50,7 +55,10 @@ export function ContactDetailModule({
       if (field.type === "number") {
         return (
           <div key={index}>
-            <label className="mr-2 whitespace-nowrap" htmlFor={field.key}>
+            <label
+              className="mr-2 whitespace-nowrap text-black-shade-300"
+              htmlFor={field.key}
+            >
               {field.label}:
             </label>
             <input
@@ -71,7 +79,9 @@ export function ContactDetailModule({
       if (field.type === "dropdown") {
         return (
           <div key={index}>
-            <label htmlFor={field.key}>{field.label}:</label>
+            <label className="text-black-shade-300" htmlFor={field.key}>
+              {field.label}:
+            </label>
             <select
               id={field.key}
               name={field.key}
@@ -96,7 +106,10 @@ export function ContactDetailModule({
         return (
           <div key={index} className="flex w-full gap-2 item-center">
             <div className="flex flex-wrap items-center w-full space-y-2">
-              <label className="mr-2 whitespace-nowrap" htmlFor={field.key}>
+              <label
+                className="mr-2 whitespace-nowrap text-black-shade-300"
+                htmlFor={field.key}
+              >
                 {field.label}:
               </label>
               <div className="flex flex-row w-full gap-2">
@@ -139,7 +152,9 @@ export function ContactDetailModule({
       if (field.type === "radio") {
         return (
           <div key={index}>
-            <p className="mb-2 font-semibold ">{field.label}</p>
+            <p className="mb-2 font-semibold text-black-shade-300">
+              {field.label}
+            </p>
             {field.option.map((opt, i) => (
               <div key={i} className="flex items-center space-x-3">
                 <input
@@ -163,8 +178,8 @@ export function ContactDetailModule({
     });
 
   return (
-    <div className="border-[#B8B8B8] rounded-md flex flex-col gap-4 w-full  border-2 border-solid p-4">
-      <h2 className="text-lg font-semibold underline decoration-2 underline-offset-4">
+    <div className="border-[#B8B8B8] overflow-hidden rounded-md flex flex-col gap-4 w-full  border-2 border-solid p-4">
+      <h2 className="text-lg font-semibold underline text-black-shade-300 decoration-2 underline-offset-4">
         {config.title}
       </h2>
       {renderFields(config.fields)}
