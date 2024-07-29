@@ -2,9 +2,10 @@ export const heroData = [
   {
     id: 1,
     title: "Floor Polishing Service",
+    subject: "Polishing ands Washing",
     description:
       "Revitalize your floors with our expert polishing service. Shine and elegance restored!",
-    redirect: "/services/polishing-floors",
+    redirect: "/services/polishing-and-washing",
     images: {
       imageSmall: "/home/hero/polishing-floors-small.webp",
       imageMedium: "/home/hero/polishing-floors-medium.webp",
@@ -15,6 +16,7 @@ export const heroData = [
   {
     id: 2,
     title: "Office Cleaning Service",
+    subject: "Office Cleaning",
     description:
       "These services typically include office cleaning, floor care, window washing, and specialized sanitation for various commercial spaces.",
     redirect: "/services/office-cleaning",
@@ -27,6 +29,7 @@ export const heroData = [
   {
     id: 3,
     title: "Lawn Mowing Service",
+    subject: "Lawn Mowing",
     description:
       "Transform your yard with our reliable lawn mowing service. Enjoy a pristine lawn without the hassle!",
     redirect: "/services/lawn-mowing",
@@ -40,6 +43,7 @@ export const heroData = [
   {
     id: 4,
     title: "Window Cleaning Service",
+    subject: "Window Cleaning",
     description:
       "Brighten your view with our professional window cleaning. Sparkling windows, guaranteed!",
     redirect: "/services/window-cleaning",
@@ -53,6 +57,7 @@ export const heroData = [
   {
     id: 5,
     title: "Pressure Hose Cleaning",
+    subject: "Pressure Hose Cleaning",
     description:
       "Blast away dirt and grime with our powerful hose cleaning service. Your surfaces, renewed!",
     redirect: "/services/window-cleaning",

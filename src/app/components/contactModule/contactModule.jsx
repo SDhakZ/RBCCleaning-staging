@@ -47,7 +47,7 @@ export default function ContactModule(props) {
                   target="_blank"
                   key={index}
                   title={socialInfo.title}
-                  className="text-[1.6rem] transition-all duration-300 lg:text-[2rem] text-black-shade-200 hover:text-primary-shade-200"
+                  className="text-[1.6rem] transition-all duration-300 lg:text-[1.7rem] text-black-shade-200 hover:text-primary-shade-200"
                   href={socialInfo.link}
                 >
                   <FontAwesomeIcon icon={socialInfo.icon} />

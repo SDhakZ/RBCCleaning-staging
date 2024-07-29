@@ -5,7 +5,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuestion } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
-import ServiceBanner from "@/app/assets/services/service-banner.webp";
+// import ServiceBanner from "@/app/assets/services/service-banner.webp";
 import Banner from "./Components/banner";
 
 export default function Service() {
@@ -46,9 +46,6 @@ export default function Service() {
                     require(`@/app/assets/services/icons/${serviceItem.icon}`).default;
                   return (
                     <Link
-                      onClick={() => {
-                        window.scrollTo(0, 0);
-                      }}
                       href={`services/${serviceItem.slug}`}
                       className="flex relative flex-col max-w-[350px]  items-center justify-center w-full gap-2 px-6 pt-12 pb-6 transition-colors duration-200 border-2 md:pb-8 sm:pb-6 lg:pb-8 hover:bg-primary-shade-200 group rounded-3xl flex- card-shadow border-black-shade-100"
                       key={serviceItem.id}

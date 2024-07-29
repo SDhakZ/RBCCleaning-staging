@@ -95,7 +95,10 @@ export default function Process({ title }) {
         <Link
           data-aos="fade-up"
           className="px-6 text-center py-3 mt-10 text-base font-semibold rounded-md sm:text-lg font-lato text-white-shade-100 shiny-global hover:bg-[#FFB554] bg-secondary-shade w-fit"
-          href="/contact"
+          href={{
+            pathname: "/contact",
+            query: { subject: title },
+          }}
         >
           {title ? `Book for ${title} now!` : "Contact us now!"}
         </Link>

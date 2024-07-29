@@ -10,9 +10,12 @@ import { serviceData } from "@/app/data/services";
 import { ContactDetailModule } from "@/app/components/contactDetailModule/contactDetailModule";
 import { useForm } from "@/app/hooks/useForm";
 import { useDynamicFields } from "@/app/hooks/useDynamicFields";
-
+import { useSearchParams } from "next/navigation";
 export default function Contact(props) {
   const { hcaptcha_site_key } = props;
+  const searchParams = useSearchParams();
+  const subject = searchParams.get("subject");
+
   const initialFormData = {
     name: "",
     email: "",
@@ -48,11 +51,19 @@ export default function Contact(props) {
     }, 7000);
   }, []);
 
+  useEffect(() => {
+    if (subject) {
+      setSelectedOption(subject);
+    }
+  }, [subject, setSelectedOption]);
+
   const handleInputChange = (event) => {
     setSelectedOption(event.target.value);
   };
 
-  const allServices = serviceData.flatMap((category) => category.serviceItems);
+  const allServices = serviceData
+    .flatMap((category) => category.serviceItems)
+    .sort((a, b) => a.title.localeCompare(b.title));
 
   return (
     <div

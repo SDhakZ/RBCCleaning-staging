@@ -14,7 +14,10 @@ export default function Services() {
       once: false,
     });
   });
-  const allServices = serviceData.flatMap((category) => category.serviceItems);
+  const allServices = serviceData
+    .flatMap((category) => category.serviceItems)
+    .sort((a, b) => a.title.localeCompare(b.title));
+
   return (
     <div className="py-14 lg:py-24 container-margin-compact">
       <h2

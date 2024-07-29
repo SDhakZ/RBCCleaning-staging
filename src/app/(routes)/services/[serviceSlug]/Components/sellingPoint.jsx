@@ -34,7 +34,10 @@ export default function sellingPoint(props) {
           </ul>
           <Link
             className="px-6 py-3 hover:bg-[#16a9df] mt-2 text-lg font-semibold rounded-md shiny-global w-fit bg-primary-shade-200 text-white-shade-100"
-            href="/contact"
+            href={{
+              pathname: "/contact",
+              query: { subject: serviceItem.title },
+            }}
           >
             Get the service
           </Link>

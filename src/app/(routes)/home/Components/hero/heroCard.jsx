@@ -1,6 +1,7 @@
 import React from "react";
 import HeroCSS from "./hero.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export const HeroCard = (props) => {
   return (
@@ -9,7 +10,6 @@ export const HeroCard = (props) => {
         <picture>
           {/* Small Image */}
           <source media="(max-width: 650px)" srcSet={props.imageSmall} />
-
           {/* Medium Image */}
           <source media="(max-width: 1000px)" srcSet={props.imageMedium} />
           {/* Large Image */}
@@ -38,12 +38,12 @@ export const HeroCard = (props) => {
           <p className="font-light leading-relaxed text-white-shade-100">
             {props.description}
           </p>
-          <a
+          <Link
             href={props.redirect ? props.redirect : "/products"}
             className={`${HeroCSS["HeroT-btn"]} shiny-global sm:mb-0 mb-10 flex mt-2 items-center justify-center text-white-shade-100 sm:max-w-fit lg:px-4 font-semibold md:px-3 px-3 py-2 md:py-2 lg:py-3 bg-secondary-shade md:bg-primary-shade-200 lg:text-base xl:text-lg rounded-lg text-center cursor-pointer transition-colors duration-200`}
           >
             {props.ctaMessage}
-          </a>
+          </Link>
         </div>
       </div>
     </div>
