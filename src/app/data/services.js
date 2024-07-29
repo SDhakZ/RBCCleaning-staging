@@ -59,7 +59,7 @@ export const serviceData = [
           "Post construction cleaning all the debris, dust, and leftover materials, making sure the new buildings are spotless and ready for people to move in and use comfortably.",
         icon: "builder-cleaning.png",
         detail: {
-          title: "Here's what we provide post building construction.",
+          title: "Here's what we provide for post building construction.",
           description:
             "We strive to provide quality builder cleaning services after every construction for a clean and inviting environment. Whether it is commercial property, residential complex, or industrial facility, our trained team ensures in-depth attention toward each aspect of post-construction cleaning. We dust all surfaces to remove construction dust and debris as well as vacuuming which ensures a clean, sanitary space. Additionally, we provide window cleaning services along with floor care such as sweeping, mopping, polishing and many more.",
           sellingPoints: [

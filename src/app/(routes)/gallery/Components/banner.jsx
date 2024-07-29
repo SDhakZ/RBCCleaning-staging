@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import BannerDesktop from "@/app/assets/gallery/gallery-banner-desktop.webp";
+import Link from "next/link";
 
 export default function banner() {
   return (
@@ -22,20 +23,21 @@ export default function banner() {
         />
       </picture>
       <div className="absolute -translate-y-1/2 w-full top-[50%]">
-        <div className="container-margin-compact">
+        <div className="relative container-margin-compact">
           <h1 className="text-3xl font-semibold font-lato lg:text-5xl md:text-4xl text-white-shade-100">
             Our Gallery
           </h1>
-          <p className="text-lg font-lato text-white-shade-100 mt-4 max-w-[450px] font-medium">
+          <p className="text-lg mb-8 font-lato text-white-shade-100 mt-4 max-w-[450px] font-medium">
             Explore our gallery to see our professinal cleaning services in
             action and the result we deliver
           </p>
-          <button
+
+          <Link
             href="/contact"
-            className="px-6 py-2 mt-6 text-lg hover:bg-[#59CA31] font-semibold rounded-md bg-primary-shade-200 text-white-shade-100"
+            className="px-6 hover:bg-[#16a9df] overflow-hidden py-3 text-base mt-1 font-semibold transition-all duration-200 rounded-md text-white-shade-100 bg-primary-shade-200 text-primary-orange-100 w-fit "
           >
             Book us now!
-          </button>
+          </Link>
         </div>
       </div>
     </div>
