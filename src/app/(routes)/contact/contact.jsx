@@ -11,7 +11,9 @@ import { ContactDetailModule } from "@/app/components/contactDetailModule/contac
 import { useForm } from "@/app/hooks/useForm";
 import { useDynamicFields } from "@/app/hooks/useDynamicFields";
 import { useSearchParams } from "next/navigation";
-export default function Contact(props) {
+import { Suspense } from "react";
+
+function ContactComponent(props) {
   const { hcaptcha_site_key } = props;
   const searchParams = useSearchParams();
   const subject = searchParams.get("subject");
@@ -246,3 +248,16 @@ export default function Contact(props) {
     </div>
   );
 }
+
+const Contact = (props) => (
+  <Suspense
+    fallback={
+      <div className="100vh">
+        <FontAwesomeIcon className="ml-2 animate-spin" icon={faSpinner} />
+      </div>
+    }
+  >
+    <ContactComponent {...props} />
+  </Suspense>
+);
+export default Contact;
