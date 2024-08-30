@@ -17,7 +17,7 @@ export function ContactDetailModule({
     fields.map((field, index) => {
       if (field.type === "heading") {
         return (
-          <h4 className="font-semibold text-black-shade-300" key={index}>
+          <h4 className="font-semibold text-black-shade-200" key={index}>
             {field.label}
           </h4>
         );
@@ -152,7 +152,7 @@ export function ContactDetailModule({
       if (field.type === "radio") {
         return (
           <div key={index}>
-            <p className="mb-2 font-semibold text-black-shade-300">
+            <p className="mb-2 font-semibold text-black-shade-200">
               {field.label}
             </p>
             {field.option.map((opt, i) => (
@@ -179,7 +179,7 @@ export function ContactDetailModule({
 
   return (
     <div className="border-[#B8B8B8] overflow-hidden rounded-md flex flex-col gap-4 w-full  border-2 border-solid p-4">
-      <h2 className="text-lg font-semibold underline text-black-shade-300 decoration-2 underline-offset-4">
+      <h2 className="text-base font-semibold underline text-black-shade-300 decoration-2 underline-offset-4">
         {config.title}
       </h2>
       {renderFields(config.fields)}

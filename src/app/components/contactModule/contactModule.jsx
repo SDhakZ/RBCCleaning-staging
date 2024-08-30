@@ -7,7 +7,7 @@ export default function ContactModule(props) {
   const { message } = props;
   return (
     <div>
-      <section className="relative flex justify-center w-full padding-y-lg lg:pb-24 bg-white-shade-100">
+      <section className="relative flex justify-center w-full margin-t padding-y-lg lg:pb-24 bg-white-shade-100">
         <div className="w-full container-margin-compact">
           <div>
             <div className="mt-2 text-3xl font-semibold leading-12 md:text-4xl md:leading-tight lg:text-4xl lg:leading-tight text-black-shade-200">

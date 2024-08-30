@@ -26,6 +26,7 @@ function ContactComponent(props) {
     subject: "",
     message: "",
   };
+  
   const {
     formData,
     loading,

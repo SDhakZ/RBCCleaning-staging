@@ -254,6 +254,20 @@ const cleaningConfigurations = [
           },
         ],
       },
+
+      {
+        label: "Number of big windows",
+        type: "number",
+        key: "Number of big windows",
+        min: 0,
+      },
+      {
+        label: "Number of small windows",
+        type: "number",
+        key: "Number of small windows",
+        min: 0,
+      },
+
       {
         type: "heading",
         label: "Specifications of amenities to clean",
@@ -440,7 +454,7 @@ const cleaningConfigurations = [
             dropdown: {
               key: "Area Unit",
               label: "unit",
-              option: ["sq ft", "sq m", "sq yards", "sq km"],
+              option: ["metre", "sq ft", "sq m", "sq yards", "sq km"],
               required: true,
             },
           },
@@ -460,7 +474,7 @@ const cleaningConfigurations = [
             dropdown: {
               key: "Area Unit",
               label: "unit",
-              option: ["sq ft", "sq m", "sq yards", "sq km"],
+              option: ["metre", "sq ft", "sq m", "sq yards", "sq km"],
               required: true,
             },
           },
@@ -480,7 +494,7 @@ const cleaningConfigurations = [
             dropdown: {
               key: "Area Unit",
               label: "unit",
-              option: ["sq ft", "sq m", "sq yards", "sq km"],
+              option: ["metre", "sq ft", "sq m", "sq yards", "sq km"],
               required: true,
             },
           },
@@ -506,16 +520,6 @@ const cleaningConfigurations = [
         label: "Green Waste",
         type: "checkbox",
         key: "Green Waste",
-      },
-      {
-        label: "Mattress",
-        type: "checkbox",
-        key: "Mattress",
-      },
-      {
-        label: "Tyre",
-        type: "checkbox",
-        key: "Tyre",
       },
     ],
   },

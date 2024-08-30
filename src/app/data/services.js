@@ -8,7 +8,7 @@ export const serviceData = [
         title: "Office Cleaning",
         slug: "office-cleaning",
         brief:
-          "Specialized cleaning tailored for office spaces, including deep cleaning, organizing, and maintenance.",
+          "Specialised cleaning tailored for office spaces, including deep cleaning, organizing, and maintenance.",
         icon: "office-cleaning.png",
         detail: {
           title:

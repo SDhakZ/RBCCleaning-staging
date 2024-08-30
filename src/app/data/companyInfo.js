@@ -44,6 +44,11 @@ export const menuData = [
         icon: faPhone,
       },
       {
+        title: "0448 556 464",
+        link: "tel:0448 556 464",
+        icon: faPhone,
+      },
+      {
         title: "31 Loftus street Glenorchy, TAS 7010",
         link: "https://maps.app.goo.gl/sj9EsoNrJkjWph3x9",
         icon: faLocationDot,
