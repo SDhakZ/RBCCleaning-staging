@@ -84,7 +84,7 @@ export const serviceData = [
         title: "Domestic Cleaning",
         slug: "domestic-cleaning",
         brief:
-          "Specialized cleaning for domestic cleaning including cleaning, organization and maintenance.",
+          "Specialised cleaning for domestic cleaning including cleaning, organization and maintenance.",
         icon: "domestic-cleaning.png",
         detail: {
           title:
@@ -190,7 +190,7 @@ export const serviceData = [
   },
   {
     id: 3,
-    category: "Specialized Cleaning Service",
+    category: "Specialised Cleaning Service",
     serviceItems: [
       {
         id: "scs1",
@@ -235,8 +235,8 @@ export const serviceData = [
       },
       {
         id: "scs3",
-        title: "Polishing and Washing",
-        slug: "polishing-and-washing",
+        title: "Wash, Polish and Buffing",
+        slug: "wash-polish-buffing",
         brief:
           "Enhancing Your Space with Sparkling and Smooth Surfaces, Free from Dirt and Grime",
         icon: "polishing-floors.png",
@@ -277,8 +277,8 @@ export const serviceData = [
       },
       {
         id: "scs5",
-        title: "Buffering",
-        slug: "buffering",
+        title: "Buffing",
+        slug: "buffing",
         brief:
           "Restoring Shine and Cleanliness to Your Hard Floors with Precision",
         icon: "buffering.png",

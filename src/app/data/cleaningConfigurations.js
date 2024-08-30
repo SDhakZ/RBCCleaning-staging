@@ -65,8 +65,8 @@ const cleaningConfigurations = [
     ],
   },
   {
-    title: "Buffering Details",
-    key: "Buffering",
+    title: "Buffing Details",
+    key: "Buffing",
     fields: [
       {
         type: "heading",
@@ -401,8 +401,8 @@ const cleaningConfigurations = [
   },
 
   {
-    title: "Polishing and Washing",
-    key: "Polishing and Washing",
+    title: "Wash, Polish and Buffing",
+    key: "Wash, Polish and Buffing",
     fields: [
       {
         type: "heading",
@@ -425,7 +425,7 @@ const cleaningConfigurations = [
       {
         type: "radio",
         label: "Cleaning type",
-        option: ["Polishing", "Washing", "Polishing and Washing"],
+        option: ["Polishing", "Washing", "Wash, Polish and Buffing"],
         key: "Cleaning Type",
         required: true,
       },
