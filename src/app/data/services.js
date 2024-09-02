@@ -139,9 +139,19 @@ export const serviceData = [
             "Reliable and flexible scheduling",
             "Free consultation before the cleaning starts",
           ],
+
+          comparisonImage: "/services/WindowCleaning/window-comparison",
           bannerImage: "/services/WindowCleaning/window-cleaning",
           sellingPointImage: "selling-point.webp",
         },
+        pictures: [
+          {
+            src: "/services/WindowCleaning/cleaning.webp",
+            title: "test",
+            width: "760",
+            height: "570",
+          },
+        ],
       },
       {
         id: "rcs4",
@@ -275,7 +285,7 @@ export const serviceData = [
           sellingPointImage: "selling-point.webp",
         },
       },
-      {
+      /*  {
         id: "scs5",
         title: "Buffing",
         slug: "buffing",
@@ -295,7 +305,7 @@ export const serviceData = [
           bannerImage: "/services/OfficeCleaning/buffering",
           sellingPointImage: "selling-point.webp",
         },
-      },
+      }, */
     ],
   },
 ];

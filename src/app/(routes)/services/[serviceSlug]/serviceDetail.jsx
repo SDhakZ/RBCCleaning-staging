@@ -12,6 +12,7 @@ import ContactModal from "@/app/components/contactModal/contactModal";
 import { useState, useEffect } from "react";
 import NotFound from "@/app/not-found";
 import ServiceGallery from "./Components/serviceGallery";
+import { ComparisonSlider } from "./Components/comparisonSlider";
 
 export default function ServiceDetail(props) {
   const { hcaptcha_site_key } = props;
@@ -56,13 +57,15 @@ export default function ServiceDetail(props) {
         openModal={() => setIsModalOpen(true)}
       />
       <SellingPoint serviceItem={serviceItem} />
+      {serviceItem.detail.comparisonImage ? (
+        <ComparisonSlider image={serviceItem.detail.comparisonImage} />
+      ) : null}
       {serviceItem.pictures ? (
         <ServiceGallery
           title={serviceItem.title}
           pictures={serviceItem.pictures}
         />
       ) : null}
-
       <Testimonial />
       <Process title={serviceItem.title} />
       <Services />

@@ -24,6 +24,7 @@
     "next": "14.2.3",
     "next-nprogress-bar": "^2.3.12",
     "react": "^18",
+    "react-compare-image": "^3.4.0",
     "react-dom": "^18",
     "react-multi-carousel": "^2.8.5",
     "react-photo-album": "^2.4.0",
