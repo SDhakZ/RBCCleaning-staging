@@ -29,6 +29,7 @@
     "react-multi-carousel": "^2.8.5",
     "react-photo-album": "^2.4.0",
     "resend": "^3.3.0",
+    "sharp": "^0.33.5",
     "swiper": "^11.1.4",
     "ua-parser-js": "^1.0.38",
     "yet-another-react-lightbox": "^3.19.0"
