@@ -49,8 +49,8 @@ export const menuData = [
         icon: faPhone,
       },
       {
-        title: "31 Loftus street Glenorchy, TAS 7010",
-        link: "https://maps.app.goo.gl/sj9EsoNrJkjWph3x9",
+        title: "address-16 Albert Road Moonah, 7009,TAS",
+        link: "https://maps.app.goo.gl/jZD7zTrxD8vSZ3t57",
         icon: faLocationDot,
       },
     ],
